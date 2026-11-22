@@ -1,0 +1,6758 @@
+{
+ "meta": {
+  "source": "Nigerian_Foods_Dataset_v2.xlsx",
+  "dishes": 55,
+  "foodstuffs": 93
+ },
+ "nutrients": [
+  {
+   "key": "energy_kcal",
+   "name": "Energy",
+   "unit": "kcal",
+   "sortOrder": 0
+  },
+  {
+   "key": "protein_g",
+   "name": "Protein",
+   "unit": "g",
+   "sortOrder": 1
+  },
+  {
+   "key": "fat_g",
+   "name": "Fat",
+   "unit": "g",
+   "sortOrder": 2
+  },
+  {
+   "key": "carbohydrate_g",
+   "name": "Carbohydrate",
+   "unit": "g",
+   "sortOrder": 3
+  },
+  {
+   "key": "fibre_g",
+   "name": "Fibre",
+   "unit": "g",
+   "sortOrder": 4
+  },
+  {
+   "key": "calcium_mg",
+   "name": "Calcium",
+   "unit": "mg",
+   "sortOrder": 5
+  },
+  {
+   "key": "iron_mg",
+   "name": "Iron",
+   "unit": "mg",
+   "sortOrder": 6
+  },
+  {
+   "key": "zinc_mg",
+   "name": "Zinc",
+   "unit": "mg",
+   "sortOrder": 7
+  },
+  {
+   "key": "vitamin_a_ug_rae",
+   "name": "Vitamin A",
+   "unit": "µg RAE",
+   "sortOrder": 8
+  },
+  {
+   "key": "vitamin_c_mg",
+   "name": "Vitamin C",
+   "unit": "mg",
+   "sortOrder": 9
+  },
+  {
+   "key": "folate_ug",
+   "name": "Folate",
+   "unit": "µg",
+   "sortOrder": 10
+  }
+ ],
+ "foods": [
+  {
+   "code": "F001",
+   "name": "Ugu (fluted pumpkin leaves)",
+   "category": "Leafy vegetables",
+   "forms": "Raw, sliced; cooked in soups",
+   "botanicalName": "Telfairia occidentalis",
+   "allergenNote": null,
+   "searchKey1": "ugu",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ugu"
+    },
+    {
+     "language": "igbo",
+     "name": "Ugu / Ugwu"
+    }
+   ]
+  },
+  {
+   "code": "F002",
+   "name": "Spinach / efo tete (African spinach)",
+   "category": "Leafy vegetables",
+   "forms": "Raw; lightly cooked in stews",
+   "botanicalName": "Amaranthus spp. (efo tete); Spinacia oleracea (spinach)",
+   "allergenNote": null,
+   "searchKey1": "spinach",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Tete (efo tete)"
+    },
+    {
+     "language": "hausa",
+     "name": "Alayyahu"
+    },
+    {
+     "language": "igbo",
+     "name": "Inine"
+    }
+   ]
+  },
+  {
+   "code": "F003",
+   "name": "Ewedu (jute leaves)",
+   "category": "Leafy vegetables",
+   "forms": "Cooked and drawn into a smooth soup",
+   "botanicalName": "Corchorus olitorius",
+   "allergenNote": null,
+   "searchKey1": "ewedu",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewedu"
+    }
+   ]
+  },
+  {
+   "code": "F004",
+   "name": "Bitterleaf",
+   "category": "Leafy vegetables",
+   "forms": "Washed/squeezed, cooked in soup",
+   "botanicalName": "Vernonia amygdalina",
+   "allergenNote": null,
+   "searchKey1": "bitterleaf",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewuro"
+    },
+    {
+     "language": "hausa",
+     "name": "Shiwaka"
+    },
+    {
+     "language": "igbo",
+     "name": "Onugbu"
+    }
+   ]
+  },
+  {
+   "code": "F005",
+   "name": "Waterleaf",
+   "category": "Leafy vegetables",
+   "forms": "Raw/chopped, cooked in soup",
+   "botanicalName": "Talinum triangulare",
+   "allergenNote": null,
+   "searchKey1": "waterleaf",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Gbure"
+    }
+   ]
+  },
+  {
+   "code": "F006",
+   "name": "Scent leaf",
+   "category": "Leafy vegetables",
+   "forms": "Fresh herb added at end of cooking",
+   "botanicalName": "Ocimum gratissimum",
+   "allergenNote": null,
+   "searchKey1": "scent leaves",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Efirin"
+    },
+    {
+     "language": "hausa",
+     "name": "Daidoya"
+    },
+    {
+     "language": "igbo",
+     "name": "Nchanwu"
+    }
+   ]
+  },
+  {
+   "code": "F007",
+   "name": "Uziza (leaf and seed)",
+   "category": "Leafy vegetables",
+   "forms": "Fresh leaf; ground seed",
+   "botanicalName": "Piper guineense",
+   "allergenNote": null,
+   "searchKey1": "uziza",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Iyere"
+    },
+    {
+     "language": "igbo",
+     "name": "Uziza"
+    }
+   ]
+  },
+  {
+   "code": "F008",
+   "name": "Utazi leaves",
+   "category": "Leafy vegetables",
+   "forms": "Fresh leaf, slightly bitter",
+   "botanicalName": "Gongronema latifolium",
+   "allergenNote": null,
+   "searchKey1": "utazi",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Arokeke"
+    },
+    {
+     "language": "igbo",
+     "name": "Utazi"
+    }
+   ]
+  },
+  {
+   "code": "F009",
+   "name": "Afang leaves (okazi)",
+   "category": "Leafy vegetables",
+   "forms": "Pounded or finely shredded",
+   "botanicalName": "Gnetum africanum",
+   "allergenNote": null,
+   "searchKey1": "afang",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Okazi"
+    }
+   ]
+  },
+  {
+   "code": "F010",
+   "name": "Oha leaves",
+   "category": "Leafy vegetables",
+   "forms": "Hand-shredded, added last",
+   "botanicalName": "Pterocarpus mildbraedii",
+   "allergenNote": null,
+   "searchKey1": "oha",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ora"
+    },
+    {
+     "language": "igbo",
+     "name": "Oha"
+    }
+   ]
+  },
+  {
+   "code": "F011",
+   "name": "Kuka (baobab leaf powder)",
+   "category": "Leafy vegetables",
+   "forms": "Dried leaf powder",
+   "botanicalName": "Adansonia digitata",
+   "allergenNote": null,
+   "searchKey1": "kuka",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kuka"
+    }
+   ]
+  },
+  {
+   "code": "F012",
+   "name": "Zogale (moringa leaves)",
+   "category": "Leafy vegetables",
+   "forms": "Fresh or dried leaves",
+   "botanicalName": "Moringa oleifera",
+   "allergenNote": null,
+   "searchKey1": "zogale",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewe igbale"
+    },
+    {
+     "language": "hausa",
+     "name": "Zogale"
+    }
+   ]
+  },
+  {
+   "code": "F013",
+   "name": "Cabbage",
+   "category": "Leafy vegetables",
+   "forms": "Raw, steamed, stir-fried",
+   "botanicalName": "Brassica oleracea",
+   "allergenNote": null,
+   "searchKey1": "cabbage",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F014",
+   "name": "Tomato",
+   "category": "Other vegetables",
+   "forms": "Fresh; blended; paste",
+   "botanicalName": "Solanum lycopersicum",
+   "allergenNote": null,
+   "searchKey1": "tomato",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Tomati"
+    },
+    {
+     "language": "hausa",
+     "name": "Tumatir"
+    }
+   ]
+  },
+  {
+   "code": "F015",
+   "name": "Tatashe (red bell pepper)",
+   "category": "Other vegetables",
+   "forms": "Fresh; blended",
+   "botanicalName": "Capsicum annuum",
+   "allergenNote": null,
+   "searchKey1": "tatashe",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Tatashe"
+    }
+   ]
+  },
+  {
+   "code": "F016",
+   "name": "Scotch bonnet pepper (ata rodo)",
+   "category": "Other vegetables",
+   "forms": "Fresh; ground",
+   "botanicalName": "Capsicum chinense",
+   "allergenNote": null,
+   "searchKey1": "scotch bonnet",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ata rodo"
+    },
+    {
+     "language": "hausa",
+     "name": "Attarugu"
+    }
+   ]
+  },
+  {
+   "code": "F017",
+   "name": "Onion",
+   "category": "Other vegetables",
+   "forms": "Raw; fried; blended",
+   "botanicalName": "Allium cepa",
+   "allergenNote": null,
+   "searchKey1": "onion",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Alubosa"
+    },
+    {
+     "language": "hausa",
+     "name": "Albasa"
+    }
+   ]
+  },
+  {
+   "code": "F018",
+   "name": "Okra",
+   "category": "Other vegetables",
+   "forms": "Fresh, chopped or grated",
+   "botanicalName": "Abelmoschus esculentus",
+   "allergenNote": null,
+   "searchKey1": "okra",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ila"
+    },
+    {
+     "language": "hausa",
+     "name": "Kubewa"
+    },
+    {
+     "language": "igbo",
+     "name": "Okwuru"
+    }
+   ]
+  },
+  {
+   "code": "F019",
+   "name": "Pumpkin (taushe)",
+   "category": "Other vegetables",
+   "forms": "Peeled, boiled and mashed",
+   "botanicalName": "Cucurbita spp.",
+   "allergenNote": null,
+   "searchKey1": "pumpkin",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kabewa / Taushe"
+    }
+   ]
+  },
+  {
+   "code": "F020",
+   "name": "Carrot",
+   "category": "Other vegetables",
+   "forms": "Raw; diced; steamed",
+   "botanicalName": "Daucus carota",
+   "allergenNote": null,
+   "searchKey1": "carrot",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F021",
+   "name": "Green beans",
+   "category": "Other vegetables",
+   "forms": "Diced; lightly cooked",
+   "botanicalName": "Phaseolus vulgaris",
+   "allergenNote": null,
+   "searchKey1": "green beans",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F022",
+   "name": "Plantain",
+   "category": "Fruits",
+   "forms": "Unripe; ripe; boiled; fried; roasted",
+   "botanicalName": "Musa paradisiaca",
+   "allergenNote": null,
+   "searchKey1": "plantain",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ogede agbagba"
+    },
+    {
+     "language": "igbo",
+     "name": "Ogede"
+    }
+   ]
+  },
+  {
+   "code": "F023",
+   "name": "Coconut",
+   "category": "Fruits",
+   "forms": "Fresh flesh; milk",
+   "botanicalName": "Cocos nucifera",
+   "allergenNote": "Coconut",
+   "searchKey1": "coconut",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Agbon"
+    },
+    {
+     "language": "hausa",
+     "name": "Kwakwa"
+    },
+    {
+     "language": "igbo",
+     "name": "Aki oyibo"
+    }
+   ]
+  },
+  {
+   "code": "F024",
+   "name": "Pineapple",
+   "category": "Fruits",
+   "forms": "Fresh; peel used in drinks",
+   "botanicalName": "Ananas comosus",
+   "allergenNote": null,
+   "searchKey1": "pineapple",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ope oyinbo"
+    },
+    {
+     "language": "hausa",
+     "name": "Abarba"
+    }
+   ]
+  },
+  {
+   "code": "F025",
+   "name": "African pear (ube)",
+   "category": "Fruits",
+   "forms": "Softened in warm water",
+   "botanicalName": "Dacryodes edulis",
+   "allergenNote": null,
+   "searchKey1": " ube",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Elemi"
+    },
+    {
+     "language": "igbo",
+     "name": "Ube"
+    }
+   ]
+  },
+  {
+   "code": "F026",
+   "name": "Dates",
+   "category": "Fruits",
+   "forms": "Dried fruit; sweetener",
+   "botanicalName": "Phoenix dactylifera",
+   "allergenNote": null,
+   "searchKey1": "dates",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Dabino"
+    }
+   ]
+  },
+  {
+   "code": "F027",
+   "name": "Palm fruit",
+   "category": "Fruits",
+   "forms": "Boiled and extracted for soup base",
+   "botanicalName": "Elaeis guineensis",
+   "allergenNote": null,
+   "searchKey1": "palm fruits",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F028",
+   "name": "Rice (parboiled, long-grain)",
+   "category": "Grains & cereals",
+   "forms": "Dry; cooked",
+   "botanicalName": "Oryza sativa",
+   "allergenNote": null,
+   "searchKey1": "rice",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Iresi"
+    },
+    {
+     "language": "hausa",
+     "name": "Shinkafa"
+    },
+    {
+     "language": "igbo",
+     "name": "Osikapa"
+    }
+   ]
+  },
+  {
+   "code": "F029",
+   "name": "Ofada rice (local, unpolished)",
+   "category": "Grains & cereals",
+   "forms": "Dry; cooked",
+   "botanicalName": "Oryza spp. (local varieties)",
+   "allergenNote": null,
+   "searchKey1": "ofada rice",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ofada"
+    }
+   ]
+  },
+  {
+   "code": "F030",
+   "name": "Maize",
+   "category": "Grains & cereals",
+   "forms": "Dry grain; flour; fermented (ogi)",
+   "botanicalName": "Zea mays",
+   "allergenNote": null,
+   "searchKey1": "maize",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Agbado"
+    },
+    {
+     "language": "hausa",
+     "name": "Masara"
+    },
+    {
+     "language": "igbo",
+     "name": "Oka"
+    }
+   ]
+  },
+  {
+   "code": "F031",
+   "name": "Corn on the cob (fresh)",
+   "category": "Grains & cereals",
+   "forms": "Roasted; boiled",
+   "botanicalName": "Zea mays",
+   "allergenNote": null,
+   "searchKey1": "corn cobs",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Agbado"
+    },
+    {
+     "language": "hausa",
+     "name": "Masara"
+    },
+    {
+     "language": "igbo",
+     "name": "Oka"
+    }
+   ]
+  },
+  {
+   "code": "F032",
+   "name": "Millet",
+   "category": "Grains & cereals",
+   "forms": "Grain; flour",
+   "botanicalName": "Pennisetum glaucum",
+   "allergenNote": null,
+   "searchKey1": "millet",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Gero"
+    }
+   ]
+  },
+  {
+   "code": "F033",
+   "name": "Sorghum (guinea corn)",
+   "category": "Grains & cereals",
+   "forms": "Grain; flour",
+   "botanicalName": "Sorghum bicolor",
+   "allergenNote": null,
+   "searchKey1": "sorghum",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Dawa"
+    }
+   ]
+  },
+  {
+   "code": "F034",
+   "name": "Wheat flour (all-purpose)",
+   "category": "Grains & cereals",
+   "forms": "Flour for fried snacks",
+   "botanicalName": "Triticum aestivum",
+   "allergenNote": "Wheat (gluten)",
+   "searchKey1": "all-purpose flour",
+   "searchKey2": "cups flour",
+   "referenceForm": "Dried / as sold",
+   "aliases": []
+  },
+  {
+   "code": "F035",
+   "name": "Semolina (semovita)",
+   "category": "Grains & cereals",
+   "forms": "Flour for swallow",
+   "botanicalName": "Triticum durum / aestivum",
+   "allergenNote": "Wheat (gluten)",
+   "searchKey1": "semovita",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": []
+  },
+  {
+   "code": "F036",
+   "name": "Yam (white yam)",
+   "category": "Tubers & roots",
+   "forms": "Boiled; pounded; fried; roasted",
+   "botanicalName": "Dioscorea rotundata",
+   "allergenNote": null,
+   "searchKey1": "tuber white yam",
+   "searchKey2": "tuber yam",
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Isu"
+    },
+    {
+     "language": "hausa",
+     "name": "Doya"
+    },
+    {
+     "language": "igbo",
+     "name": "Ji"
+    }
+   ]
+  },
+  {
+   "code": "F037",
+   "name": "Water yam",
+   "category": "Tubers & roots",
+   "forms": "Grated; boiled",
+   "botanicalName": "Dioscorea alata",
+   "allergenNote": null,
+   "searchKey1": "water yam",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Isu ewura"
+    }
+   ]
+  },
+  {
+   "code": "F038",
+   "name": "Yam flour (elubo)",
+   "category": "Tubers & roots",
+   "forms": "Dry flour for amala",
+   "botanicalName": "Processed Dioscorea",
+   "allergenNote": null,
+   "searchKey1": "elubo",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Elubo isu"
+    }
+   ]
+  },
+  {
+   "code": "F039",
+   "name": "Cassava (fresh tubers)",
+   "category": "Tubers & roots",
+   "forms": "Soaked; boiled; fermented",
+   "botanicalName": "Manihot esculenta",
+   "allergenNote": null,
+   "searchKey1": "cassava tubers",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ege"
+    },
+    {
+     "language": "hausa",
+     "name": "Rogo"
+    }
+   ]
+  },
+  {
+   "code": "F040",
+   "name": "Garri (cassava granules)",
+   "category": "Tubers & roots",
+   "forms": "Dry granules; eba; soaked",
+   "botanicalName": "Processed Manihot esculenta",
+   "allergenNote": null,
+   "searchKey1": "garri",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Garri"
+    },
+    {
+     "language": "hausa",
+     "name": "Garri"
+    },
+    {
+     "language": "igbo",
+     "name": "Garri"
+    }
+   ]
+  },
+  {
+   "code": "F041",
+   "name": "Abacha (dried cassava shreds)",
+   "category": "Tubers & roots",
+   "forms": "Dried shreds, soaked",
+   "botanicalName": "Processed Manihot esculenta",
+   "allergenNote": null,
+   "searchKey1": "abacha",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Abacha"
+    }
+   ]
+  },
+  {
+   "code": "F042",
+   "name": "Cocoyam",
+   "category": "Tubers & roots",
+   "forms": "Boiled; pounded",
+   "botanicalName": "Colocasia esculenta",
+   "allergenNote": null,
+   "searchKey1": "cocoyam",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Koko"
+    },
+    {
+     "language": "hausa",
+     "name": "Gwaza"
+    },
+    {
+     "language": "igbo",
+     "name": "Ede"
+    }
+   ]
+  },
+  {
+   "code": "F043",
+   "name": "Sweet potato",
+   "category": "Tubers & roots",
+   "forms": "Boiled; roasted",
+   "botanicalName": "Ipomoea batatas",
+   "allergenNote": null,
+   "searchKey1": "sweet potato",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Dankali"
+    }
+   ]
+  },
+  {
+   "code": "F044",
+   "name": "Black-eyed beans (cowpea)",
+   "category": "Legumes & beans",
+   "forms": "Dry; peeled; boiled; ground",
+   "botanicalName": "Vigna unguiculata",
+   "allergenNote": null,
+   "searchKey1": "black-eyed",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewa"
+    },
+    {
+     "language": "hausa",
+     "name": "Wake"
+    },
+    {
+     "language": "igbo",
+     "name": "Agwa"
+    }
+   ]
+  },
+  {
+   "code": "F045",
+   "name": "Honey / brown beans (oloyin)",
+   "category": "Legumes & beans",
+   "forms": "Dry; boiled",
+   "botanicalName": "Vigna unguiculata (variety)",
+   "allergenNote": null,
+   "searchKey1": "honey beans",
+   "searchKey2": "(honey) beans",
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewa oloyin"
+    }
+   ]
+  },
+  {
+   "code": "F046",
+   "name": "Bambara nut (okpa flour)",
+   "category": "Legumes & beans",
+   "forms": "Flour for okpa",
+   "botanicalName": "Vigna subterranea",
+   "allergenNote": null,
+   "searchKey1": "okpa",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kwaruru"
+    },
+    {
+     "language": "igbo",
+     "name": "Okpa"
+    }
+   ]
+  },
+  {
+   "code": "F047",
+   "name": "Bean flour (cowpea flour)",
+   "category": "Legumes & beans",
+   "forms": "Dry flour",
+   "botanicalName": "Processed Vigna unguiculata",
+   "allergenNote": null,
+   "searchKey1": "bean flour",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": []
+  },
+  {
+   "code": "F048",
+   "name": "Groundnut (peanut)",
+   "category": "Legumes & beans",
+   "forms": "Raw; roasted; paste",
+   "botanicalName": "Arachis hypogaea",
+   "allergenNote": "Peanut",
+   "searchKey1": "groundnuts",
+   "searchKey2": "groundnut paste",
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Epa"
+    },
+    {
+     "language": "hausa",
+     "name": "Gyada"
+    },
+    {
+     "language": "igbo",
+     "name": "Ahuekere"
+    }
+   ]
+  },
+  {
+   "code": "F049",
+   "name": "Tiger nut",
+   "category": "Legumes & beans",
+   "forms": "Soaked; blended for drink",
+   "botanicalName": "Cyperus esculentus",
+   "allergenNote": null,
+   "searchKey1": "tiger nut",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Imumu"
+    },
+    {
+     "language": "hausa",
+     "name": "Aya"
+    },
+    {
+     "language": "igbo",
+     "name": "Ofio"
+    }
+   ]
+  },
+  {
+   "code": "F050",
+   "name": "Egusi (melon seeds)",
+   "category": "Nuts & seeds",
+   "forms": "Shelled; ground",
+   "botanicalName": "Cucurbitaceae (melon-type seeds; species vary)",
+   "allergenNote": null,
+   "searchKey1": "egusi",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Egusi"
+    },
+    {
+     "language": "hausa",
+     "name": "Guna"
+    },
+    {
+     "language": "igbo",
+     "name": "Egusi"
+    }
+   ]
+  },
+  {
+   "code": "F051",
+   "name": "Ogbono (wild mango seeds)",
+   "category": "Nuts & seeds",
+   "forms": "Ground",
+   "botanicalName": "Irvingia gabonensis",
+   "allergenNote": null,
+   "searchKey1": "ogbono",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Apon"
+    },
+    {
+     "language": "igbo",
+     "name": "Ogbono"
+    }
+   ]
+  },
+  {
+   "code": "F052",
+   "name": "Ehuru (calabash nutmeg)",
+   "category": "Nuts & seeds",
+   "forms": "Ground spice",
+   "botanicalName": "Monodora myristica",
+   "allergenNote": null,
+   "searchKey1": "ehuru",
+   "searchKey2": null,
+   "referenceForm": "Dry, uncooked",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ariwo"
+    },
+    {
+     "language": "igbo",
+     "name": "Ehuru"
+    }
+   ]
+  },
+  {
+   "code": "F053",
+   "name": "Zobo (hibiscus calyces)",
+   "category": "Nuts & seeds",
+   "forms": "Dried; boiled for drink",
+   "botanicalName": "Hibiscus sabdariffa",
+   "allergenNote": null,
+   "searchKey1": "zobo",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Isapa"
+    },
+    {
+     "language": "hausa",
+     "name": "Zoborodo"
+    }
+   ]
+  },
+  {
+   "code": "F054",
+   "name": "Beef",
+   "category": "Meat & poultry",
+   "forms": "Fresh; boiled; grilled; dried",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "beef",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F055",
+   "name": "Goat meat",
+   "category": "Meat & poultry",
+   "forms": "Fresh; boiled",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "goat",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F056",
+   "name": "Chicken",
+   "category": "Meat & poultry",
+   "forms": "Fresh; boiled; fried",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "chicken",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F057",
+   "name": "Chicken gizzard",
+   "category": "Meat & poultry",
+   "forms": "Boiled; fried",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "gizzard",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F058",
+   "name": "Liver (beef or chicken)",
+   "category": "Meat & poultry",
+   "forms": "Boiled; fried",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "liver",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F059",
+   "name": "Assorted meat (beef, tripe, cow skin etc.)",
+   "category": "Meat & poultry",
+   "forms": "Boiled",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "assorted meat",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F060",
+   "name": "Cow skin (kpomo/ponmo) and tripe (shaki)",
+   "category": "Meat & poultry",
+   "forms": "Boiled until soft",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "kpomo",
+   "searchKey2": "shaki",
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F061",
+   "name": "Cow foot",
+   "category": "Meat & poultry",
+   "forms": "Boiled until soft",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "cow foot",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F062",
+   "name": "Catfish",
+   "category": "Fish & seafood",
+   "forms": "Fresh; smoked; boiled",
+   "botanicalName": "Clarias gariepinus",
+   "allergenNote": "Fish",
+   "searchKey1": "catfish",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Eja aro"
+    },
+    {
+     "language": "hausa",
+     "name": "Tarwada"
+    }
+   ]
+  },
+  {
+   "code": "F063",
+   "name": "Stockfish",
+   "category": "Fish & seafood",
+   "forms": "Dried; soaked and boiled",
+   "botanicalName": "Dried Gadus morhua (imported)",
+   "allergenNote": "Fish",
+   "searchKey1": "stockfish",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Panla"
+    },
+    {
+     "language": "igbo",
+     "name": "Okporoko"
+    }
+   ]
+  },
+  {
+   "code": "F064",
+   "name": "Dry / smoked fish",
+   "category": "Fish & seafood",
+   "forms": "Dried or smoked",
+   "botanicalName": "Various species",
+   "allergenNote": "Fish",
+   "searchKey1": "dry fish",
+   "searchKey2": "smoked fish",
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Eja gbigbe"
+    }
+   ]
+  },
+  {
+   "code": "F065",
+   "name": "Crayfish (dried, ground)",
+   "category": "Fish & seafood",
+   "forms": "Dried; ground",
+   "botanicalName": null,
+   "allergenNote": "Shellfish (crustacean)",
+   "searchKey1": "crayfish",
+   "searchKey2": null,
+   "referenceForm": "Dried / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ede"
+    }
+   ]
+  },
+  {
+   "code": "F066",
+   "name": "Periwinkle",
+   "category": "Fish & seafood",
+   "forms": "Cleaned; boiled",
+   "botanicalName": "Tympanotonus fuscatus",
+   "allergenNote": "Shellfish (mollusc)",
+   "searchKey1": "periwinkle",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F067",
+   "name": "Shrimp",
+   "category": "Fish & seafood",
+   "forms": "Fresh; dried",
+   "botanicalName": null,
+   "allergenNote": "Shellfish (crustacean)",
+   "searchKey1": "shrimp",
+   "searchKey2": null,
+   "referenceForm": "Raw, edible portion",
+   "aliases": []
+  },
+  {
+   "code": "F068",
+   "name": "Egg",
+   "category": "Dairy & eggs",
+   "forms": "Boiled; scrambled; in sauces",
+   "botanicalName": null,
+   "allergenNote": "Egg",
+   "searchKey1": "eggs",
+   "searchKey2": "1 egg",
+   "referenceForm": "Raw / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Eyin"
+    },
+    {
+     "language": "hausa",
+     "name": "Kwai"
+    },
+    {
+     "language": "igbo",
+     "name": "Akwa"
+    }
+   ]
+  },
+  {
+   "code": "F069",
+   "name": "Milk (fresh, powdered, evaporated)",
+   "category": "Dairy & eggs",
+   "forms": "Liquid; powdered",
+   "botanicalName": null,
+   "allergenNote": "Milk",
+   "searchKey1": "cup milk",
+   "searchKey2": "milk (optional)",
+   "referenceForm": "Raw / as sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Wara"
+    },
+    {
+     "language": "hausa",
+     "name": "Madara"
+    }
+   ]
+  },
+  {
+   "code": "F070",
+   "name": "Nono (fermented cow's milk)",
+   "category": "Dairy & eggs",
+   "forms": "Fermented, served chilled",
+   "botanicalName": null,
+   "allergenNote": "Milk",
+   "searchKey1": "nono",
+   "searchKey2": null,
+   "referenceForm": "Raw / as sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Nono"
+    }
+   ]
+  },
+  {
+   "code": "F071",
+   "name": "Butter / margarine",
+   "category": "Dairy & eggs",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": "Milk (butter; check margarine label)",
+   "searchKey1": "butter",
+   "searchKey2": "margarine",
+   "referenceForm": "Raw / as sold",
+   "aliases": []
+  },
+  {
+   "code": "F072",
+   "name": "Palm oil",
+   "category": "Oils & fats",
+   "forms": "As sold",
+   "botanicalName": "Elaeis guineensis",
+   "allergenNote": null,
+   "searchKey1": "palm oil",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Epo pupa"
+    },
+    {
+     "language": "hausa",
+     "name": "Man ja"
+    },
+    {
+     "language": "igbo",
+     "name": "Mmanu nri"
+    }
+   ]
+  },
+  {
+   "code": "F073",
+   "name": "Groundnut oil",
+   "category": "Oils & fats",
+   "forms": "As sold",
+   "botanicalName": "Arachis hypogaea",
+   "allergenNote": "Peanut (oil)",
+   "searchKey1": "groundnut oil",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Epo epa"
+    },
+    {
+     "language": "hausa",
+     "name": "Man gyada"
+    }
+   ]
+  },
+  {
+   "code": "F074",
+   "name": "Vegetable oil",
+   "category": "Oils & fats",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "vegetable oil",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F075",
+   "name": "Ginger",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Fresh; ground",
+   "botanicalName": "Zingiber officinale",
+   "allergenNote": null,
+   "searchKey1": "ginger",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Citta"
+    },
+    {
+     "language": "igbo",
+     "name": "Jinja"
+    }
+   ]
+  },
+  {
+   "code": "F076",
+   "name": "Cloves",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Whole; ground",
+   "botanicalName": "Syzygium aromaticum",
+   "allergenNote": null,
+   "searchKey1": "cloves",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Kanafuru"
+    },
+    {
+     "language": "hausa",
+     "name": "Kanunfari"
+    }
+   ]
+  },
+  {
+   "code": "F077",
+   "name": "Garlic",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Fresh; ground",
+   "botanicalName": "Allium sativum",
+   "allergenNote": null,
+   "searchKey1": "garlic",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ayu"
+    },
+    {
+     "language": "hausa",
+     "name": "Tafarnuwa"
+    }
+   ]
+  },
+  {
+   "code": "F078",
+   "name": "Nutmeg",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Ground",
+   "botanicalName": "Myristica fragrans",
+   "allergenNote": null,
+   "searchKey1": "nutmeg",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F079",
+   "name": "Curry powder",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Dry blend",
+   "botanicalName": "Spice blend",
+   "allergenNote": null,
+   "searchKey1": "curry",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F080",
+   "name": "Thyme (dried)",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Dried herb",
+   "botanicalName": "Thymus vulgaris",
+   "allergenNote": null,
+   "searchKey1": "thyme",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F081",
+   "name": "Bay leaves",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Dried leaves",
+   "botanicalName": "Laurus nobilis",
+   "allergenNote": null,
+   "searchKey1": "bay leaves",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F082",
+   "name": "Pepper soup spice mix",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Ground blend (varies by maker)",
+   "botanicalName": "Spice blend",
+   "allergenNote": null,
+   "searchKey1": "pepper soup spice",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F083",
+   "name": "Yaji (suya spice)",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Ground blend of kuli-kuli, ginger, garlic, paprika, cayenne",
+   "botanicalName": "Spice blend",
+   "allergenNote": "Peanut",
+   "searchKey1": "yaji",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Yaji"
+    }
+   ]
+  },
+  {
+   "code": "F084",
+   "name": "Stock / seasoning cubes",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Cubes (check label)",
+   "botanicalName": null,
+   "allergenNote": "Check label (may contain gluten, soy, milk, celery)",
+   "searchKey1": "stock cube",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F085",
+   "name": "Edible potash (kaun / kanwa / akanwu)",
+   "category": "Herbs, spices & seasonings",
+   "forms": "Dissolved and filtered",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "potash",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Kaun"
+    },
+    {
+     "language": "hausa",
+     "name": "Kanwa"
+    },
+    {
+     "language": "igbo",
+     "name": "Akanwu"
+    }
+   ]
+  },
+  {
+   "code": "F086",
+   "name": "Salt",
+   "category": "Herbs, spices & seasonings",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "salt",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F087",
+   "name": "Sugar",
+   "category": "Herbs, spices & seasonings",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "sugar",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F088",
+   "name": "Yeast (instant)",
+   "category": "Herbs, spices & seasonings",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "yeast",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F089",
+   "name": "Baking powder",
+   "category": "Herbs, spices & seasonings",
+   "forms": "As sold",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "baking powder",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  },
+  {
+   "code": "F090",
+   "name": "Iru / daddawa (fermented locust beans)",
+   "category": "Fermented seasonings",
+   "forms": "Fermented; pounded or whole",
+   "botanicalName": "Parkia biglobosa",
+   "allergenNote": null,
+   "searchKey1": " iru",
+   "searchKey2": "daddawa",
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Iru"
+    },
+    {
+     "language": "hausa",
+     "name": "Daddawa"
+    },
+    {
+     "language": "igbo",
+     "name": "Ogiri okpei"
+    }
+   ]
+  },
+  {
+   "code": "F091",
+   "name": "Ogiri (fermented seeds)",
+   "category": "Fermented seasonings",
+   "forms": "Fermented paste",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "ogiri",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ogiri"
+    }
+   ]
+  },
+  {
+   "code": "F092",
+   "name": "Ugba (African oil bean)",
+   "category": "Fermented seasonings",
+   "forms": "Sliced, fermented",
+   "botanicalName": "Pentaclethra macrophylla",
+   "allergenNote": null,
+   "searchKey1": "ugba",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Apara"
+    },
+    {
+     "language": "igbo",
+     "name": "Ugba / Ukpaka"
+    }
+   ]
+  },
+  {
+   "code": "F093",
+   "name": "Tomato paste",
+   "category": "Processed foods & staples",
+   "forms": "Canned/sachet",
+   "botanicalName": null,
+   "allergenNote": null,
+   "searchKey1": "tomato paste",
+   "searchKey2": null,
+   "referenceForm": "As sold",
+   "aliases": []
+  }
+ ],
+ "recipes": [
+  {
+   "legacyNo": 1,
+   "slug": "jollof-rice",
+   "name": "Jollof Rice",
+   "category": "Rice dish",
+   "originNote": "Nationwide (West African)",
+   "summaryIngredients": "Long-grain parboiled rice, tomatoes, tatashe, scotch bonnet, onions, stock",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Tomatoes and peppers supply antioxidants (lycopene, vitamin C); rice gives quick energy; onions support heart health.",
+   "keyNutrients": "Carbohydrates, vitamin C, vitamin A, lycopene",
+   "cautions": "High in carbs and oil. Use less oil, add veggies (carrots, peas) and pair with protein and salad.",
+   "servedWith": "Fried plantain, chicken/beef, coleslaw, moi moi",
+   "occasion": "Parties, Sundays, celebrations",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "One-pot (simmered/steamed)",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Milk (optional)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cool quickly, refrigerate within 1 hr; eat within 1 day; reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Low heat + tight foil cover = evenly cooked grains. Don't stir too often or it turns mushy.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups parboiled long-grain rice",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "5 medium tomatoes",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "3 red bell peppers (tatashe)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 scotch bonnet peppers (ata rodo)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 large onions",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1/2 cup vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "3 tbsp tomato paste",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "3 cups chicken/beef stock",
+     "optional": false
+    },
+    {
+     "position": 9,
+     "rawText": "2 stock cubes, 1 tsp curry, 1 tsp thyme, 2 bay leaves",
+     "optional": false
+    },
+    {
+     "position": 10,
+     "rawText": "Salt to taste",
+     "optional": false
+    },
+    {
+     "position": 11,
+     "rawText": "1 tbsp butter (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Blend tomatoes, tatashe, scotch bonnet and 1 onion until smooth; boil the blend down until thick (about 15 min)."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Heat oil, fry sliced onion until soft, add tomato paste and fry 5 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add the reduced pepper blend and fry 15-20 min until oil floats on top."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add stock, seasoning cubes, curry, thyme, bay leaves and salt; bring to a boil."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Wash rice, add to the pot, stir, cover with foil and lid; cook on low heat 30-35 min."
+    },
+    {
+     "stepNumber": 6,
+     "instruction": "Stir gently, check doneness, add butter and let it slightly catch at the bottom for the smoky 'party' flavour."
+    }
+   ]
+  },
+  {
+   "legacyNo": 2,
+   "slug": "nigerian-fried-rice",
+   "name": "Fried Rice (Nigerian)",
+   "category": "Rice dish",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Parboiled rice, mixed vegetables, liver, curry, stock",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Vegetables add fibre and vitamins; liver is rich in iron and vitamin B12, good for blood health.",
+   "keyNutrients": "Carbohydrates, fibre, iron, vitamin A, B12",
+   "cautions": "Can be oily. Stir-fry with minimal oil and load up on vegetables.",
+   "servedWith": "Fried chicken, plantain, salad",
+   "occasion": "Christmas, weddings, parties",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stir-fried",
+   "spiceLevel": "MILD",
+   "costTier": "MEDIUM",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cool quickly, refrigerate within 1 hr; eat within 1 day; reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Use cooled, dry rice so it fries rather than steams. Curry gives the signature yellow colour.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups parboiled rice",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "3 cups chicken stock",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 carrots (diced)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 cup green beans (diced)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 cup sweet corn & peas",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "200g chicken/beef liver (diced)",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "1 green bell pepper, 1 onion",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "2 tsp curry, 1 tsp thyme, 2 stock cubes",
+     "optional": false
+    },
+    {
+     "position": 9,
+     "rawText": "4 tbsp vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 10,
+     "rawText": "Salt and white pepper",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Cook rice in stock with curry, thyme and salt until just done and dry; spread out to cool."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil liver in seasoned water 10 min, then dice."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Heat a little oil, stir-fry onions, then add vegetables and liver for 3-4 min (keep them crunchy)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add cooled rice in batches, stirring so every grain is coated."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Adjust seasoning and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 3,
+   "slug": "egusi-soup",
+   "name": "Egusi Soup",
+   "category": "Soup / Stew",
+   "originNote": "Nationwide (Yoruba, Igbo variations)",
+   "summaryIngredients": "Ground melon seeds, palm oil, leafy vegetables, assorted meat, stockfish",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Egusi seeds are rich in protein and healthy fats; leafy greens give iron and folate; supports muscle building and satiety.",
+   "keyNutrients": "Protein, healthy fats, vitamin E, iron, folate",
+   "cautions": "Calorie-dense due to seeds and palm oil. Moderate portions; use less palm oil.",
+   "servedWith": "Pounded yam, eba, fufu, semo, amala",
+   "occasion": "Everyday meals, Sunday lunch",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Frying egusi before adding stock gives a richer taste and prevents a raw 'seedy' flavour.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Obe egusi"
+    },
+    {
+     "language": "hausa",
+     "name": "Miyan egusi"
+    },
+    {
+     "language": "igbo",
+     "name": "Ofe egusi"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups ground egusi",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat (beef, shaki, cow skin)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 medium stockfish & 2 dry fish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 cups chopped ugu or spinach (or bitterleaf)",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 scotch bonnet peppers (ground)",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "1 onion",
+     "optional": false
+    },
+    {
+     "position": 9,
+     "rawText": "2 stock cubes, 1 tbsp iru (optional)",
+     "optional": true
+    },
+    {
+     "position": 10,
+     "rawText": "Salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Season and boil meat with onion and stock cubes until tender; add stockfish and dry fish."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Mix egusi with a little water/onion into a paste."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Heat palm oil, add egusi paste in lumps (or stir for smooth style) and fry 10 min, stirring to avoid burning."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add meat stock gradually, then meat, fish, crayfish and pepper; simmer 15 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add vegetables, cook 3-5 min, adjust salt and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 4,
+   "slug": "efo-riro",
+   "name": "Efo Riro",
+   "category": "Soup / Stew",
+   "originNote": "South-West (Yoruba)",
+   "summaryIngredients": "Spinach/efo tete, tatashe, palm oil, locust beans, assorted meat",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "Very high in leafy greens - iron, calcium, vitamin K and antioxidants; iru (locust beans) aids digestion.",
+   "keyNutrients": "Iron, calcium, vitamins A, C, K, protein",
+   "cautions": "Don't overcook the vegetables or you lose nutrients. Use palm oil moderately.",
+   "servedWith": "Pounded yam, eba, amala, white rice",
+   "occasion": "Everyday meals, parties",
+   "cuisine": "Yoruba",
+   "region": "South-West",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Squeezing water from the greens keeps the stew thick and rich, not watery.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Efo riro"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 large bunches efo tete or spinach",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "4 tatashe, 2 scotch bonnet, 1 onion (coarsely blended)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "500g assorted meat & smoked fish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 tbsp iru (locust beans)",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash, chop and blanch vegetables briefly; squeeze out water."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil meat with seasoning until tender."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Heat palm oil, fry onions and iru, add pepper blend and fry until reduced (15 min)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add meat, fish, crayfish and seasoning; simmer 5 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Stir in vegetables, cook 2-3 min and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 5,
+   "slug": "ogbono-soup",
+   "name": "Ogbono Soup",
+   "category": "Soup / Stew",
+   "originNote": "South-East & South-South",
+   "summaryIngredients": "Ground ogbono (wild mango seed), palm oil, okra or greens, meat/fish",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "Ogbono is high in fibre and may help regulate blood sugar and cholesterol; supports digestion.",
+   "keyNutrients": "Fibre, healthy fats, protein, iron",
+   "cautions": "Palm-oil heavy versions are calorie-rich. Combine with okra for extra fibre.",
+   "servedWith": "Eba, fufu, pounded yam",
+   "occasion": "Everyday meals",
+   "cuisine": "Igbo",
+   "region": "South-East & South-South",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Don't fry ogbono on high heat - it loses its draw. Less stirring = more draw.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Obe apon"
+    },
+    {
+     "language": "igbo",
+     "name": "Ofe ogbono"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 cup ground ogbono",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat & stockfish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 cup chopped ugu or bitterleaf",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 scotch bonnet (ground)",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil meat and stockfish with seasoning until tender."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Heat palm oil on low heat, take off heat and stir in ogbono until it dissolves."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Return to heat, add meat stock gradually while stirring until it draws."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add meat, fish, crayfish, pepper; simmer 10-15 min stirring often."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add greens, cook 3 min and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 6,
+   "slug": "afang-soup",
+   "name": "Afang Soup",
+   "category": "Soup / Stew",
+   "originNote": "South-South (Efik/Ibibio)",
+   "summaryIngredients": "Afang (okazi) leaves, waterleaf, periwinkle, palm oil, meat/fish",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Very nutrient-dense; afang and waterleaf are rich in fibre, iron and antioxidants; periwinkle adds zinc and protein.",
+   "keyNutrients": "Fibre, iron, zinc, protein, vitamins A & C",
+   "cautions": "Use moderate palm oil. Wash periwinkle thoroughly.",
+   "servedWith": "Pounded yam, eba, fufu",
+   "occasion": "Special occasions, Sunday meals",
+   "cuisine": "Efik / Ibibio",
+   "region": "South-South",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)",
+    "Shellfish (mollusc)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Don't add water - the waterleaf releases enough liquid.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups afang leaves (pounded or finely ground)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "4 bunches waterleaf (chopped)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat, kpomo, stockfish, dry fish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 cups periwinkle (cleaned)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Scotch bonnet, 2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil meats with seasoning until tender; add stockfish and dry fish."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add waterleaf first and cook 5 min (it releases water)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add palm oil, crayfish, pepper and periwinkle; cook 5 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the ground afang leaves, stir well, cook 5 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Adjust seasoning and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 7,
+   "slug": "edikang-ikong",
+   "name": "Edikang Ikong",
+   "category": "Soup / Stew",
+   "originNote": "South-South (Efik/Ibibio)",
+   "summaryIngredients": "Ugu (pumpkin leaves), waterleaf, periwinkle, palm oil, meat",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Often called a 'vegetable powerhouse'; ugu is linked to improved blood health (iron) and immunity.",
+   "keyNutrients": "Iron, folate, vitamins A, C, K, protein",
+   "cautions": "Very high in greens - one of the healthiest Nigerian soups. Keep oil moderate.",
+   "servedWith": "Pounded yam, fufu, eba",
+   "occasion": "Special occasions",
+   "cuisine": "Efik / Ibibio",
+   "region": "South-South",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)",
+    "Shellfish (mollusc)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Ratio is usually more ugu than waterleaf so the soup isn't watery.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 large bunches ugu (finely sliced)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "3 bunches waterleaf (sliced)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat, kpomo, stockfish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 cup periwinkle",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Pepper, 2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Cook meats with very little water and seasoning until tender."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add waterleaf, cook 5 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add palm oil, crayfish, pepper and periwinkle; stir."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add ugu, stir, cook 3-5 min and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 8,
+   "slug": "banga-soup-ofe-akwu",
+   "name": "Banga Soup (Ofe Akwu)",
+   "category": "Soup / Stew",
+   "originNote": "South-South (Urhobo/Isoko) & South-East",
+   "summaryIngredients": "Palm fruit extract, banga spices, catfish, beletete leaves",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Palm fruit is rich in vitamin E (tocotrienols) and beta-carotene - antioxidants that support skin and eyes.",
+   "keyNutrients": "Vitamin E, vitamin A, healthy fats, protein (fish)",
+   "cautions": "Naturally high in fat. Skim excess oil and keep portions moderate.",
+   "servedWith": "Starch (Delta), white rice (Igbo ofe akwu), eba",
+   "occasion": "Special occasions",
+   "cuisine": "Urhobo / Isoko",
+   "region": "South-East & South-South",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Don't stir after adding catfish so it doesn't break apart.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ofe akwu"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg palm fruits (or 800g tinned palm concentrate)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 medium fresh catfish",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "500g beef/dry fish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tbsp banga spice, 2 oburunbebe sticks",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Beletete or scent leaves",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 tbsp crayfish, pepper, stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil palm fruits until soft, pound and extract the juice with warm water; sieve."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil the extract 20 min until it thickens and oil rises."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add cooked meat, crayfish, pepper and banga spices."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add cleaned catfish gently, simmer 10 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add beletete/scent leaves, simmer 3 min, serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 9,
+   "slug": "okra-soup",
+   "name": "Okra Soup",
+   "category": "Soup / Stew",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Fresh okra, palm oil, ugu, meat/fish, crayfish",
+   "timeText": "45 min",
+   "totalMinutes": 45,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "Okra is rich in soluble fibre - supports digestion, may help control blood sugar and cholesterol; low in calories.",
+   "keyNutrients": "Fibre, vitamin C, vitamin K, folate, magnesium",
+   "cautions": "Great option for weight watchers and diabetics (with a portion-controlled swallow).",
+   "servedWith": "Eba, fufu, semo, amala",
+   "occasion": "Everyday meals",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "A pinch of potash (akanwu) increases the draw, but use sparingly.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Obe ila"
+    },
+    {
+     "language": "hausa",
+     "name": "Miyan kubewa"
+    },
+    {
+     "language": "igbo",
+     "name": "Ofe okwuru"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "500g fresh okra (chopped/grated)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 kg assorted meat & fish",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/4 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 cup ugu leaves",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Pepper, 2 stock cubes, salt",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "1 tbsp iru (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil meat with seasoning until tender."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add palm oil, crayfish, pepper and fish; simmer 5 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add okra, stir, cook 3-5 min (don't overcook - keep it green)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add ugu, cook 2 min, serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 10,
+   "slug": "goat-meat-pepper-soup",
+   "name": "Goat Meat Pepper Soup",
+   "category": "Soup / Stew",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Goat meat, pepper soup spice, scent leaves, scotch bonnet",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Light broth that's warming; spices (uda, uziza, ehuru) have anti-inflammatory properties; traditionally given for colds and postpartum recovery.",
+   "keyNutrients": "Protein, iron, zinc, B vitamins",
+   "cautions": "Low-carb and low-oil. Watch sodium from stock cubes.",
+   "servedWith": "Boiled yam, white rice, agidi, on its own",
+   "occasion": "Evenings, bars, cold weather, new mothers",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Catfish (point-and-kill) or chicken work with the same method - just shorter cooking.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg goat meat (cut small)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 tbsp pepper soup spice",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 onion",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2-3 scotch bonnet (ground)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Handful of scent leaves (efirin) or uziza",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "5 cups water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash goat meat, season with onion, stock cubes and salt; steam 10 min."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add water and boil until meat is almost tender (40 min)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add pepper soup spice and ground pepper; simmer 10 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add sliced scent leaves, cook 2 min, serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 11,
+   "slug": "ofe-onugbu",
+   "name": "Ofe Onugbu (Bitterleaf Soup)",
+   "category": "Soup / Stew",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "Washed bitterleaf, cocoyam thickener, palm oil, ogiri, meat/fish",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Bitterleaf has been studied for blood-sugar-lowering and antimicrobial effects; supports liver health and digestion.",
+   "keyNutrients": "Fibre, antioxidants, vitamin C, iron",
+   "cautions": "Ensure leaves are properly washed to reduce bitterness. Cocoyam thickener adds carbs.",
+   "servedWith": "Fufu, pounded yam, eba",
+   "occasion": "Traditional ceremonies, everyday",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Ogiri gives the authentic aroma; substitute with iru if unavailable.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ofe onugbu"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups washed bitterleaf",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "10 small cocoyams (boiled, pounded)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat & stockfish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 tbsp ogiri (fermented seeds)",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Pepper, 2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil meat and stockfish with seasoning until tender."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add palm oil, pepper, crayfish and ogiri; cook 5 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add pounded cocoyam in small lumps; cook until dissolved and soup thickens (10 min)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add bitterleaf, simmer 5 min, adjust salt and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 12,
+   "slug": "moi-moi",
+   "name": "Moi Moi",
+   "category": "Snack / Side",
+   "originNote": "Nationwide (Yoruba origin)",
+   "summaryIngredients": "Peeled beans, tatashe, onions, oil, eggs/fish",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Steamed, not fried - beans give plant protein and fibre; good for heart health and steady blood sugar.",
+   "keyNutrients": "Plant protein, fibre, folate, iron, potassium",
+   "cautions": "Use less oil (2-3 tbsp is enough per 2 cups beans). Great for diabetics in moderation.",
+   "servedWith": "Jollof, pap (ogi), custard, garri, bread",
+   "occasion": "Parties, breakfast",
+   "cuisine": "Yoruba",
+   "region": "Nationwide",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Steamed",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Egg",
+    "Fish"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Whisking the batter for a few minutes makes it lighter and fluffier.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Moin-moin"
+    },
+    {
+     "language": "hausa",
+     "name": "Alele"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups black-eyed or honey beans (peeled)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 tatashe, 1 scotch bonnet, 1 onion",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/3 cup vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 boiled eggs (sliced), flaked fish/corned beef",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 cup warm stock or water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Soak beans 10 min, rub to remove skins, rinse until clean."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Blend beans with peppers and onion to a smooth thick paste."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Mix in oil, stock, stock cubes and salt to a pourable (not watery) consistency."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pour into leaves, foil or ramekins; add egg/fish."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Steam 45-60 min until firm."
+    }
+   ]
+  },
+  {
+   "legacyNo": 13,
+   "slug": "akara",
+   "name": "Akara (Bean Cakes)",
+   "category": "Snack / Side",
+   "originNote": "Nationwide (Yoruba)",
+   "summaryIngredients": "Peeled beans, onions, pepper, oil for frying",
+   "timeText": "45 min",
+   "totalMinutes": 45,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "High in plant protein from beans - filling and energy-giving breakfast.",
+   "keyNutrients": "Plant protein, fibre, iron",
+   "cautions": "Deep fried - absorbs oil. Drain on paper towels; air-frying is a healthier option.",
+   "servedWith": "Pap (ogi/akamu), bread, custard",
+   "occasion": "Breakfast, Saturday mornings",
+   "cuisine": "Yoruba",
+   "region": "Nationwide",
+   "mealSlot": "Breakfast",
+   "cookingMethod": "Deep-fried",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Too much water = flat akara that soaks up oil. Keep the batter thick.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Akara"
+    },
+    {
+     "language": "hausa",
+     "name": "Kosai"
+    },
+    {
+     "language": "igbo",
+     "name": "Akara"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups peeled black-eyed beans",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 onion",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1-2 scotch bonnet",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tsp salt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Oil for deep frying",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Soak and peel beans; rinse well."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Blend with very little water to a thick paste."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Whisk paste vigorously 5 min to add air; add chopped onion, pepper and salt."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Scoop spoonfuls into hot oil, fry until golden on both sides."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Drain and serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 14,
+   "slug": "suya",
+   "name": "Suya",
+   "category": "Grill / Protein",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Thin beef slices, yaji (suya spice), groundnut oil",
+   "timeText": "3 hrs (incl. marinating)",
+   "totalMinutes": 180,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Lean beef provides protein, iron and zinc; spices like ginger and garlic aid digestion.",
+   "keyNutrients": "Protein, iron, zinc, B12",
+   "cautions": "Grilled meat over open flame - avoid charring. Yaji has groundnut (allergy warning).",
+   "servedWith": "Sliced onions, tomatoes, cabbage, extra yaji",
+   "occasion": "Evenings, street food, hangouts",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Grilled / roasted",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cook fresh; refrigerate leftovers within 2 hrs, eat within 2 days and reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Soak wooden skewers in water 30 min to stop them burning.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Tsire"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg beef (sirloin/flank), thinly sliced",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup yaji (ground kuli-kuli, ginger, garlic, paprika, cayenne, stock cube)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "3 tbsp groundnut oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "Skewers",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Onions, tomatoes, cabbage to serve",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Slice beef very thin and thread onto skewers."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Brush with oil, coat generously with yaji."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Marinate 2 hrs or overnight."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Grill on high heat or oven 200°C, 8-10 min per side, brushing with oil."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Sprinkle extra yaji and serve with onions and tomatoes."
+    }
+   ]
+  },
+  {
+   "legacyNo": 15,
+   "slug": "pounded-yam",
+   "name": "Pounded Yam",
+   "category": "Swallow",
+   "originNote": "Nationwide (Yoruba, Igbo)",
+   "summaryIngredients": "White yam, water",
+   "timeText": "40 min",
+   "totalMinutes": 40,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Yam provides complex carbs, potassium and vitamin C; naturally gluten-free.",
+   "keyNutrients": "Complex carbs, potassium, vitamin C, fibre",
+   "cautions": "High glycemic load in big portions. Keep the swallow fist-sized and eat with veggie-rich soup.",
+   "servedWith": "Egusi, efo riro, ogbono, afang, edikang ikong",
+   "occasion": "Weekends, ceremonies",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MILD",
+   "costTier": "MEDIUM",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; refrigerate leftovers within 2 hrs and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Use old (dry) yam - new yam is watery and gives a soft, sticky result.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Iyan"
+    },
+    {
+     "language": "hausa",
+     "name": "Tuwon doya"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 medium tuber white yam (puna)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "Water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Peel yam, cut into chunks and wash."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil until very soft (20-25 min)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Pound in a mortar (or use a food processor/yam pounder) while hot, adding a splash of hot water."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pound until smooth, stretchy and lump-free; shape into balls."
+    }
+   ]
+  },
+  {
+   "legacyNo": 16,
+   "slug": "eba-garri",
+   "name": "Eba (Garri)",
+   "category": "Swallow",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Garri (fermented cassava granules), hot water",
+   "timeText": "5 min",
+   "totalMinutes": 5,
+   "difficulty": "EASY",
+   "servings": 2,
+   "healthBenefits": "Quick energy source; fermentation of cassava may support gut health.",
+   "keyNutrients": "Carbohydrates, some fibre",
+   "cautions": "Low in protein and vitamins on its own - pair with protein-rich, vegetable soup. Yellow garri has some vitamin A (palm oil).",
+   "servedWith": "Okra, ogbono, egusi, efo riro",
+   "occasion": "Everyday meals",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; refrigerate leftovers within 2 hrs and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Adding garri to water (not water to garri) prevents lumps.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Eba"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups garri (yellow or white)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 cups boiling water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Pour boiling water into a bowl."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Sprinkle garri over the water and let it soak 1 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Stir and fold firmly with a wooden spatula until smooth."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add more garri for firmer eba; shape and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 17,
+   "slug": "amala-ewedu-gbegiri",
+   "name": "Amala, Ewedu & Gbegiri",
+   "category": "Swallow & Soup",
+   "originNote": "South-West (Yoruba, esp. Oyo/Ibadan)",
+   "summaryIngredients": "Yam flour, jute leaves, peeled beans, palm oil, stew",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Ewedu (jute leaves) is high in iron and fibre; gbegiri adds plant protein; amala (yam flour) has a lower glycemic index than pounded yam.",
+   "keyNutrients": "Fibre, iron, plant protein, vitamins A & C",
+   "cautions": "Balanced combo - carbs + protein + greens. Watch the oily stew topping.",
+   "servedWith": "Assorted meat, buka stew (ata dindin)",
+   "occasion": "Lunch, Abula spots",
+   "cuisine": "Yoruba",
+   "region": "South-West",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Stir amala fast and continuously to avoid lumps.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Amala, ewedu, gbegiri"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups elubo (yam flour) + water",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 bunches ewedu leaves",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 tsp potash/kaun (optional) + 1 tbsp iru",
+     "optional": true
+    },
+    {
+     "position": 4,
+     "rawText": "1 cup peeled beans (gbegiri)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "3 tbsp palm oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Crayfish, pepper, stock cubes, salt",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Buka stew and assorted meat to serve",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Gbegiri: boil peeled beans until very soft, mash smooth; add palm oil, crayfish, pepper, seasoning; simmer 10 min."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Ewedu: pick leaves, boil in a little water (with potash if using) 5 min; whisk (ijabe) until slimy, add iru, crayfish, salt."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Amala: boil water, sprinkle elubo while stirring vigorously; add a splash of water, cover 3 min, stir again until smooth."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Serve amala with ewedu, gbegiri and stew on top."
+    }
+   ]
+  },
+  {
+   "legacyNo": 18,
+   "slug": "beans-porridge-ewa-riro",
+   "name": "Beans Porridge (Ewa Riro)",
+   "category": "Main dish",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Honey beans, palm oil, onions, pepper, crayfish",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "Excellent plant protein and fibre; keeps you full; supports heart health and steady blood sugar.",
+   "keyNutrients": "Plant protein, fibre, folate, magnesium, potassium",
+   "cautions": "Can cause bloating - parboil and discard first water to reduce gas.",
+   "servedWith": "Fried plantain (dodo), bread, garri",
+   "occasion": "Lunch, dinner",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Fish (optional)",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Pressure cooker cuts cooking time by half.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewa riro"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups honey beans (oloyin)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 onion, 2 scotch bonnet, 2 tatashe (blended)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Smoked fish (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Pick and wash beans; boil 10 min, drain water."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add fresh water, cook until soft (45-60 min)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "In a separate pan, fry onion and pepper blend in palm oil 10 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pour into beans with crayfish, seasoning and fish; simmer 10 min, mashing some beans for creaminess."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 19,
+   "slug": "yam-porridge-asaro",
+   "name": "Yam Porridge (Asaro)",
+   "category": "Main dish",
+   "originNote": "Nationwide (Yoruba)",
+   "summaryIngredients": "Yam, palm oil, pepper blend, greens, fish",
+   "timeText": "45 min",
+   "totalMinutes": 45,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Comforting, easy to digest; yam offers potassium and vitamin C; greens add iron.",
+   "keyNutrients": "Complex carbs, potassium, vitamin C, iron",
+   "cautions": "Add vegetables and fish to balance the carbs.",
+   "servedWith": "Eaten on its own",
+   "occasion": "Lunch, dinner",
+   "cuisine": "Yoruba",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Sweet potato or plantain can be added for a twist.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Asaro"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1/2 tuber yam (cubed)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "3 tbsp palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Blended tatashe, scotch bonnet, onion",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Smoked fish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 cup spinach or ugu",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Peel and cube yam, wash, put in pot with water just covering it."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add pepper blend, palm oil, crayfish, fish and seasoning."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Cook until yam is soft (20 min); mash some pieces to thicken."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add greens, stir and cook 2 min. Serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 20,
+   "slug": "ofada-rice-ayamase",
+   "name": "Ofada Rice & Ayamase",
+   "category": "Rice dish",
+   "originNote": "South-West (Ogun State)",
+   "summaryIngredients": "Local unpolished ofada rice, green peppers, bleached palm oil, iru, assorted meat",
+   "timeText": "2 hrs",
+   "totalMinutes": 120,
+   "difficulty": "HARD",
+   "servings": 6,
+   "healthBenefits": "Ofada rice is unpolished - more fibre, minerals and lower glycemic index than white rice.",
+   "keyNutrients": "Fibre, B vitamins, magnesium, protein",
+   "cautions": "Ayamase uses lots of bleached palm oil - reduce quantity. Bleaching oil produces smoke; do it outdoors.",
+   "servedWith": "Fried plantain, boiled eggs",
+   "occasion": "Weekends, parties",
+   "cuisine": "Yoruba",
+   "region": "South-West",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Egg"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cool quickly, refrigerate within 1 hr; eat within 1 day; reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Traditionally served in uma (moimoi) leaves for aroma.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Iresi ofada ati ayamase"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups ofada rice",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "10 green bell peppers + 4 green scotch bonnet",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 cup palm oil (bleached)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 kg assorted meat (shaki, beef, kpomo)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "3 tbsp iru",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "4 boiled eggs",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 onions, stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Pick stones from ofada rice, wash well, boil until soft (40-50 min)."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Coarsely blend green peppers and boil to reduce water."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Bleach palm oil: heat in a covered pot on low heat 10-15 min until clear (ventilate!). Cool slightly."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Fry onions and iru in the oil, add pepper blend and fry 20-30 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add cooked meat, stock and seasoning; simmer 10 min; add eggs."
+    }
+   ]
+  },
+  {
+   "legacyNo": 21,
+   "slug": "nkwobi",
+   "name": "Nkwobi",
+   "category": "Grill / Protein",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "Cow foot, palm oil, potash (akanwu), utazi, ugba",
+   "timeText": "2 hrs",
+   "totalMinutes": 120,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Cow foot is rich in collagen and gelatin, which support joints and skin.",
+   "keyNutrients": "Protein, collagen, healthy fats",
+   "cautions": "High in fat and cholesterol - an occasional treat. Potash in small amounts only.",
+   "servedWith": "Palm wine, chilled drinks",
+   "occasion": "Evenings, bars, celebrations",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Serve in a wooden bowl for the classic presentation.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Nkwobi"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg cow foot (cut)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 tsp potash (dissolved, filtered)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tbsp ground ehuru (calabash nutmeg)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Utazi leaves, 1 onion, ugba (optional)",
+     "optional": true
+    },
+    {
+     "position": 7,
+     "rawText": "Pepper, 2 stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil cow foot with seasoning until very tender (1.5 hrs); reduce stock."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Mix filtered potash water into palm oil until it thickens and turns yellow."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add crayfish, ehuru, pepper and a little stock; mix into a paste."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Toss cow foot in the paste and warm through."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Garnish with sliced utazi and onions."
+    }
+   ]
+  },
+  {
+   "legacyNo": 22,
+   "slug": "fried-plantain-dodo",
+   "name": "Fried Plantain (Dodo)",
+   "category": "Snack / Side",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Ripe plantain, salt, oil",
+   "timeText": "15 min",
+   "totalMinutes": 15,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Plantain provides potassium, vitamin A, vitamin C and fibre; good for heart health.",
+   "keyNutrients": "Potassium, vitamins A, B6, C, fibre",
+   "cautions": "Deep-fried absorbs oil. Air-fry or roast (boli) for a healthier version.",
+   "servedWith": "Jollof, beans, rice and stew, eggs",
+   "occasion": "Any meal",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Deep-fried",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Best eaten fresh; store covered and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Very ripe plantain caramelises faster - lower the heat slightly.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Dodo"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 ripe plantains (yellow with black spots)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 tsp salt",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Oil for frying",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Peel plantain and cut diagonally or into cubes."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Sprinkle lightly with salt."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Fry in hot oil until golden brown on both sides (3-4 min)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Drain on paper towel and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 23,
+   "slug": "boli-roasted-plantain",
+   "name": "Boli (Roasted Plantain)",
+   "category": "Snack / Side",
+   "originNote": "South-South (Port Harcourt)",
+   "summaryIngredients": "Ripe plantain, groundnuts, fish/pepper sauce",
+   "timeText": "30 min",
+   "totalMinutes": 30,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Roasted, not fried - a lower-fat way to enjoy plantain's potassium and fibre; groundnuts add protein and healthy fats.",
+   "keyNutrients": "Potassium, fibre, vitamins A & C, healthy fats",
+   "cautions": "One of the healthier snacks. Groundnut allergy warning.",
+   "servedWith": "Roasted groundnuts, roasted fish & pepper sauce",
+   "occasion": "Street food, snack",
+   "cuisine": "Other",
+   "region": "South-South",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Grilled / roasted",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Fish (optional)",
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "OPTIONAL",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Slightly firm plantain roasts best; very soft ones turn mushy.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Bole"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "4 firm-ripe plantains",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 cup roasted groundnuts",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Pepper sauce: palm oil, scotch bonnet, onion, salt",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "Roasted fish (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Peel plantains."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Roast over charcoal, grill or oven (200°C) turning until charred spots appear and inside is soft (20-25 min)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Make pepper sauce by mixing palm oil, ground pepper, onions and salt."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Serve with groundnuts and sauce."
+    }
+   ]
+  },
+  {
+   "legacyNo": 24,
+   "slug": "puff-puff",
+   "name": "Puff-Puff",
+   "category": "Snack / Side",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Flour, sugar, yeast, nutmeg, oil",
+   "timeText": "1 hr 30 min (incl. rising)",
+   "totalMinutes": 90,
+   "difficulty": "EASY",
+   "servings": 8,
+   "healthBenefits": "Quick energy treat - mainly an indulgence rather than a health food.",
+   "keyNutrients": "Carbohydrates",
+   "cautions": "High in sugar and oil. Enjoy occasionally; reduce sugar to 1/4 cup.",
+   "servedWith": "Zobo, chilled drinks, small chops platter",
+   "occasion": "Parties, small chops, snacks",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Deep-fried",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Wheat (gluten)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "TREAT",
+   "storageGuidance": "Best eaten fresh; store covered and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Oil should be medium-hot - too hot and the inside stays raw.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups all-purpose flour",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup sugar",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 tsp instant yeast",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1/2 tsp nutmeg, pinch of salt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 1/4 cups warm water",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Oil for deep frying",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Mix flour, sugar, yeast, nutmeg and salt."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add warm water gradually, mix into a smooth sticky batter."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Cover and leave to rise 45-60 min until doubled."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Scoop small balls with your hand into hot oil; fry until golden."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Drain and serve."
+    }
+   ]
+  },
+  {
+   "legacyNo": 25,
+   "slug": "chin-chin",
+   "name": "Chin Chin",
+   "category": "Snack / Side",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Flour, sugar, butter, milk, eggs, nutmeg",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "EASY",
+   "servings": 10,
+   "healthBenefits": "Energy-dense snack; eggs and milk add a little protein and calcium.",
+   "keyNutrients": "Carbohydrates, fats, some protein",
+   "cautions": "High in sugar and fat. Bake instead of frying for a lighter version.",
+   "servedWith": "Drinks, tea",
+   "occasion": "Christmas, festive seasons, gifts",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Deep-fried",
+   "spiceLevel": "MILD",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Egg",
+    "Milk",
+    "Wheat (gluten)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "TREAT",
+   "storageGuidance": "Cool fully; store airtight in a cool, dry place; discard if stale, rancid-smelling or mouldy.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Popular as a small business product - good packaging sells.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "4 cups flour",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup sugar",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/2 cup butter/margarine",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 egg",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 cup milk",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 tsp nutmeg, 1/2 tsp baking powder",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Oil for frying",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Mix flour, sugar, nutmeg and baking powder; rub in butter until crumbly."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add egg and milk; knead into a firm dough."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Roll out thin, cut into small squares/strips."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Fry in medium-hot oil, stirring, until golden."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Drain, cool and store in an airtight jar."
+    }
+   ]
+  },
+  {
+   "legacyNo": 26,
+   "slug": "tuwo-shinkafa-miyan-kuka",
+   "name": "Tuwo Shinkafa & Miyan Kuka",
+   "category": "Swallow & Soup",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Soft rice, baobab leaf powder, dried meat/fish, daddawa",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Baobab leaves are rich in calcium, iron, and antioxidants; supports bone health and immunity.",
+   "keyNutrients": "Calcium, iron, vitamin C, fibre, carbs",
+   "cautions": "Balanced meal. Keep oil moderate.",
+   "servedWith": "Miyan kuka, miyan taushe, miyan kubewa (okra)",
+   "occasion": "Lunch, dinner",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Peanut (oil only)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Whisk continuously while adding kuka or it clumps.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Tuwon shinkafa da miyan kuka"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups short-grain/soft rice (tuwo)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup kuka (baobab leaf powder)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "300g dried meat or fish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp daddawa (fermented locust beans)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 tbsp palm or groundnut oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Onion, pepper, stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Tuwo: cook rice with extra water until very soft; mash/stir vigorously into a smooth mass; shape."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Kuka: boil meat/fish with onion, pepper, daddawa and seasoning."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add oil, then sprinkle kuka powder while whisking to avoid lumps."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Simmer 5 min and serve with tuwo."
+    }
+   ]
+  },
+  {
+   "legacyNo": 27,
+   "slug": "masa-waina",
+   "name": "Masa (Waina)",
+   "category": "Snack / Side",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Rice, yeast, sugar, oil",
+   "timeText": "3 hrs (incl. fermenting)",
+   "totalMinutes": 180,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Fermented rice cakes - fermentation improves digestibility; lighter than deep-fried snacks.",
+   "keyNutrients": "Carbohydrates, some B vitamins",
+   "cautions": "Pair with protein-rich soup/suya for balance.",
+   "servedWith": "Miyan taushe, yaji, honey, suya",
+   "occasion": "Breakfast, street snack",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Breakfast",
+   "cookingMethod": "Shallow-fried (pan)",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "A special masa pan with round holes gives the authentic shape.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Waina / Masa"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups rice (soaked overnight)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 cup cooked rice",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 tsp yeast",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp sugar, pinch of salt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 tsp baking powder",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Oil for the pan",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Blend soaked rice and cooked rice with a little water to a thick batter."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add yeast, cover and ferment 2 hrs (or overnight)."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add sugar, salt, baking powder; mix."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pour into an oiled masa pan (or muffin pan) and cook covered on low heat; flip once golden."
+    }
+   ]
+  },
+  {
+   "legacyNo": 28,
+   "slug": "abacha-african-salad",
+   "name": "Abacha (African Salad)",
+   "category": "Main dish",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "Dried shredded cassava, ugba, palm oil, potash, garden egg leaves, fish",
+   "timeText": "45 min",
+   "totalMinutes": 45,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Ugba (fermented oil bean) contains probiotics and protein; garden egg leaves add fibre and iron.",
+   "keyNutrients": "Fibre, protein, probiotics, vitamin A",
+   "cautions": "Potash in small amounts only; not ideal for people with kidney issues.",
+   "servedWith": "Fried fish, kpomo, garden eggs, palm wine",
+   "occasion": "Evenings, ceremonies",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Soaked / no-cook",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Serve at room temperature - it's a salad.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Abacha"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups abacha (dried cassava shreds)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 cup ugba",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tsp potash (dissolved, filtered)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 tbsp crayfish, ground pepper, ehuru",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Garden egg leaves or utazi, onions",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Fried fish, kpomo, stock cubes, salt",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Soak abacha in cold water 10 min until soft; drain."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Mix filtered potash water into palm oil until it thickens."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add crayfish, pepper, ehuru, stock cube and ugba; mix."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add abacha and mix thoroughly."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Top with sliced garden egg leaves, onions and fish."
+    }
+   ]
+  },
+  {
+   "legacyNo": 29,
+   "slug": "zobo-drink",
+   "name": "Zobo Drink",
+   "category": "Drink",
+   "originNote": "Northern Nigeria (now nationwide)",
+   "summaryIngredients": "Dried hibiscus petals, ginger, pineapple, cloves",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "EASY",
+   "servings": 10,
+   "healthBenefits": "Hibiscus is rich in antioxidants; studies link it to lowering blood pressure; ginger aids digestion.",
+   "keyNutrients": "Antioxidants (anthocyanins), vitamin C",
+   "cautions": "Commercial zobo can be very sugary - sweeten with fruit (pineapple, dates) instead.",
+   "servedWith": "Small chops, puff-puff, on its own",
+   "occasion": "Parties, hot afternoons",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Drink",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Keep chilled in a clean covered container; drink within 1-2 days; discard if it smells off.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Popular small-business drink - add cucumber or orange for flavour variants.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Zoborodo"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups dried zobo (hibiscus) leaves",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 pineapple (peels + flesh)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Thumb-sized ginger",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tsp cloves",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "8 cups water",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Sugar/honey to taste (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash zobo leaves."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil with pineapple peels, ginger and cloves 20-30 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Cool and strain."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Blend pineapple flesh, strain and add to the drink for natural sweetness."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Refrigerate and serve chilled."
+    }
+   ]
+  },
+  {
+   "legacyNo": 30,
+   "slug": "kunu-kunun-zaki",
+   "name": "Kunu (Kunun Zaki)",
+   "category": "Drink",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Millet or sorghum, ginger, cloves, sweet potato",
+   "timeText": "12 hrs (incl. soaking)",
+   "totalMinutes": 720,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Millet is gluten-free and rich in magnesium; fermentation gives mild probiotic benefit; refreshing and energising.",
+   "keyNutrients": "Carbohydrates, magnesium, iron, B vitamins",
+   "cautions": "Drink fresh - spoils quickly. Limit added sugar.",
+   "servedWith": "Masa, akara, on its own",
+   "occasion": "Hot afternoons, Ramadan iftar",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Drink",
+   "cookingMethod": "Fermented",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Keep chilled in a clean covered container; drink within 1-2 days; discard if it smells off.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "The raw portion contains enzymes that naturally sweeten the drink.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kunun zaki"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups millet (or sorghum)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "Thumb-sized ginger, 1 tsp cloves",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 small sweet potato (optional)",
+     "optional": true
+    },
+    {
+     "position": 4,
+     "rawText": "Sugar/dates to taste",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Soak millet overnight; drain."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Blend with ginger, cloves and sweet potato into a smooth paste; divide into 2 parts."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Pour boiling water into one part while stirring until it thickens."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the second (raw) part, stir, cover and leave 2-3 hrs."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Strain through a fine cloth, sweeten and chill."
+    }
+   ]
+  },
+  {
+   "legacyNo": 31,
+   "slug": "ogi-pap-akamu",
+   "name": "Ogi / Pap (Akamu)",
+   "category": "Breakfast / Porridge",
+   "originNote": "Nationwide (Yoruba: ogi; Igbo: akamu; Hausa: koko)",
+   "summaryIngredients": "Fermented maize (or millet/sorghum) paste, water, sugar or honey, milk (optional)",
+   "timeText": "3 days (incl. fermenting)",
+   "totalMinutes": 4320,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Smooth, easily eaten source of carbohydrate energy; pairs well with protein foods (akara, moi moi, eggs, milk) for a more balanced breakfast.",
+   "keyNutrients": "Carbohydrates; B vitamins (amount depends on grain and processing)",
+   "cautions": "Plain pap is low in protein and fibre. Pair with beans, eggs or milk and keep added sugar low.",
+   "servedWith": "Akara, moi moi, boiled eggs, bread",
+   "occasion": "Everyday breakfast",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Breakfast",
+   "cookingMethod": "Fermented",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Milk (optional)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cooked pap: refrigerate within 2 hrs and eat within 2 days. Settled ogi paste: keep covered with clean water in the fridge, changing the water daily.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Stir constantly while adding boiling water to avoid lumps. Keep settled ogi covered with clean water in the fridge and change the water daily.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ogi"
+    },
+    {
+     "language": "hausa",
+     "name": "Koko"
+    },
+    {
+     "language": "igbo",
+     "name": "Akamu"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups dry yellow or white maize (or millet/sorghum)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "Clean water for soaking, washing and cooking",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Sugar or honey to taste",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "Evaporated or powdered milk (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash the maize and soak in clean water for 2-3 days, changing the water daily, until soft and slightly sour."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Drain and blend with clean water until smooth; sieve through a fine cloth or sieve and discard the chaff."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Leave the sieved liquid to settle for 6-12 hours, then pour off the water; the thick settled paste is ogi."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Mix about 1/2 cup ogi paste with a little cold water into a smooth slurry."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Pour in 2-3 cups boiling water, stirring quickly until it thickens; simmer gently 3-5 min, stirring, so it is fully cooked."
+    },
+    {
+     "stepNumber": 6,
+     "instruction": "Sweeten to taste and add milk if desired. Serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 32,
+   "slug": "agidi-eko",
+   "name": "Agidi (Eko)",
+   "category": "Snack / Side",
+   "originNote": "Nationwide (Yoruba: eko; Igbo: agidi)",
+   "summaryIngredients": "Fermented corn paste (ogi), water, leaf or food-grade wraps",
+   "timeText": "1 hr (after ogi is ready)",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Soft, mild carbohydrate food that makes a filling base for protein-rich partners such as moi moi, akara, fish or stew.",
+   "keyNutrients": "Carbohydrates; small amounts of B vitamins",
+   "cautions": "Low in protein and fibre on its own, so pair with beans, eggs, fish or meat. Use clean wrappers and refrigerate leftovers.",
+   "servedWith": "Moi moi, akara, stew, fried fish",
+   "occasion": "Breakfast, lunch side",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Breakfast",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Refrigerate within 2 hrs; eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "The mixture must be thick enough to hold its shape; it firms up as it cools. Use clean wrappers, refrigerate and eat within 1-2 days.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Eko"
+    },
+    {
+     "language": "igbo",
+     "name": "Agidi"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups settled ogi paste (see Ogi / Pap)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "About 7 cups water (4 cups boiling, rest cold)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Banana or other clean leaves, or food-grade wraps/moulds",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Mix 1 cup of the ogi paste with 1 cup cold water into a smooth slurry."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Pour in about 4 cups boiling water, stirring quickly until it thickens into a custard-like pap."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Stir in the rest of the paste gradually, then cook on low heat for 10-15 min, stirring, until very thick and glossy."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Scoop portions into leaf wraps or moulds and wrap/cover tightly."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Leave to cool and set (30-45 min). Serve with moi moi, akara or stew."
+    }
+   ]
+  },
+  {
+   "legacyNo": 33,
+   "slug": "fufu-akpu",
+   "name": "Fufu (Akpu / Cassava Fufu)",
+   "category": "Swallow",
+   "originNote": "South-West & South-East (Yoruba, Igbo); popular nationwide",
+   "summaryIngredients": "Cassava tubers (soaked/fermented), water",
+   "timeText": "3 days (incl. fermenting)",
+   "totalMinutes": 4320,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Cassava is a staple source of energy; the soft, stretchy dough suits vegetable and protein-rich soups.",
+   "keyNutrients": "Carbohydrates; small amounts of potassium",
+   "cautions": "Cassava must be peeled, soaked or fermented and well cooked to reduce naturally occurring cyanogenic compounds; never eat it raw or poorly processed. Low in protein and fibre, so serve with vegetable soups and fish or meat.",
+   "servedWith": "Egusi, ogbono, okra, oha, efo riro",
+   "occasion": "Everyday meals, Sunday lunch",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Fermented",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; refrigerate leftovers within 2 hrs and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Never eat raw or poorly processed cassava: soak fully and cook until tender. Ready-made fufu flour is a convenient alternative; follow the pack instructions.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Fufu"
+    },
+    {
+     "language": "igbo",
+     "name": "Akpu"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg (about 3 medium) cassava tubers, peeled",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "Clean water for soaking and cooking",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Cut the peeled cassava into chunks and wash well."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Soak completely in clean water for about 3 days, until soft and slightly sour-smelling."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Rinse, remove any hard fibrous core, then boil the soaked cassava until very tender (20-30 min)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Drain; pound in a mortar (or blend with a little hot water) until smooth and stretchy, removing any fibre strands."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Mould into balls with wet hands and serve hot with soup."
+    }
+   ]
+  },
+  {
+   "legacyNo": 34,
+   "slug": "semovita-semo",
+   "name": "Semovita (Semo)",
+   "category": "Swallow",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Semolina (wheat) flour, water",
+   "timeText": "10 min",
+   "totalMinutes": 10,
+   "difficulty": "EASY",
+   "servings": 2,
+   "healthBenefits": "Quick-cooking swallow that provides carbohydrate energy and, depending on the brand, some B vitamins and a little protein.",
+   "keyNutrients": "Carbohydrates; some protein; B vitamins (varies by brand)",
+   "cautions": "Contains wheat (gluten): not suitable for wheat allergy or coeliac disease. Low in fibre, so pair with vegetable soups.",
+   "servedWith": "Egusi, okra, efo riro, ogbono, vegetable soups",
+   "occasion": "Everyday meals, quick dinners",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Wheat (gluten)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; refrigerate leftovers within 2 hrs and eat within 1-2 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add the flour gradually and keep turning to avoid lumps. If too stiff, add a splash of hot water and turn again.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 1/2 cups semovita (semolina flour)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "About 2 1/4 cups water (plus a little extra if needed)",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Bring 1 3/4 cups of the water to a boil."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Mix about 1/3 cup semovita with the remaining cold water into a smooth paste and stir it into the boiling water to make a thin starch."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Reduce heat and add the remaining semovita gradually, turning firmly with a wooden spoon until no lumps remain."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Cover and steam on low heat for 3-5 min, then turn again until smooth and stretchy."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Mould into a bowl or cling film and serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 35,
+   "slug": "tuwo-masara-miyan-taushe",
+   "name": "Tuwo Masara & Miyan Taushe",
+   "category": "Swallow & Soup",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Maize flour; pumpkin, groundnut paste, spinach, tomatoes, onions, dried meat or fish, daddawa",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Pumpkin supplies carotenoids (a source of vitamin A), groundnut paste adds plant protein and unsaturated fats, and spinach adds iron and folate; the maize swallow provides energy.",
+   "keyNutrients": "Carbohydrates, protein, carotenoids (vitamin A), folate, iron",
+   "cautions": "Groundnuts are a common allergen. Go easy on oil, salt and stock cubes.",
+   "servedWith": "Tuwo masara (maize swallow)",
+   "occasion": "Family lunch or dinner",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add the spinach at the end to keep its colour. Add the groundnut paste gradually so it thickens without catching.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Tuwon masara da miyan taushe"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups fine maize flour (for the tuwo)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "500g pumpkin (taushe), peeled and cubed",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 tbsp groundnut paste",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 cups chopped spinach (alayyahu)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "300g beef, goat meat or dried fish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 tomatoes, 1 onion, 2 scotch bonnet peppers (blended)",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 tbsp daddawa (fermented locust beans)",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "3 tbsp groundnut oil",
+     "optional": false
+    },
+    {
+     "position": 9,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil the seasoned meat with onion and salt for 30 min until tender; keep the stock."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add the blended tomatoes and pepper to a pot with the pumpkin cubes and cook until the pumpkin is soft; mash it."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Heat the oil, fry the mashed mixture 10 min, then add the meat stock, groundnut paste (dissolved in a little water), daddawa and stock cubes; simmer 15 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the meat and simmer 5 min; stir in the spinach for the last 3 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Tuwo: mix 1/2 cup flour with cold water into a paste, stir into 3 cups boiling water, then add the remaining flour gradually while turning until firm; cover 5 min, turn again and mould."
+    }
+   ]
+  },
+  {
+   "legacyNo": 36,
+   "slug": "ofe-oha",
+   "name": "Ofe Oha (Oha Soup)",
+   "category": "Soup / Stew",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "Oha leaves, cocoyam paste, palm oil, assorted meat, stockfish, crayfish, ogiri, pepper",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 8,
+   "healthBenefits": "Leafy oha adds fibre and plant compounds, while stockfish and meat add protein; cocoyam thickens the soup naturally.",
+   "keyNutrients": "Protein, fibre, minerals; vitamins from leafy greens",
+   "cautions": "Palm oil, assorted meat and stock cubes make it rich: moderate the oil and salt and keep meat portions sensible. Contains fish and crayfish.",
+   "servedWith": "Pounded yam, akpu (fufu), eba, semo",
+   "occasion": "Weddings, festivals, Sunday meals",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add the oha leaves last so they stay green with a little bite. The soup keeps thickening as the cocoyam dissolves, so add it gradually.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ofe oha"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups fresh oha leaves (shredded by hand)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "5 small cocoyam (boiled, peeled and pounded to a paste)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 kg assorted meat (beef, shaki, cow skin)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 stockfish piece & 2 dry fish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "1 tbsp ogiri okpei (optional)",
+     "optional": true
+    },
+    {
+     "position": 8,
+     "rawText": "2 scotch bonnet peppers (ground), 1 onion",
+     "optional": false
+    },
+    {
+     "position": 9,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil the meats and stockfish with onion, stock cubes and salt until tender; keep about 4 cups of stock."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add palm oil, ground pepper, crayfish and ogiri to the stock and boil 5-10 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Drop small lumps of pounded cocoyam into the soup and simmer 10-15 min until dissolved and thickened."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Stir in the oha leaves and cook only 3-5 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Adjust salt and serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 37,
+   "slug": "ofe-nsala-white-soup",
+   "name": "Ofe Nsala (White Soup)",
+   "category": "Soup / Stew",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "Catfish or goat meat, yam paste (thickener), crayfish, pepper soup spices, utazi leaves",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Made without palm oil, so it is lighter than many soups; fish provides protein, vitamin B12 and minerals.",
+   "keyNutrients": "Protein, vitamin B12, minerals",
+   "cautions": "Contains fish and crayfish (shellfish). Cook fish fresh and just until done; watch stock cubes and salt, and reduce pepper for children.",
+   "servedWith": "Pounded yam, fufu, eba",
+   "occasion": "Special meals, family dinners",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Thicken gradually because the soup keeps thickening as it simmers. Cook the fish briefly so it does not break up.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ofe nsala"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 large fresh catfish (or 1 kg goat meat)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "200g boiled yam, pounded to a smooth paste",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tbsp nsala/pepper soup spice mix (ehuru, uda, uziza)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 cup utazi leaves (or scent leaves)",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 onion, 2 scotch bonnet peppers",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "4 cups water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Clean the catfish, cut into steaks and season with salt, onion and a stock cube."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil the fish in the water with onion for 10-15 min; lift out carefully and keep the stock."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add crayfish, ground pepper and the spice mix to the stock and boil 10 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Drop in small lumps of pounded yam and simmer about 15 min until dissolved and the soup thickens."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Return the fish, add the utazi and simmer 3 min. Adjust seasoning."
+    }
+   ]
+  },
+  {
+   "legacyNo": 38,
+   "slug": "catfish-pepper-soup",
+   "name": "Catfish Pepper Soup",
+   "category": "Soup / Stew",
+   "originNote": "Nationwide (popular in South-South)",
+   "summaryIngredients": "Fresh catfish, pepper soup spice, scent leaves, onion, scotch bonnet",
+   "timeText": "40 min",
+   "totalMinutes": 40,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "A lean, protein-rich soup that is low in carbohydrate and full of flavour from herbs and spices; the warm broth also adds fluids.",
+   "keyNutrients": "Protein, vitamin B12, minerals",
+   "cautions": "Very spicy: reduce pepper for children. Cook fish fresh and thoroughly, and watch salt and stock cubes. Contains fish (and crayfish if added).",
+   "servedWith": "Boiled yam, plantain, white rice, or on its own",
+   "occasion": "Evenings, get-togethers",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean) (optional)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Do not overcook catfish or it falls apart. Add the scent leaves at the end to keep their aroma.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg fresh catfish (cut into steaks)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 tbsp pepper soup spice",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 onion",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2-3 scotch bonnet peppers (ground)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Handful of scent leaves (efirin) or uziza",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "5 cups water",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "1 tbsp ground crayfish (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Rinse the fish with hot water and season with salt, onion and a stock cube."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Bring the water to a boil with the onion, ground pepper, pepper soup spice and remaining stock cube; boil 5 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add the catfish carefully and simmer 10-15 min until just cooked; avoid stirring hard."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the scent leaves and cook 2 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Adjust seasoning and serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 39,
+   "slug": "ikokore",
+   "name": "Ikokore (Water Yam Porridge)",
+   "category": "Main dish",
+   "originNote": "South-West (Yoruba, Ijebu)",
+   "summaryIngredients": "Water yam, palm oil, smoked fish, crayfish, pepper, onions, ugu or spinach",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Water yam provides carbohydrate energy; smoked fish adds protein and palm oil contributes carotenoids and vitamin E.",
+   "keyNutrients": "Carbohydrates, protein, carotenoids (palm oil), vitamin E",
+   "cautions": "Rich in palm oil and salt: use less oil and add leafy vegetables. Contains fish and crayfish.",
+   "servedWith": "Eaten on its own; fried fish",
+   "occasion": "Weekend and family meals",
+   "cuisine": "Yoruba",
+   "region": "South-West",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Let the grated yam steam on top before stirring so the lumps hold their shape.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ikokore"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "600g water yam (isu ewura), peeled and finely grated",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "4 tatashe (red bell peppers), 3 scotch bonnet peppers, 1 onion (blended)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "200g smoked fish (cleaned)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 cup chopped ugu or spinach (optional)",
+     "optional": true
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "1/2 cup water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Peel the water yam and grate it finely."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Boil the blended pepper mix for 10 min to reduce."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add palm oil, crayfish and stock cubes and fry 5-7 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the smoked fish and water."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Spoon the grated yam in small lumps over the sauce without stirring; cover and simmer on low heat for 20-25 min."
+    },
+    {
+     "stepNumber": 6,
+     "instruction": "Stir gently, fold in the vegetables for the last 3 min and adjust salt."
+    }
+   ]
+  },
+  {
+   "legacyNo": 40,
+   "slug": "ewa-agoyin",
+   "name": "Ewa Agoyin",
+   "category": "Main dish",
+   "originNote": "South-West (Lagos; Yoruba)",
+   "summaryIngredients": "Soft mashed brown beans, dark spicy dried-pepper sauce (palm oil, onions, crayfish)",
+   "timeText": "2 hrs",
+   "totalMinutes": 120,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Beans provide plant protein, fibre, folate and iron; slow cooking makes them soft and filling.",
+   "keyNutrients": "Plant protein, fibre, folate, iron",
+   "cautions": "The sauce is oil-heavy: use less oil and pepper. Beans can cause gas, so soak or pre-boil and discard that water. Contains crayfish.",
+   "servedWith": "Agege bread, fried plantain (dodo)",
+   "occasion": "Street-food favourite, lunch",
+   "cuisine": "Yoruba",
+   "region": "South-West",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Fry the sauce slowly on low heat: the dark colour and smoky taste come from patience, not high heat. Keep the beans mashed but not watery.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Ewa aganyin"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups brown (honey) beans",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "Salt to taste",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/2 cup palm oil (or vegetable oil)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "3 large onions (sliced)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/3 cup dried red pepper (ground)",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "1 stock cube",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Sort and wash the beans; boil in plenty of water on medium heat for about 1 1/2 hrs until very soft, topping up water as needed."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Mash with a wooden spoon until thick and soft; season with salt and cook off excess water."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Sauce: heat the oil and fry the sliced onions until deep brown."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the ground dried pepper and crayfish; fry on low heat 10-15 min until very dark and the oil separates; season."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve the beans topped with the sauce, with bread or fried plantain."
+    }
+   ]
+  },
+  {
+   "legacyNo": 41,
+   "slug": "ukwa-breadfruit-porridge",
+   "name": "Ukwa (African Breadfruit Porridge)",
+   "category": "Main dish",
+   "originNote": "South-East (Igbo)",
+   "summaryIngredients": "African breadfruit seeds (ukwa), palm oil, edible potash, crayfish, dry fish, onions, utazi or ugu",
+   "timeText": "2 hrs",
+   "totalMinutes": 120,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Breadfruit seeds provide plant protein, fibre and energy; fish and vegetables add protein and vitamins.",
+   "keyNutrients": "Plant protein, fibre, carbohydrates, minerals",
+   "cautions": "Usually cooked with edible potash, which adds sodium: use sparingly, and people on a low-sodium diet should check with a doctor or dietitian. Contains fish and crayfish.",
+   "servedWith": "Eaten on its own; fried fish, plantain",
+   "occasion": "Festive and family meals",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "If the seeds are slow to soften, soak overnight or use a pressure cooker to save time and fuel. Add water gradually.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Ukwa"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups ukwa (African breadfruit seeds), washed",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 tsp edible potash (akanwu), dissolved and filtered",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "3 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 onion, 2 scotch bonnet peppers (ground)",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "200g smoked or dry fish",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "1 cup shredded utazi or ugu leaves",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Pick over and wash the ukwa; boil with the dissolved potash and enough water for 1-1 1/2 hrs until soft, topping up water as needed."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add palm oil, crayfish, pepper, onion, fish, stock cubes and salt; simmer 15-20 min until the pottage thickens."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Stir in the vegetables and cook 3 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Adjust salt and serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 42,
+   "slug": "yam-and-egg-sauce",
+   "name": "Yam & Egg Sauce",
+   "category": "Main dish",
+   "originNote": "Nationwide",
+   "summaryIngredients": "White yam, eggs, tomatoes, onions, scotch bonnet, vegetable oil",
+   "timeText": "40 min",
+   "totalMinutes": 40,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Yam provides steady carbohydrate energy and potassium; eggs add high-quality protein and vitamin B12; tomatoes and peppers add vitamin C.",
+   "keyNutrients": "Carbohydrates, protein, vitamin B12, potassium, vitamin C",
+   "cautions": "Use moderate oil and boil rather than fry the yam. Add spinach or bell peppers for extra fibre. Contains egg.",
+   "servedWith": "Tea, pap, sliced avocado",
+   "occasion": "Breakfast, quick dinner",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Breakfast",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Egg"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Take the eggs off the heat while still slightly moist so they do not turn rubbery. Salt the yam water lightly for the best texture.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1/2 medium tuber white yam (about 600g), peeled and sliced",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "5 eggs",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "3 ripe tomatoes, 1 onion, 1-2 scotch bonnet peppers (chopped)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "3 tbsp vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 stock cube, 1 tsp curry (optional), salt to taste",
+     "optional": true
+    },
+    {
+     "position": 6,
+     "rawText": "1 cup chopped spinach or green pepper (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash the yam slices and boil in lightly salted water for 15-20 min until fork-tender; drain."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Heat the oil, fry the onion 2 min, add tomatoes and pepper and cook 8-10 min until reduced."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Season with stock cube, salt and curry."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Beat the eggs lightly, pour into the sauce and stir gently until just set (2-3 min); add vegetables."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve hot with the boiled yam."
+    }
+   ]
+  },
+  {
+   "legacyNo": 43,
+   "slug": "plantain-porridge",
+   "name": "Plantain Porridge (Unripe Plantain Pottage)",
+   "category": "Main dish",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Unripe plantain, palm oil, crayfish, smoked fish, onion, pepper, ugu or spinach",
+   "timeText": "45 min",
+   "totalMinutes": 45,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "Unripe plantain provides fibre, resistant starch and potassium; vegetables and fish add vitamins and protein.",
+   "keyNutrients": "Carbohydrates, fibre, potassium, protein, carotenoids (palm oil)",
+   "cautions": "Rich in palm oil: use moderate amounts. Contains fish and crayfish.",
+   "servedWith": "Eaten on its own; fried fish, salad",
+   "occasion": "Everyday meals, lunch",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Fish",
+    "Shellfish (crustacean)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Mashing a few plantain cubes thickens the porridge naturally without extra oil.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "4 unripe plantains (peeled and cubed)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/3 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 onion, 2 scotch bonnet peppers, 2 tatashe (blended)",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp ground crayfish",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "200g smoked fish",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1-2 cups chopped ugu or spinach",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "2 cups water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Heat the palm oil on low heat, lightly fry sliced onion, then add the blended pepper mix and fry 10 min."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add crayfish, stock cubes, salt and water; bring to a boil."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add the plantain cubes and smoked fish; cover and simmer 15-20 min until soft."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Mash a few pieces against the pot to thicken; stir in the vegetables and cook 3 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve hot."
+    }
+   ]
+  },
+  {
+   "legacyNo": 44,
+   "slug": "coconut-rice",
+   "name": "Coconut Rice",
+   "category": "Rice dish",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Parboiled rice, coconut milk, tatashe, scotch bonnet, onions, stock, mixed vegetables, shrimp or chicken (optional)",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Coconut milk adds flavour and energy; peppers and vegetables add vitamins and fibre; rice supplies carbohydrates.",
+   "keyNutrients": "Carbohydrates, vitamin C, fats (coconut), some minerals",
+   "cautions": "Coconut milk is high in saturated fat: use light coconut milk, keep portions moderate and add plenty of vegetables. Contains coconut (and shellfish if shrimp is added).",
+   "servedWith": "Fried fish or chicken, salad, plantain",
+   "occasion": "Parties, Sundays, celebrations",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "One-pot (simmered/steamed)",
+   "spiceLevel": "MEDIUM",
+   "costTier": "MEDIUM",
+   "allergenFlags": [
+    "Coconut",
+    "Shellfish (crustacean) (optional)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Cool quickly, refrigerate within 1 hr; eat within 1 day; reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add the coconut milk gently and avoid boiling hard, as it can split.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups parboiled long-grain rice",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 1/2 cups thick coconut milk",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "3 cups chicken stock",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 tatashe (red bell peppers), 2 scotch bonnet peppers, 1 onion (blended)",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "3 tbsp vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "1 green bell pepper and 1 carrot (diced)",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "Shrimp or chicken (optional)",
+     "optional": true
+    },
+    {
+     "position": 8,
+     "rawText": "2 stock cubes, 1 tsp curry, 1 tsp thyme, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Wash the rice and drain."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Heat the oil, fry a sliced onion, add the blended peppers and fry 10 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Add the coconut milk, stock and seasoning and bring to a gentle boil."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the rice, stir once, cover tightly and cook on low heat 25-30 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add the vegetables (and shrimp, if using) for the last 5 min, then fluff gently."
+    }
+   ]
+  },
+  {
+   "legacyNo": 45,
+   "slug": "obe-ata-tomato-stew",
+   "name": "Obe Ata (Nigerian Tomato Stew)",
+   "category": "Soup / Stew",
+   "originNote": "Nationwide (Yoruba: obe ata)",
+   "summaryIngredients": "Tomatoes, tatashe, scotch bonnet, onions, vegetable oil, beef or chicken, seasoning",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "EASY",
+   "servings": 6,
+   "healthBenefits": "Tomatoes and peppers supply vitamin C and lycopene; adding protein (meat, fish, eggs, beans) turns it into a more balanced topping.",
+   "keyNutrients": "Vitamin C, lycopene, vitamin A (from peppers), protein (if meat added)",
+   "cautions": "Stew is often cooked with a lot of oil: use about half, and add vegetables or beans. Watch stock cubes and salt.",
+   "servedWith": "White rice, boiled yam, plantain, beans",
+   "occasion": "Everyday meals, parties",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Sauce / Accompaniment",
+   "cookingMethod": "Stewed / simmered",
+   "spiceLevel": "HOT",
+   "costTier": "MEDIUM",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Boiling the blend down first removes sourness and water, so you need less oil and less frying time.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Obe ata"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "6 medium tomatoes",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "4 tatashe (red bell peppers)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 scotch bonnet peppers",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 onions",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/2 cup vegetable oil",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "3 tbsp tomato paste (optional)",
+     "optional": true
+    },
+    {
+     "position": 7,
+     "rawText": "500g beef or chicken (boiled, with stock)",
+     "optional": false
+    },
+    {
+     "position": 8,
+     "rawText": "2 stock cubes, 1 tsp curry, 1 tsp thyme, 2 bay leaves, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Boil the meat with onion, seasoning and salt until tender; keep the stock."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Blend the tomatoes, tatashe, scotch bonnet and half an onion; boil down in a dry pot for about 20 min and pour off excess water."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Heat the oil, fry sliced onion, add the tomato paste and fry 5 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the reduced pepper mix and fry 15-20 min, stirring, until the oil floats."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add the meat, stock and seasoning; simmer 10 min and adjust salt."
+    }
+   ]
+  },
+  {
+   "legacyNo": 46,
+   "slug": "gizdodo",
+   "name": "Gizdodo",
+   "category": "Snack / Side",
+   "originNote": "Nationwide (popular in Lagos)",
+   "summaryIngredients": "Chicken gizzards, ripe plantain, bell peppers, scotch bonnet, onion, tomato paste",
+   "timeText": "50 min",
+   "totalMinutes": 50,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Gizzard is a protein-rich meat that also supplies iron and zinc; plantain adds carbohydrates and potassium; peppers add vitamin C.",
+   "keyNutrients": "Protein, iron, zinc, potassium, vitamin C",
+   "cautions": "Fried plantain and oil add calories: use little oil, or bake or air-fry the plantain. Watch salt.",
+   "servedWith": "Drinks, as a party snack, or with rice",
+   "occasion": "Parties, celebrations, small chops",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Stir-fried",
+   "spiceLevel": "HOT",
+   "costTier": "MEDIUM",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Keep the plantain cubes slightly firm so they do not break when tossed in the sauce.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "500g chicken gizzards",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "3 ripe plantains (cubed)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "2 tatashe (red bell peppers) and 1 green bell pepper",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 scotch bonnet peppers, 1 onion",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 tbsp tomato paste",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Oil for frying plus 3 tbsp for the sauce",
+     "optional": false
+    },
+    {
+     "position": 7,
+     "rawText": "2 stock cubes, 1 tsp thyme, 1 tsp curry, salt to taste",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Clean the gizzards and boil with onion and seasoning for 30-40 min until tender."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Fry the plantain cubes until golden; drain."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Blend the red peppers with the scotch bonnet and boil down."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Heat the sauce oil, fry sliced onion and tomato paste, add the pepper puree and fry 10 min."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Add the gizzards and a splash of stock; stir in the plantain and green pepper strips and toss 2-3 min."
+    }
+   ]
+  },
+  {
+   "legacyNo": 47,
+   "slug": "okpa",
+   "name": "Okpa",
+   "category": "Snack / Side",
+   "originNote": "South-East (Igbo, Nsukka/Enugu)",
+   "summaryIngredients": "Bambara nut (okpa) flour, palm oil, pepper, salt, water",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Bambara nut is a legume that provides plant protein, fibre and minerals such as iron; steaming keeps the preparation simple.",
+   "keyNutrients": "Plant protein, fibre, iron, carbohydrates",
+   "cautions": "Palm oil adds fat: use moderate amounts. Dense and filling, so small portions go a long way.",
+   "servedWith": "Eaten on its own, with pap or pepper sauce",
+   "occasion": "Breakfast, street snack",
+   "cuisine": "Igbo",
+   "region": "South-East",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Steamed",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh; cool fully, store covered and eat within 2-3 days.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add warm water gradually and stir well for a lump-free batter. Steam above the water rather than boiling directly in it, so the okpa stays firm.",
+   "aliases": [
+    {
+     "language": "igbo",
+     "name": "Okpa"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups Bambara nut (okpa) flour",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup palm oil",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Ground pepper and salt to taste",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "2 cups warm water",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Banana leaves or small containers for steaming",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Whisk the palm oil with the pepper, salt and a splash of water until well blended."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add the okpa flour gradually with the warm water, stirring until you have a smooth, thick, pourable batter."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Rest the batter for 10 min."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pour into leaf wraps or small containers and steam, covered, for 40-60 min until set."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Cool slightly, unwrap and serve warm."
+    }
+   ]
+  },
+  {
+   "legacyNo": 48,
+   "slug": "kuli-kuli",
+   "name": "Kuli-kuli",
+   "category": "Snack / Side",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Roasted groundnuts, salt, pepper or ginger (optional), oil for frying (optional)",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 10,
+   "healthBenefits": "A crunchy source of plant protein, unsaturated fats, vitamin E and magnesium; the dry snack keeps well when stored properly.",
+   "keyNutrients": "Protein, healthy (unsaturated) fats, vitamin E, magnesium",
+   "cautions": "Groundnuts are a common and potentially severe allergen. Energy-dense, so keep portions small. Discard mouldy, shrivelled or bitter nuts and store dry (moulds on groundnuts can produce aflatoxins).",
+   "servedWith": "Garri (soaked), pap, akara, or as a snack",
+   "occasion": "Everyday snack",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Deep-fried",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Store completely dry in an airtight container; discard if rancid, mouldy or bitter (aflatoxin risk).",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Roast on medium heat and stir constantly so the nuts do not scorch. Store completely dry.",
+   "aliases": [
+    {
+     "language": "yoruba",
+     "name": "Kuli-kuli"
+    },
+    {
+     "language": "hausa",
+     "name": "Kuli-kuli"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups raw groundnuts (shelled; discard any mouldy or discoloured nuts)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 tsp salt",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/2 tsp ground pepper or ginger (optional)",
+     "optional": true
+    },
+    {
+     "position": 4,
+     "rawText": "Warm water as needed",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Oil for frying (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Sort the groundnuts carefully and roast in a dry pan until golden; cool and rub off the skins."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Grind to a thick paste."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Knead with a little warm water and the salt until the oil separates; press and pour off the oil (keep it for cooking)."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Shape the remaining dough into thin rolls or small rings."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Fry in hot oil on medium heat 5-8 min until crisp, or bake at 160°C for 25-30 min, turning once."
+    },
+    {
+     "stepNumber": 6,
+     "instruction": "Cool completely and store in an airtight container."
+    }
+   ]
+  },
+  {
+   "legacyNo": 49,
+   "slug": "roasted-corn-and-ube",
+   "name": "Roasted Corn & Ube (Agbado ati Ube)",
+   "category": "Snack / Side",
+   "originNote": "Nationwide (seasonal)",
+   "summaryIngredients": "Fresh corn on the cob, ube (African pear), salt",
+   "timeText": "30 min",
+   "totalMinutes": 30,
+   "difficulty": "EASY",
+   "servings": 4,
+   "healthBenefits": "A whole-food snack: corn provides fibre and carbohydrates, and ube provides unsaturated fats and fibre.",
+   "keyNutrients": "Carbohydrates, fibre, unsaturated fats (ube)",
+   "cautions": "Ube is fat-dense, so a little goes a long way. Roast corn until cooked through.",
+   "servedWith": "Eaten on its own",
+   "occasion": "Seasonal roadside snack",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Grilled / roasted",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Best eaten fresh and warm.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Test the ube with a fingertip: it should be tender, not mushy. Over-soaking makes it oily and soft.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "6 fresh corn cobs (peeled or in husk)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "8-10 ube (African pears)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "Hot (not boiling) water for softening the ube",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "Salt (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Roast the corn over charcoal, or under a hot grill or in the oven, turning often for 15-20 min until the kernels are tender and lightly charred."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Soak the ube in hot (not boiling) water for 5-10 min until tender."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Drain the ube and serve warm with the roasted corn, with a little salt if desired."
+    }
+   ]
+  },
+  {
+   "legacyNo": 50,
+   "slug": "kilishi",
+   "name": "Kilishi",
+   "category": "Grill / Protein",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Thin beef slices, yaji (groundnut-based spice), groundnut paste, oil, salt",
+   "timeText": "2 days (incl. drying)",
+   "totalMinutes": 2880,
+   "difficulty": "HARD",
+   "servings": 6,
+   "healthBenefits": "A concentrated, protein-rich dried meat snack that is a source of iron, zinc and vitamin B12.",
+   "keyNutrients": "Protein, iron, zinc, vitamin B12",
+   "cautions": "Dried meats are high in salt and spice: eat small portions. Dry hygienically and store airtight; discard if mouldy or off-smelling. Contains groundnut (peanut).",
+   "servedWith": "Eaten as a snack, with drinks",
+   "occasion": "Travel snack, gatherings",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Dried / cured",
+   "spiceLevel": "HOT",
+   "costTier": "HIGH",
+   "allergenFlags": [
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "OCCASIONAL",
+   "storageGuidance": "Store airtight in a cool, dry place (refrigerate for longer storage); discard if mouldy or off-smelling.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Even, thin slices dry evenly. Keep flies away while drying, and use a low oven or dehydrator if you cannot sun-dry safely.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kilishi"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 kg lean beef (topside), sliced very thin",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 cup yaji (ground kuli-kuli, ginger, garlic, paprika, cayenne, stock cube)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/2 cup groundnut paste",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tbsp salt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1/4 cup groundnut oil",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Trim off fat and slice the beef about 3 mm thick."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Dry the slices under a clean net in the sun, or in a low oven (about 70°C, door slightly open), for 4-6 hours until dry but not crisp."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Mix the yaji, groundnut paste, oil, salt and a little water into a thick paste and coat each strip on both sides."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Dry again until firm."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Grill briefly over low heat on both sides until fragrant."
+    },
+    {
+     "stepNumber": 6,
+     "instruction": "Cool and store in an airtight container."
+    }
+   ]
+  },
+  {
+   "legacyNo": 51,
+   "slug": "dambun-shinkafa",
+   "name": "Dambun Shinkafa",
+   "category": "Main dish",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Coarsely ground rice, moringa (zogale) or cabbage, carrot, onion, groundnut oil, pepper, seasoning",
+   "timeText": "1 hr 15 min",
+   "totalMinutes": 75,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "A steamed (not fried) rice dish; moringa or cabbage add fibre and vitamins, and it pairs easily with eggs or fish for protein.",
+   "keyNutrients": "Carbohydrates, fibre, vitamins from vegetables, minerals",
+   "cautions": "Add a protein (egg, fish, beans) to balance the meal and use moderate oil. Groundnut oil is a peanut-derived product.",
+   "servedWith": "Boiled eggs, fried fish, yaji",
+   "occasion": "Lunch, family meals",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Steamed",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Egg",
+    "Fish",
+    "Peanut (oil only)"
+   ],
+   "containsAnimalFlesh": "YES",
+   "frequencyGuide": "REGULAR",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Pulse the rice only briefly: you want coarse grains, not flour. Steam in a basket above (not touching) the water.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Dambun shinkafa"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "3 cups rice, washed",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "2 cups shredded zogale (moringa) leaves or cabbage",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 carrot (grated), 1 onion, 2 scotch bonnet peppers",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1/4 cup groundnut oil",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "2 stock cubes, salt to taste",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Boiled eggs or fried fish to serve",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Pulse the washed rice briefly in a blender to coarse, couscous-like grains; drain."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Steam the rice granules for 20-25 min until just soft."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Fluff and mix in the onion, pepper, carrot, vegetables, oil, stock cubes and salt."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Steam again for 15-20 min until the vegetables are tender."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve with eggs or fish."
+    }
+   ]
+  },
+  {
+   "legacyNo": 52,
+   "slug": "danwake",
+   "name": "Danwake",
+   "category": "Main dish",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Bean flour, wheat or cassava flour, edible potash, water; served with groundnut oil, yaji, eggs, vegetables",
+   "timeText": "1 hr",
+   "totalMinutes": 60,
+   "difficulty": "MEDIUM",
+   "servings": 4,
+   "healthBenefits": "Bean-flour dumplings provide plant protein, fibre and slow-digesting carbohydrates; vegetable and egg toppings add vitamins and protein.",
+   "keyNutrients": "Plant protein, carbohydrates, fibre, folate",
+   "cautions": "Edible potash adds sodium: use sparingly. Toppings such as oil and yaji can be heavy, and yaji contains groundnut. Contains wheat if wheat flour is used.",
+   "servedWith": "Boiled eggs, onions, tomatoes, cabbage, yaji, groundnut oil",
+   "occasion": "Lunch, street food",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Lunch / Dinner",
+   "cookingMethod": "Boiled",
+   "spiceLevel": "MEDIUM",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Egg",
+    "Peanut",
+    "Wheat (gluten)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Cool and refrigerate within 2 hrs; eat within 3 days (or freeze); reheat until steaming hot.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Use the potash sparingly. Knead until smooth so the dumplings hold together.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Dan wake"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups bean (cowpea) flour",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1/2 cup wheat or cassava flour (binder)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1/2 tsp edible potash (kaun/kanwa), dissolved in a little water",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "1 tsp salt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "About 2 cups warm water",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Toppings: 1/4 cup groundnut oil, yaji, 2 boiled eggs, sliced onions, tomatoes, cabbage",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Mix the bean flour, binder flour and salt."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add the dissolved potash and warm water gradually, kneading about 5 min into a soft dough that does not stick."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Pinch off small pieces and roll or press into small dumplings."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Boil about 5 cups water, add the dumplings and cook 15-20 min until they float and are cooked through."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Drain and serve with sliced onion, tomato, boiled eggs, a drizzle of groundnut oil and yaji."
+    }
+   ]
+  },
+  {
+   "legacyNo": 53,
+   "slug": "fura-da-nono",
+   "name": "Fura da Nono",
+   "category": "Drink",
+   "originNote": "Northern Nigeria (Hausa/Fulani)",
+   "summaryIngredients": "Millet flour balls (fura), fermented cow's milk (nono), spices, water, sugar (optional)",
+   "timeText": "1 hr 30 min",
+   "totalMinutes": 90,
+   "difficulty": "MEDIUM",
+   "servings": 6,
+   "healthBenefits": "Millet provides carbohydrate energy and minerals; nono adds protein and calcium, making it a filling drink-meal.",
+   "keyNutrients": "Carbohydrates, protein, calcium, B vitamins",
+   "cautions": "Contains milk (lactose). Use pasteurised or properly boiled-then-fermented milk and clean water: raw milk carries food-safety risks, especially for children, pregnant women and older adults.",
+   "servedWith": "On its own, chilled",
+   "occasion": "Hot-weather refreshment, breakfast",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Any meal",
+   "cookingMethod": "Steamed",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Milk"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Keep chilled in a clean covered container; drink within 1-2 days; discard if it smells off.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Chill the nono for the best taste. Use pasteurised or properly prepared milk from a trusted source.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Fura da nono"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups millet flour",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "1 tbsp ground ginger, 1/2 tsp ground cloves",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "About 1/2 cup warm water to bind",
+     "optional": false
+    },
+    {
+     "position": 4,
+     "rawText": "4 cups nono (fermented milk) or plain yoghurt",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "1 cup cold water",
+     "optional": false
+    },
+    {
+     "position": 6,
+     "rawText": "Sugar to taste (optional)",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Mix the millet flour with the ground spices and knead with a little warm water into a stiff dough."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Shape into small balls."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Steam or boil the balls for 30-40 min until cooked through."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Pound or mash the cooked balls until smooth and sticky, then reshape into balls and cool."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "To serve, crumble the fura into a bowl, add chilled nono and a little cold water, sweeten if desired and stir."
+    }
+   ]
+  },
+  {
+   "legacyNo": 54,
+   "slug": "kunun-aya-tiger-nut-drink",
+   "name": "Kunun Aya (Tiger Nut Drink)",
+   "category": "Drink",
+   "originNote": "Northern Nigeria (Hausa)",
+   "summaryIngredients": "Tiger nuts, dates, coconut, ginger, water",
+   "timeText": "3 hrs (incl. soaking)",
+   "totalMinutes": 180,
+   "difficulty": "EASY",
+   "servings": 8,
+   "healthBenefits": "Tiger nuts supply fibre and unsaturated fats; dates sweeten the drink naturally, so little or no sugar is needed.",
+   "keyNutrients": "Fibre, unsaturated fats, carbohydrates, minerals",
+   "cautions": "Calorie-dense for a drink, so keep servings modest. Best chilled and drunk fresh as it spoils quickly; wash tiger nuts well. Contains coconut if added.",
+   "servedWith": "Drunk chilled, on its own",
+   "occasion": "Hot weather, social gatherings",
+   "cuisine": "Hausa",
+   "region": "Northern Nigeria",
+   "mealSlot": "Drink",
+   "cookingMethod": "Soaked / no-cook",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Coconut (optional)"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Keep chilled in a clean covered container; drink within 1-2 days; discard if it smells off.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Wash the tiger nuts thoroughly and chill promptly. Add a little extra date for sweetness instead of sugar.",
+   "aliases": [
+    {
+     "language": "hausa",
+     "name": "Kunun aya"
+    }
+   ],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "2 cups tiger nuts, sorted and washed",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "6-8 dates (pitted)",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 small coconut (optional)",
+     "optional": true
+    },
+    {
+     "position": 4,
+     "rawText": "Thumb-sized ginger (optional)",
+     "optional": true
+    },
+    {
+     "position": 5,
+     "rawText": "6-8 cups cold water",
+     "optional": false
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Sort and wash the tiger nuts, then soak in clean water for 2-3 hours (or overnight) to soften."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Drain and blend with the dates, coconut and ginger in 3-4 cups of the water until fine."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Strain through a clean muslin or fine sieve, squeezing out all the milk."
+    },
+    {
+     "stepNumber": 4,
+     "instruction": "Add the remaining cold water, stir and chill."
+    },
+    {
+     "stepNumber": 5,
+     "instruction": "Serve cold; refrigerate and drink within 2-3 days."
+    }
+   ]
+  },
+  {
+   "legacyNo": 55,
+   "slug": "garri-soakings",
+   "name": "Garri Soakings",
+   "category": "Snack / Side",
+   "originNote": "Nationwide",
+   "summaryIngredients": "Garri, cold water, roasted groundnuts, sugar or honey, milk or coconut (optional)",
+   "timeText": "5 min",
+   "totalMinutes": 5,
+   "difficulty": "EASY",
+   "servings": 2,
+   "healthBenefits": "A quick, affordable energy food; groundnuts add protein and healthy fats, and milk or coconut add extra nutrients.",
+   "keyNutrients": "Carbohydrates, protein and fats (from groundnuts/milk)",
+   "cautions": "Garri alone is mostly starch and low in protein, fibre and vitamins: add groundnuts, milk, fish or fruit. Limit added sugar and use clean water. Contains groundnut/milk if added.",
+   "servedWith": "Roasted groundnuts, coconut, fried fish, kuli-kuli",
+   "occasion": "Quick snack, student meal",
+   "cuisine": "Pan-Nigerian",
+   "region": "Nationwide",
+   "mealSlot": "Snack / Side",
+   "cookingMethod": "Soaked / no-cook",
+   "spiceLevel": "MILD",
+   "costTier": "LOW",
+   "allergenFlags": [
+    "Coconut (optional)",
+    "Milk (optional)",
+    "Peanut"
+   ],
+   "containsAnimalFlesh": "NO",
+   "frequencyGuide": "MODERATE",
+   "storageGuidance": "Prepare and eat immediately.",
+   "evidenceLevel": "C_COMMUNITY",
+   "tips": "Add the water slowly because garri swells. Pair with groundnuts or milk to make it more balanced.",
+   "aliases": [],
+   "ingredientLines": [
+    {
+     "position": 1,
+     "rawText": "1 cup garri (white or yellow)",
+     "optional": false
+    },
+    {
+     "position": 2,
+     "rawText": "About 1 1/2 cups cold clean water",
+     "optional": false
+    },
+    {
+     "position": 3,
+     "rawText": "1 tbsp sugar or honey (optional)",
+     "optional": true
+    },
+    {
+     "position": 4,
+     "rawText": "2 tbsp roasted groundnuts",
+     "optional": false
+    },
+    {
+     "position": 5,
+     "rawText": "Milk (optional) or sliced coconut",
+     "optional": true
+    }
+   ],
+   "steps": [
+    {
+     "stepNumber": 1,
+     "instruction": "Put the garri in a bowl and add the cold water gradually, stirring."
+    },
+    {
+     "stepNumber": 2,
+     "instruction": "Add sugar or honey and milk, if using; let it swell for 1-2 min."
+    },
+    {
+     "stepNumber": 3,
+     "instruction": "Top with groundnuts or coconut and serve immediately."
+    }
+   ]
+  }
+ ]
+}

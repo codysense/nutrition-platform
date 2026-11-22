@@ -1,0 +1,29 @@
+# Render Blueprint: API only. The database is Neon and the web app is Netlify.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: nutrition-api
+    runtime: node
+    region: frankfurt        # closest Render region to Nigeria; pick a Neon region near it (e.g. AWS Frankfurt)
+    plan: free               # sleeps after 15 min idle (first request is slow). Use `starter` to keep it awake.
+    rootDir: api
+    # --include=dev: TypeScript and type packages are needed to build, even though NODE_ENV is production.
+    buildCommand: npm ci --include=dev && npm run build
+    # Applies any new migrations (using the direct Neon URL), then starts the server.
+    startCommand: npm run start:render
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL            # Neon POOLED string, with &connect_timeout=15
+        sync: false
+      - key: DATABASE_URL_UNPOOLED   # Neon DIRECT string, used for migrations
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 8h
+      - key: CORS_ORIGIN             # your Netlify URL, e.g. https://your-site.netlify.app
+        sync: false

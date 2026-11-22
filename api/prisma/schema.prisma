@@ -1,0 +1,301 @@
+// Nigerian Nutrition Platform - back office schema (Phase 1: foundation + professional review)
+generator client {
+  provider = "prisma-client-js"
+}
+
+// DATABASE_URL: used by the running app (on Neon, the pooled "-pooler" connection string).
+// DATABASE_URL_UNPOOLED: used by Prisma CLI for migrations (on Neon, the direct connection string).
+// Locally with Docker, set both to the same value.
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+// ───────────── Enums ─────────────
+enum Role {
+  SUPER_ADMIN
+  CONTENT_MANAGER
+  NUTRITION_REVIEWER // dietitian / nutritionist
+  VIEWER
+}
+
+enum ReviewStatus {
+  DRAFT
+  PENDING_REVIEW
+  APPROVED
+  PUBLISHED
+  REJECTED
+  ARCHIVED
+  REQUIRES_UPDATE
+}
+
+enum EvidenceLevel {
+  A_SCIENTIFIC
+  B_RESEARCH
+  C_COMMUNITY
+  D_PROFESSIONAL_REVIEW
+}
+
+enum DataQuality {
+  ANALYTICAL
+  CALCULATED
+  IMPUTED
+  ESTIMATED
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum SpiceLevel {
+  MILD
+  MEDIUM
+  HOT
+}
+
+enum CostTier {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum FrequencyGuide {
+  REGULAR
+  MODERATE
+  OCCASIONAL
+  TREAT
+}
+
+enum AnimalFlesh {
+  YES
+  NO
+  OPTIONAL
+}
+
+enum MappingStatus {
+  UNMAPPED
+  AUTO_SUGGESTED
+  CONFIRMED
+}
+
+// ───────────── Identity ─────────────
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(VIEWER)
+  isActive     Boolean  @default(true)
+  mustChangePassword Boolean @default(false) // set on creation and admin reset
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  comments   ReviewComment[] @relation("CommentAuthor")
+  resolved   ReviewComment[] @relation("CommentResolver")
+  auditLogs  AuditLog[]
+}
+
+// ───────────── Knowledge sources ─────────────
+model KnowledgeSource {
+  id              String   @id @default(cuid())
+  title           String
+  publisher       String?
+  url             String?
+  publicationYear Int?
+  licenseNote     String? // permission to reuse / redistribute (get this in writing)
+  createdAt       DateTime @default(now())
+
+  nutrientValues FoodNutrient[]
+}
+
+// ───────────── Foodstuffs ─────────────
+model Food {
+  id            String       @id @default(cuid())
+  code          String       @unique // F001...
+  name          String
+  category      String
+  forms         String?
+  botanicalName String?
+  allergenNote  String?
+  referenceForm String? // which form nutrient values describe (raw, dry, as sold)
+  searchKey1    String?
+  searchKey2    String?
+  status        ReviewStatus @default(DRAFT)
+  namesVerified Boolean      @default(false)
+  lastEditedById String?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  aliases    FoodAlias[]
+  nutrients  FoodNutrient[]
+  lines      RecipeIngredientLine[]
+  comments   ReviewComment[]
+
+  @@index([name])
+  @@index([category])
+  @@index([status])
+}
+
+model FoodAlias {
+  id       String  @id @default(cuid())
+  foodId   String
+  language String // yoruba | hausa | igbo | english | other
+  name     String
+  verified Boolean @default(false)
+  food     Food    @relation(fields: [foodId], references: [id], onDelete: Cascade)
+
+  @@index([name])
+}
+
+model Nutrient {
+  id        String @id @default(cuid())
+  key       String @unique // energy_kcal, protein_g...
+  name      String
+  unit      String
+  sortOrder Int    @default(0)
+
+  values FoodNutrient[]
+}
+
+// Values are per `basisGrams` (default 100 g) of Food.referenceForm. No row = unavailable (never estimate).
+model FoodNutrient {
+  id          String      @id @default(cuid())
+  foodId      String
+  nutrientId  String
+  amount      Decimal     @db.Decimal(12, 4)
+  basisGrams  Decimal     @default(100) @db.Decimal(8, 2)
+  sourceId    String
+  citation    String? // table + year + page/ID
+  quality     DataQuality
+  enteredById String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  food     Food            @relation(fields: [foodId], references: [id], onDelete: Cascade)
+  nutrient Nutrient        @relation(fields: [nutrientId], references: [id])
+  source   KnowledgeSource @relation(fields: [sourceId], references: [id])
+
+  @@unique([foodId, nutrientId])
+}
+
+// ───────────── Dishes / recipes ─────────────
+model Recipe {
+  id                 String         @id @default(cuid())
+  legacyNo           Int?           @unique // # in the Excel dataset
+  slug               String         @unique
+  name               String
+  category           String
+  originNote         String?
+  cuisine            String?
+  region             String?
+  mealSlot           String?
+  cookingMethod      String?
+  spiceLevel         SpiceLevel?
+  costTier           CostTier?
+  summaryIngredients String?
+  timeText           String?
+  totalMinutes       Int?
+  difficulty         Difficulty?
+  servings           Int?
+  // claim-type fields: dietitian reviews these closely
+  healthBenefits     String?
+  keyNutrients       String?
+  cautions           String?
+  frequencyGuide     FrequencyGuide?
+  allergenFlags      String[]
+  containsAnimalFlesh AnimalFlesh?
+  servedWith         String?
+  occasion           String?
+  storageGuidance    String?
+  tips               String?
+  evidenceLevel      EvidenceLevel  @default(C_COMMUNITY)
+  status             ReviewStatus   @default(DRAFT)
+  namesVerified      Boolean        @default(false)
+  lastEditedById     String?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+
+  aliases  RecipeAlias[]
+  lines    RecipeIngredientLine[]
+  steps    RecipeStep[]
+  comments ReviewComment[]
+
+  @@index([status])
+  @@index([category])
+  @@index([cuisine])
+  @@index([name])
+}
+
+model RecipeAlias {
+  id       String  @id @default(cuid())
+  recipeId String
+  language String
+  name     String
+  verified Boolean @default(false)
+  recipe   Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+// Free text today; structured quantity/unit are filled in during ingredient mapping.
+model RecipeIngredientLine {
+  id            String        @id @default(cuid())
+  recipeId      String
+  position      Int
+  rawText       String
+  optional      Boolean       @default(false)
+  quantity      Decimal?      @db.Decimal(10, 3)
+  unit          String?
+  mappingStatus MappingStatus @default(UNMAPPED)
+  recipe        Recipe        @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  foods         Food[] // a line can touch several foods, e.g. "tatashe, scotch bonnet, onion"
+
+  @@unique([recipeId, position])
+}
+
+model RecipeStep {
+  id          String @id @default(cuid())
+  recipeId    String
+  stepNumber  Int
+  instruction String
+  recipe      Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  @@unique([recipeId, stepNumber])
+}
+
+// ───────────── Review workflow ─────────────
+model ReviewComment {
+  id           String    @id @default(cuid())
+  recipeId     String?
+  foodId       String?
+  field        String? // e.g. healthBenefits, allergenFlags, nutrient:iron_mg
+  body         String
+  resolved     Boolean   @default(false)
+  authorId     String
+  resolvedById String?
+  createdAt    DateTime  @default(now())
+  resolvedAt   DateTime?
+
+  recipe     Recipe? @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  food       Food?   @relation(fields: [foodId], references: [id], onDelete: Cascade)
+  author     User    @relation("CommentAuthor", fields: [authorId], references: [id])
+  resolvedBy User?   @relation("CommentResolver", fields: [resolvedById], references: [id])
+
+  @@index([recipeId])
+  @@index([foodId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String // CREATE | UPDATE | STATUS_CHANGE | COMMENT | LOGIN ...
+  entityType String
+  entityId   String?
+  meta       Json?
+  createdAt  DateTime @default(now())
+  actor      User?    @relation(fields: [actorId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
