@@ -68,8 +68,41 @@ yourself a minute before her session.
 
 ## 5. Tell the API about the web app
 
-Render -> `nutrition-api` -> **Environment** -> set `CORS_ORIGIN` to your Netlify URL (no trailing slash). Save: Render redeploys.
-Without this, the browser blocks every request and the login page shows a network error.
+Render -> `nutrition-api` -> **Environment** -> set `CORS_ORIGIN` to your Netlify **origin**: the scheme and host only.
+
+| Right | Wrong |
+|---|---|
+| `https://your-site.netlify.app` | `https://your-site.netlify.app/login` (has a path) |
+| | `https://your-site.netlify.app/` (trailing slash) |
+| | `your-site.netlify.app` (no `https://`) |
+
+The browser sends only the origin, so anything extra never matches. The API now trims a path or trailing slash for you and
+prints a warning in the Render logs, but set it correctly anyway. For more than one site (for example a Netlify preview),
+separate origins with commas. Save: Render redeploys.
+
+## Troubleshooting: the web app cannot reach the API
+
+The login page shows **"Can't reach the server"** when the browser gets no usable response. Check in this order:
+
+1. **Is the API up?** Open `https://<your-api>.onrender.com/health`. It must return `{"ok":true}`. The first request after
+   15 idle minutes can take up to a minute on the free plan.
+2. **Does the Netlify build know the API address?** `VITE_API_URL` is baked in at build time, so after adding or changing it you must
+   **Deploy -> Trigger deploy -> Clear cache and deploy site**. It must end in `/api/v1` and have no trailing slash.
+3. **Is the origin allowed?** Render -> Logs. At start-up you will see `[config] CORS allowed origins: ...`. If someone was
+   blocked you will see `[cors] Blocked a request from "https://..."`. The origin in that line is exactly what `CORS_ORIGIN` must contain.
+4. **Test CORS directly** (replace the two URLs). A correct setup prints an `access-control-allow-origin` line:
+
+```bash
+curl -i -X OPTIONS "https://<your-api>.onrender.com/api/v1/auth/login" \
+  -H "Origin: https://<your-site>.netlify.app" \
+  -H "Access-Control-Request-Method: POST"
+```
+
+5. **Browser DevTools -> Network**: click the failed `login` request. A red "CORS error" means step 3; a request to the wrong host
+   (for example your Netlify domain) means step 2.
+
+Every error shown in the app has a **Technical details** section with the status, a code and a reference id. The same reference
+id appears in the Render logs, so a screenshot is enough to find the matching server log line.
 
 ## 6. Smoke test (10 minutes)
 

@@ -40,7 +40,7 @@ export const authenticate: RequestHandler = async (req, _res, next) => {
     if (!user || !user.isActive) throw new AppError(401, 'Account not found or deactivated');
     // A user with a temporary password can do nothing except look themselves up and change it.
     if (user.mustChangePassword && !PASSWORD_CHANGE_PATHS.includes(req.baseUrl + req.path))
-      throw new AppError(403, 'You must change your password before continuing', { code: 'PASSWORD_CHANGE_REQUIRED' });
+      throw new AppError(403, 'You must change your temporary password before continuing', undefined, 'PASSWORD_CHANGE_REQUIRED');
     req.user = { id: user.id, email: user.email, name: user.name, role: user.role, mustChangePassword: user.mustChangePassword };
     next();
   } catch (err) {

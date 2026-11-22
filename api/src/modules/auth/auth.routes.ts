@@ -1,16 +1,16 @@
 import { Router } from 'express';
 import bcrypt from 'bcryptjs';
-import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import { prisma } from '../../lib/prisma';
 import { ah, AppError } from '../../lib/errors';
 import { signToken } from '../../lib/jwt';
+import { limiter } from '../../lib/limiters';
 import { audit } from '../../lib/audit';
 import { authenticate } from '../../middleware/auth';
 
 export const authRouter = Router();
 
-const loginLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 20, standardHeaders: true, legacyHeaders: false });
+const loginLimiter = limiter(20, 'Too many sign-in attempts. Please wait a few minutes and try again.');
 
 // Compared against when the email is unknown so response time does not reveal which emails exist.
 const DUMMY_HASH = bcrypt.hashSync('not-a-real-password', 12);
@@ -22,7 +22,7 @@ authRouter.post(
     const { email, password } = z.object({ email: z.string().email().toLowerCase(), password: z.string().min(1) }).parse(req.body);
     const user = await prisma.user.findUnique({ where: { email } });
     const ok = await bcrypt.compare(password, user?.passwordHash ?? DUMMY_HASH);
-    if (!user || !ok || !user.isActive) throw new AppError(401, 'Invalid email or password');
+    if (!user || !ok || !user.isActive) throw new AppError(401, 'Incorrect email or password', undefined, 'INVALID_CREDENTIALS');
     await audit(user.id, 'LOGIN', 'User', user.id);
     res.json({
       token: signToken(user),
@@ -35,7 +35,7 @@ authRouter.get('/me', authenticate, (req, res) => {
   res.json({ user: req.user });
 });
 
-const changeLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: true, legacyHeaders: false });
+const changeLimiter = limiter(10, 'Too many password change attempts. Please wait a few minutes and try again.');
 
 authRouter.post(
   '/change-password',

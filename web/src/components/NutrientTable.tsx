@@ -4,6 +4,7 @@ import { api } from '../lib/api';
 import { useInvalidate } from '../lib/hooks';
 import { FoodNutrientValue, Nutrient, Source } from '../lib/types';
 import { titleCase } from '../lib/format';
+import { describeError } from '../lib/errors';
 import { ErrorBox } from './ui';
 
 const QUALITIES = ['ANALYTICAL', 'CALCULATED', 'IMPUTED', 'ESTIMATED'];
@@ -55,7 +56,7 @@ function Row({ foodId, nutrient, existing, sources, canEdit }: {
             {existing && <button className="btn-secondary" disabled={save.isPending} onClick={() => { save.mutate({ amount: null }); setAmount(''); setSourceId(''); setQuality(''); setCitation(''); }}>Remove</button>}
           </div>
         )}
-        {(localError || save.error) && <p className="mt-1 text-xs text-red-600">{localError || (save.error as Error).message}</p>}
+        {(localError || save.error) && <p className="mt-1 text-xs text-red-600">{localError || (() => { const i = describeError(save.error); return i.fields.length ? i.fields.map((f) => `${f.field}: ${f.messages.join(', ')}`).join('; ') : i.message; })()}</p>}
       </td>
     </tr>
   );

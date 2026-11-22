@@ -80,6 +80,14 @@ The rules live in one file, `src/modules/review/workflow.ts`, with tests.
 | POST | `/auth/change-password` | Change own password; clears the temporary-password flag |
 | GET | `/admin/export/dishes.json`, `dishes.csv`, `foods.csv` | Offline review exports (`status` filter); logged |
 
+## Error format
+
+Every API error has one shape: `{ error, code, details?, requestId }`. `error` is a message safe to show, `code` is stable
+(`VALIDATION_FAILED`, `INVALID_CREDENTIALS`, `FORBIDDEN`, `NOT_FOUND`, `CONFLICT`, `RATE_LIMITED`, `INTERNAL`, ...), and
+`requestId` is also sent in the `X-Request-Id` header and written to the server log on 5xx errors. In the web app,
+`src/lib/errors.ts` turns any error (including "no response" failures) into a title, message, per-field problems and hints,
+and `ErrorBox` renders it, so all screens report problems the same way.
+
 ## Design decisions to review
 
 1. **Ingredients stay as free-text lines** (`RecipeIngredientLine.rawText`) with suggested links to foodstuffs

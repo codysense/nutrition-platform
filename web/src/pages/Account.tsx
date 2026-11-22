@@ -2,6 +2,8 @@ import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
+import { UserError } from '../lib/apiError';
+import { PasswordInput } from '../components/PasswordInput';
 import { ErrorBox, PageHeader } from '../components/ui';
 
 export default function Account() {
@@ -17,7 +19,7 @@ export default function Account() {
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setError(null);
-    if (next !== confirm) return setError(new Error('The new passwords do not match'));
+    if (next !== confirm) return setError(new UserError('The new password and its confirmation do not match.'));
     setBusy(true);
     try {
       await api('/auth/change-password', { method: 'POST', body: { currentPassword: current, newPassword: next } });
@@ -41,16 +43,16 @@ export default function Account() {
       <form onSubmit={submit} className="card space-y-4 p-5">
         <div>
           <label className="mb-1 block text-sm font-medium" htmlFor="cur">{forced ? 'Temporary password' : 'Current password'}</label>
-          <input id="cur" className="input" type="password" autoComplete="current-password" required value={current} onChange={(e) => setCurrent(e.target.value)} />
+          <PasswordInput id="cur" autoComplete="current-password" required value={current} onChange={setCurrent} />
         </div>
         <div>
           <label className="mb-1 block text-sm font-medium" htmlFor="new">New password</label>
-          <input id="new" className="input" type="password" autoComplete="new-password" required minLength={12} value={next} onChange={(e) => setNext(e.target.value)} />
+          <PasswordInput id="new" autoComplete="new-password" required minLength={12} value={next} onChange={setNext} />
           <p className="mt-1 text-xs text-slate-500">At least 12 characters. A few random words is easier to remember than symbols.</p>
         </div>
         <div>
           <label className="mb-1 block text-sm font-medium" htmlFor="conf">Confirm new password</label>
-          <input id="conf" className="input" type="password" autoComplete="new-password" required value={confirm} onChange={(e) => setConfirm(e.target.value)} />
+          <PasswordInput id="conf" autoComplete="new-password" required value={confirm} onChange={setConfirm} />
         </div>
         {error != null && <ErrorBox error={error} />}
         <button className="btn-primary" disabled={busy}>{busy ? 'Saving…' : 'Change password'}</button>
