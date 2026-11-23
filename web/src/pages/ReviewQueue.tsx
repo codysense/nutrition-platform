@@ -4,30 +4,23 @@ import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { fmtDate } from '../lib/format';
 import { Queue } from '../lib/types';
+import { Column, DataTable } from '../components/DataTable';
 import { ErrorBox, PageHeader, Spinner } from '../components/ui';
 
 type Row = { id: string; title: string; sub: string; category: string; updatedAt: string; lastEditedById: string | null; open: number; to: string };
 
 function Table({ title, rows, myId }: { title: string; rows: Row[]; myId?: string }) {
+  const columns: Column<Row>[] = [
+    { key: 'name', header: 'Name', title: true, cell: (r) => <><Link className="font-medium text-brand-700 hover:underline" to={r.to}>{r.title}</Link> <span className="text-xs font-normal text-slate-400">{r.sub}</span></> },
+    { key: 'category', header: 'Category', cell: (r) => <span className="text-slate-600">{r.category}</span> },
+    { key: 'since', header: 'Waiting since', cell: (r) => <span className="text-slate-600">{fmtDate(r.updatedAt)}</span> },
+    { key: 'open', header: 'Open comments', cell: (r) => (r.open > 0 ? <span className="rounded-full bg-amber-100 px-2 text-xs text-amber-800">{r.open}</span> : '—') },
+    { key: 'note', header: '', align: 'right', cell: (r) => (r.lastEditedById === myId ? <span className="text-xs">You edited this last, so someone else must approve it</span> : null) },
+  ];
   return (
     <section className="card mb-5 overflow-hidden">
       <h2 className="border-b border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700">{title} ({rows.length})</h2>
-      {rows.length === 0 ? <p className="p-4 text-sm text-slate-500">Nothing waiting.</p> : (
-        <table className="w-full">
-          <thead className="bg-slate-50"><tr><th className="th">Name</th><th className="th">Category</th><th className="th">Waiting since</th><th className="th">Open comments</th><th className="th" /></tr></thead>
-          <tbody className="divide-y divide-slate-100">
-            {rows.map((r) => (
-              <tr key={r.id} className="hover:bg-slate-50">
-                <td className="td"><Link className="font-medium text-brand-700 hover:underline" to={r.to}>{r.title}</Link> <span className="text-xs text-slate-400">{r.sub}</span></td>
-                <td className="td text-slate-600">{r.category}</td>
-                <td className="td text-slate-600">{fmtDate(r.updatedAt)}</td>
-                <td className="td">{r.open > 0 ? <span className="rounded-full bg-amber-100 px-2 text-xs text-amber-800">{r.open}</span> : '—'}</td>
-                <td className="td text-right text-xs text-slate-500">{r.lastEditedById === myId ? 'You edited this last' : ''}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      <DataTable rows={rows} columns={columns} rowKey={(r) => r.id} empty="Nothing waiting." />
     </section>
   );
 }

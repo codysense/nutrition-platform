@@ -31,7 +31,7 @@ export function AliasEditor({ kind, id, aliases, canEdit, isReviewer }: {
       <ul className="divide-y divide-slate-100">
         {aliases.length === 0 && <li className="px-4 py-3 text-sm text-slate-400">No local names recorded.</li>}
         {aliases.map((a, i) => (
-          <li key={`${a.language}-${a.name}`} className="flex items-center justify-between gap-3 px-4 py-2 text-sm">
+          <li key={`${a.language}-${a.name}`} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-4 py-2 text-sm">
             <span><span className="mr-2 rounded bg-slate-100 px-1.5 py-0.5 text-xs">{titleCase(a.language)}</span>{a.name}</span>
             <span className="flex items-center gap-3">
               <label className="flex items-center gap-1 text-xs text-slate-600">
@@ -45,8 +45,8 @@ export function AliasEditor({ kind, id, aliases, canEdit, isReviewer }: {
         ))}
       </ul>
       {canEdit && (
-        <div className="flex gap-2 border-t border-slate-200 px-4 py-3">
-          <select className="input max-w-[130px]" value={language} onChange={(e) => setLanguage(e.target.value)}>
+        <div className="flex flex-col gap-2 border-t border-slate-200 px-4 py-3 sm:flex-row">
+          <select className="input sm:max-w-[130px]" value={language} onChange={(e) => setLanguage(e.target.value)}>
             {LANGS.map((l) => <option key={l} value={l}>{titleCase(l)}</option>)}
           </select>
           <input className="input" placeholder="Add a local name" value={name} onChange={(e) => setName(e.target.value)} />

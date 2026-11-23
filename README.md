@@ -80,6 +80,15 @@ The rules live in one file, `src/modules/review/workflow.ts`, with tests.
 | POST | `/auth/change-password` | Change own password; clears the temporary-password flag |
 | GET | `/admin/export/dishes.json`, `dishes.csv`, `foods.csv` | Offline review exports (`status` filter); logged |
 
+## Mobile and tablet
+
+The dashboard is responsive from 360 px phones up to wide desktops.
+
+- **Phones and small tablets (below 1024 px):** a top bar with a menu button opens a slide-out drawer (closes on navigation, Escape or tapping outside).
+- **Lists (below 768 px):** tables turn into cards with "label: value" pairs, including row checkboxes for bulk actions. See `components/DataTable.tsx`; use it for any new list.
+- **Detail screens:** on phones the order is status actions, content, then comments (with a "Jump to comments" link). From 1280 px the comments column sits beside the content.
+- **Touch:** buttons and inputs are larger on phones, and inputs use 16 px text so iOS does not zoom in when a field is focused.
+
 ## Error format
 
 Every API error has one shape: `{ error, code, details?, requestId }`. `error` is a message safe to show, `code` is stable

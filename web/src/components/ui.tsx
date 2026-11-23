@@ -50,9 +50,9 @@ export function PageHeader({ title, subtitle, actions }: { title: string; subtit
 export function Pager({ page, pageSize, total, onChange }: { page: number; pageSize: number; total: number; onChange: (p: number) => void }) {
   const pages = Math.max(1, Math.ceil(total / pageSize));
   return (
-    <div className="flex items-center justify-between border-t border-slate-200 px-3 py-2 text-sm text-slate-600">
+    <div className="flex flex-col items-center gap-2 border-t border-slate-200 px-3 py-3 text-sm text-slate-600 sm:flex-row sm:justify-between sm:py-2">
       <span>{total} result{total === 1 ? '' : 's'}</span>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3 sm:gap-2">
         <button className="btn-secondary" disabled={page <= 1} onClick={() => onChange(page - 1)}>Previous</button>
         <span>Page {page} of {pages}</span>
         <button className="btn-secondary" disabled={page >= pages} onClick={() => onChange(page + 1)}>Next</button>

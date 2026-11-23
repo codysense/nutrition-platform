@@ -77,12 +77,12 @@ export function EditableFields({ title, kind, id, status, data, fields, canEdit,
             <dt className="flex items-start gap-2 text-xs font-medium uppercase tracking-wide text-slate-500">
               <span>{f.label}</span>
               {!editing && (
-                <button className="normal-case text-brand-600 hover:underline" onClick={() => onComment(f.key)} title="Comment on this field">
+                <button className="py-0.5 normal-case text-brand-600 hover:underline" onClick={() => onComment(f.key)} title="Comment on this field">
                   Comment{openFor(f.key) > 0 && <span className="ml-1 rounded-full bg-amber-100 px-1.5 text-amber-800">{openFor(f.key)}</span>}
                 </button>
               )}
             </dt>
-            <dd className="text-sm text-slate-800">
+            <dd className="min-w-0 break-words text-sm text-slate-800">
               {editing ? (
                 f.type === 'textarea' ? (
                   <textarea className="input min-h-[90px]" value={draft[f.key]} onChange={(e) => setDraft({ ...draft, [f.key]: e.target.value })} />
@@ -112,7 +112,7 @@ export function EditableFields({ title, kind, id, status, data, fields, canEdit,
       </dl>
 
       {editing && (
-        <div className="flex items-center gap-2 border-t border-slate-200 px-4 py-3">
+        <div className="flex flex-wrap items-center gap-2 border-t border-slate-200 px-4 py-3">
           <button className="btn-primary" disabled={save.isPending} onClick={submit}>Save changes</button>
           <button className="btn-secondary" onClick={() => setEditing(false)}>Cancel</button>
           {save.error && <ErrorBox error={save.error} />}

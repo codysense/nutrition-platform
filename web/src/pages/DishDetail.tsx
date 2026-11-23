@@ -73,8 +73,9 @@ export default function DishDetail() {
         title={d.name}
         subtitle={<span className="flex flex-wrap items-center gap-2"><StatusBadge status={d.status} /><span>#{d.legacyNo} · {d.slug}</span><span>Updated {fmtDate(d.updatedAt)}</span></span>}
       />
+      {/* Phones: status actions first, then the content, then comments. From xl up: content left, sticky side column right. */}
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_380px]">
-        <div className="space-y-5">
+        <div className="order-2 min-w-0 space-y-5 xl:order-none">
           <EditableFields title="Claims for review" kind="dish" id={d.id} status={d.status} data={row} fields={CLAIM_FIELDS} canEdit={editable} comments={d.comments} onComment={setFocusField} />
           <IngredientLines dishId={d.id} lines={d.lines} canEdit={editable} />
           <section className="card">
@@ -87,10 +88,14 @@ export default function DishDetail() {
           <AliasEditor kind="dish" id={d.id} aliases={d.aliases} canEdit={editable} isReviewer={isReviewer} />
           <EditableFields title="Dish details" kind="dish" id={d.id} status={d.status} data={row} fields={DETAIL_FIELDS} canEdit={editable} comments={d.comments} onComment={setFocusField} />
         </div>
-
-        <div className="space-y-5 xl:sticky xl:top-6 xl:self-start">
-          <StatusActions kind="dish" id={d.id} status={d.status} allowed={d.allowedTransitions} openComments={openComments} />
-          <CommentThread kind="dish" id={d.id} comments={d.comments} fields={ALL_FIELDS} focusField={focusField} canComment={canEdit} />
+        <div className="contents xl:block xl:space-y-5 xl:sticky xl:top-6 xl:self-start">
+          <div className="order-1 xl:order-none">
+            <StatusActions kind="dish" id={d.id} status={d.status} allowed={d.allowedTransitions} openComments={openComments} />
+          </div>
+          <div id="comments" className="order-3 scroll-mt-20 xl:order-none">
+            <CommentThread kind="dish" id={d.id} comments={d.comments} fields={ALL_FIELDS} focusField={focusField} canComment={canEdit} />
+          </div>
+          <div className="order-4 xl:order-none">
           <div className="card p-4">
             <h2 className="mb-3 text-sm font-semibold text-slate-700">Reviewer flags</h2>
             <label className="mb-3 flex items-center gap-2 text-sm">
@@ -103,6 +108,7 @@ export default function DishDetail() {
             </select>
             {!isReviewer && <p className="mt-2 text-xs text-slate-500">Only reviewers can change these.</p>}
             {flags.error && <div className="mt-2"><ErrorBox error={flags.error} /></div>}
+          </div>
           </div>
         </div>
       </div>

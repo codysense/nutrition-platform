@@ -6,6 +6,7 @@ import { FOOD_CATEGORIES, STATUSES, STATUS_LABEL } from '../lib/format';
 import { FoodListItem, Paged } from '../lib/types';
 import { useSelection } from '../lib/useSelection';
 import { BulkBar } from '../components/BulkBar';
+import { Column, DataTable } from '../components/DataTable';
 import { ErrorBox, PageHeader, Pager, StatusBadge } from '../components/ui';
 
 export default function Foods() {
@@ -22,6 +23,16 @@ export default function Foods() {
   const sel = useSelection(data?.items.map((f) => f.id) ?? []);
   const reset = <T,>(set: (v: T) => void) => (v: T) => { set(v); setPage(1); sel.setAllMatching(false); };
 
+  const columns: Column<FoodListItem>[] = [
+    { key: 'code', header: 'Code', cell: (f) => <span className="text-slate-400">{f.code}</span>, hideOnMobile: true },
+    { key: 'name', header: 'Foodstuff', title: true, cell: (f) => <Link className="font-medium text-brand-700 hover:underline" to={`/foods/${f.id}`}>{f.name}</Link> },
+    { key: 'category', header: 'Category', cell: (f) => <span className="text-slate-600">{f.category}</span> },
+    { key: 'names', header: 'Local names', cell: (f) => <span className="text-xs text-slate-600">{f.aliases.map((a) => a.name).join(', ') || '—'}</span> },
+    { key: 'status', header: 'Status', cell: (f) => <StatusBadge status={f.status} /> },
+    { key: 'used', header: 'Used in', cell: (f) => `${f._count.lines} lines` },
+    { key: 'nutrients', header: 'Nutrients', cell: (f) => `${f._count.nutrients}/11` },
+  ];
+
   return (
     <>
       <PageHeader title="Foodstuffs" subtitle="Ingredient master list. “Used in” shows how many ingredient lines reference each item, which helps decide what nutrient data to source first." />
@@ -33,7 +44,7 @@ export default function Foods() {
         <select className="input" value={category} onChange={(e) => reset(setCategory)(e.target.value)}>
           <option value="">All categories</option>{FOOD_CATEGORIES.map((c) => <option key={c}>{c}</option>)}
         </select>
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={missing} onChange={(e) => reset(setMissing)(e.target.checked)} /> Only without nutrient values</label>
+        <label className="flex min-h-[40px] items-center gap-2 text-sm"><input type="checkbox" className="h-4 w-4" checked={missing} onChange={(e) => reset(setMissing)(e.target.checked)} /> Only without nutrient values</label>
       </div>
       {error && <ErrorBox error={error} />}
       <BulkBar
@@ -43,24 +54,10 @@ export default function Foods() {
         onSelectAllMatching={() => sel.setAllMatching(true)} onClear={sel.clear}
       />
       <div className={`card overflow-hidden ${isFetching ? 'opacity-70' : ''}`}>
-        <table className="w-full">
-          <thead className="bg-slate-50"><tr><th className="th w-8"><input type="checkbox" aria-label="Select all on this page" checked={sel.allOnPage} onChange={sel.togglePage} /></th><th className="th">Code</th><th className="th">Foodstuff</th><th className="th">Category</th><th className="th">Local names</th><th className="th">Status</th><th className="th">Used in</th><th className="th">Nutrients</th></tr></thead>
-          <tbody className="divide-y divide-slate-100">
-            {data?.items.map((f) => (
-              <tr key={f.id} className="hover:bg-slate-50">
-                <td className="td"><input type="checkbox" aria-label={`Select ${f.name}`} checked={sel.allMatching || sel.selected.has(f.id)} onChange={() => sel.toggle(f.id)} /></td>
-                <td className="td text-slate-400">{f.code}</td>
-                <td className="td"><Link className="font-medium text-brand-700 hover:underline" to={`/foods/${f.id}`}>{f.name}</Link></td>
-                <td className="td text-slate-600">{f.category}</td>
-                <td className="td text-xs text-slate-600">{f.aliases.map((a) => a.name).join(', ') || '—'}</td>
-                <td className="td"><StatusBadge status={f.status} /></td>
-                <td className="td">{f._count.lines} lines</td>
-                <td className="td">{f._count.nutrients}/11</td>
-              </tr>
-            ))}
-            {data && data.items.length === 0 && <tr><td className="td text-slate-500" colSpan={8}>No foodstuffs match.</td></tr>}
-          </tbody>
-        </table>
+        <DataTable
+          rows={data?.items ?? []} columns={columns} rowKey={(f) => f.id} empty="No foodstuffs match."
+          selection={{ isSelected: (f) => sel.allMatching || sel.selected.has(f.id), toggle: (f) => sel.toggle(f.id), allOnPage: sel.allOnPage, togglePage: sel.togglePage, label: (f) => f.name }}
+        />
         {data && <Pager page={data.page} pageSize={data.pageSize} total={data.total} onChange={setPage} />}
       </div>
     </>

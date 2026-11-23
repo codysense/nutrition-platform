@@ -44,7 +44,7 @@ export default function FoodDetail() {
       <p className="mb-2 text-sm"><Link className="text-brand-600 hover:underline" to="/foods">← Foodstuffs</Link></p>
       <PageHeader title={f.name} subtitle={<span className="flex flex-wrap items-center gap-2"><StatusBadge status={f.status} /><span>{f.code}</span><span>Updated {fmtDate(f.updatedAt)}</span></span>} />
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_380px]">
-        <div className="space-y-5">
+        <div className="order-2 min-w-0 space-y-5 xl:order-none">
           <EditableFields title="Foodstuff details" kind="food" id={f.id} status={f.status} data={f as unknown as Record<string, unknown>} fields={FIELDS} canEdit={editable} comments={f.comments} onComment={setFocusField} />
           <NutrientTable foodId={f.id} values={f.nutrients} referenceForm={f.referenceForm} canEdit={editable} />
           <AliasEditor kind="food" id={f.id} aliases={f.aliases} canEdit={editable} isReviewer={isReviewer} />
@@ -56,9 +56,14 @@ export default function FoodDetail() {
             </ul>
           </section>
         </div>
-        <div className="space-y-5 xl:sticky xl:top-6 xl:self-start">
-          <StatusActions kind="food" id={f.id} status={f.status} allowed={f.allowedTransitions} openComments={openComments} />
-          <CommentThread kind="food" id={f.id} comments={f.comments} fields={COMMENT_FIELDS} focusField={focusField} canComment={canEdit} />
+        <div className="contents xl:block xl:space-y-5 xl:sticky xl:top-6 xl:self-start">
+          <div className="order-1 xl:order-none">
+            <StatusActions kind="food" id={f.id} status={f.status} allowed={f.allowedTransitions} openComments={openComments} />
+          </div>
+          <div id="comments" className="order-3 scroll-mt-20 xl:order-none">
+            <CommentThread kind="food" id={f.id} comments={f.comments} fields={COMMENT_FIELDS} focusField={focusField} canComment={canEdit} />
+          </div>
+          <div className="order-4 xl:order-none">
           <div className="card p-4">
             <h2 className="mb-3 text-sm font-semibold text-slate-700">Reviewer flags</h2>
             <label className="flex items-center gap-2 text-sm">
@@ -67,6 +72,7 @@ export default function FoodDetail() {
             </label>
             {!isReviewer && <p className="mt-2 text-xs text-slate-500">Only reviewers can change this.</p>}
             {flags.error && <div className="mt-2"><ErrorBox error={flags.error} /></div>}
+          </div>
           </div>
         </div>
       </div>

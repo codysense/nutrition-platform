@@ -50,7 +50,7 @@ export function IngredientLines({ dishId, lines, canEdit }: { dishId: string; li
 
   return (
     <section className="card">
-      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 px-4 py-3">
         <div>
           <h2 className="text-sm font-semibold text-slate-700">Ingredients</h2>
           <p className="text-xs text-slate-500">Link each line to the foodstuffs it uses. This is what nutrient calculation will rely on.</p>
@@ -60,20 +60,20 @@ export function IngredientLines({ dishId, lines, canEdit }: { dishId: string; li
       <ul className="divide-y divide-slate-100">
         {lines.map((l) => (
           <li key={l.id} className="px-4 py-3 text-sm">
-            <div className="flex items-start justify-between gap-3">
-              <p className={l.optional ? 'text-slate-600' : ''}>{l.rawText}</p>
+            <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1">
+              <p className={`min-w-0 break-words ${l.optional ? 'text-slate-600' : ''}`}>{l.rawText}</p>
               <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs ${STATUS_STYLE[l.mappingStatus]}`}>{STATUS_TEXT[l.mappingStatus]}</span>
             </div>
-            <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+            <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5">
               {l.foods.map((f) => (
                 <span key={f.id} className="inline-flex items-center gap-1 rounded bg-brand-50 px-2 py-0.5 text-xs text-brand-700">
                   {f.name}
                   {canEdit && <button title="Unlink" className="text-brand-700 hover:text-red-600" onClick={() => patch.mutate({ lineId: l.id, foodIds: l.foods.filter((x) => x.id !== f.id).map((x) => x.id) })}>×</button>}
                 </span>
               ))}
-              {canEdit && <button className="text-xs font-medium text-brand-600 hover:underline" onClick={() => setPickerFor(pickerFor === l.id ? null : l.id)}>+ Add foodstuff</button>}
+              {canEdit && <button className="py-1 text-xs font-medium text-brand-600 hover:underline" onClick={() => setPickerFor(pickerFor === l.id ? null : l.id)}>+ Add foodstuff</button>}
               {canEdit && l.mappingStatus === 'AUTO_SUGGESTED' && (
-                <button className="text-xs font-medium text-emerald-700 hover:underline" onClick={() => patch.mutate({ lineId: l.id, foodIds: l.foods.map((f) => f.id), confirm: true })}>Confirm</button>
+                <button className="py-1 text-xs font-medium text-emerald-700 hover:underline" onClick={() => patch.mutate({ lineId: l.id, foodIds: l.foods.map((f) => f.id), confirm: true })}>Confirm</button>
               )}
             </div>
             {pickerFor === l.id && <FoodPicker onClose={() => setPickerFor(null)} onPick={(f) => patch.mutate({ lineId: l.id, foodIds: [...l.foods.map((x) => x.id), f.id] })} />}

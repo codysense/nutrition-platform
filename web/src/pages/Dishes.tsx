@@ -6,6 +6,7 @@ import { CUISINES, DISH_CATEGORIES, STATUSES, STATUS_LABEL } from '../lib/format
 import { DishListItem, Paged } from '../lib/types';
 import { useSelection } from '../lib/useSelection';
 import { BulkBar } from '../components/BulkBar';
+import { Column, DataTable } from '../components/DataTable';
 import { ErrorBox, PageHeader, Pager, StatusBadge } from '../components/ui';
 
 export default function Dishes() {
@@ -22,6 +23,16 @@ export default function Dishes() {
   });
   const sel = useSelection(data?.items.map((d) => d.id) ?? []);
   const reset = <T,>(set: (v: T) => void) => (v: T) => { set(v); setPage(1); sel.setAllMatching(false); };
+
+  const columns: Column<DishListItem>[] = [
+    { key: 'no', header: '#', cell: (d) => <span className="text-slate-400">{d.legacyNo}</span>, hideOnMobile: true },
+    { key: 'name', header: 'Dish', title: true, cell: (d) => <Link className="font-medium text-brand-700 hover:underline" to={`/dishes/${d.id}`}>{d.name}</Link> },
+    { key: 'category', header: 'Category', cell: (d) => <span className="text-slate-600">{d.category}</span> },
+    { key: 'cuisine', header: 'Cuisine', cell: (d) => <span className="text-slate-600">{d.cuisine ?? '—'}</span> },
+    { key: 'status', header: 'Status', cell: (d) => <StatusBadge status={d.status} /> },
+    { key: 'comments', header: 'Open comments', cell: (d) => d._count.comments || '—' },
+    { key: 'lines', header: 'Unmapped lines', cell: (d) => d._count.lines || '—' },
+  ];
 
   return (
     <>
@@ -45,24 +56,10 @@ export default function Dishes() {
         onSelectAllMatching={() => sel.setAllMatching(true)} onClear={sel.clear}
       />
       <div className={`card overflow-hidden ${isFetching ? 'opacity-70' : ''}`}>
-        <table className="w-full">
-          <thead className="bg-slate-50"><tr><th className="th w-8"><input type="checkbox" aria-label="Select all on this page" checked={sel.allOnPage} onChange={sel.togglePage} /></th><th className="th">#</th><th className="th">Dish</th><th className="th">Category</th><th className="th">Cuisine</th><th className="th">Status</th><th className="th">Open comments</th><th className="th">Unmapped lines</th></tr></thead>
-          <tbody className="divide-y divide-slate-100">
-            {data?.items.map((d) => (
-              <tr key={d.id} className="hover:bg-slate-50">
-                <td className="td"><input type="checkbox" aria-label={`Select ${d.name}`} checked={sel.allMatching || sel.selected.has(d.id)} onChange={() => sel.toggle(d.id)} /></td>
-                <td className="td text-slate-400">{d.legacyNo}</td>
-                <td className="td"><Link className="font-medium text-brand-700 hover:underline" to={`/dishes/${d.id}`}>{d.name}</Link></td>
-                <td className="td text-slate-600">{d.category}</td>
-                <td className="td text-slate-600">{d.cuisine ?? '—'}</td>
-                <td className="td"><StatusBadge status={d.status} /></td>
-                <td className="td">{d._count.comments || '—'}</td>
-                <td className="td">{d._count.lines || '—'}</td>
-              </tr>
-            ))}
-            {data && data.items.length === 0 && <tr><td className="td text-slate-500" colSpan={8}>No dishes match.</td></tr>}
-          </tbody>
-        </table>
+        <DataTable
+          rows={data?.items ?? []} columns={columns} rowKey={(d) => d.id} empty="No dishes match."
+          selection={{ isSelected: (d) => sel.allMatching || sel.selected.has(d.id), toggle: (d) => sel.toggle(d.id), allOnPage: sel.allOnPage, togglePage: sel.togglePage, label: (d) => d.name }}
+        />
         {data && <Pager page={data.page} pageSize={data.pageSize} total={data.total} onChange={setPage} />}
       </div>
     </>

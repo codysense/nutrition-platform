@@ -62,6 +62,11 @@ export function StatusActions({ kind, id, status, allowed, openComments }: {
         </div>
       )}
 
+      {openComments > 0 && (
+        <a href="#comments" className="mt-3 block text-sm font-medium text-brand-700 hover:underline xl:hidden">
+          Jump to {openComments} open comment{openComments === 1 ? '' : 's'} ↓
+        </a>
+      )}
       {allowed.some((t) => t.blockedReason) && (
         <p className="mt-2 text-xs text-amber-700">{allowed.find((t) => t.blockedReason)!.blockedReason}.</p>
       )}

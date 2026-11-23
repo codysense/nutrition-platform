@@ -4,6 +4,7 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { api, qs } from '../lib/api';
 import { fmtDate, ROLE_LABEL, titleCase } from '../lib/format';
 import { AuditItem, Paged } from '../lib/types';
+import { Column, DataTable } from '../components/DataTable';
 import { ErrorBox, PageHeader, Pager } from '../components/ui';
 
 const ENTITIES = ['Recipe', 'Food', 'User', 'KnowledgeSource', 'ReviewComment'];
@@ -36,6 +37,14 @@ export default function Audit() {
     return <span>{label}</span>;
   };
 
+  const columns: Column<AuditItem>[] = [
+    { key: 'when', header: 'When', cell: (a) => <span className="whitespace-nowrap text-xs text-slate-500">{fmtDate(a.createdAt)}</span> },
+    { key: 'who', header: 'Who', cell: (a) => (a.actor ? <>{a.actor.name} <span className="text-xs text-slate-400">{ROLE_LABEL[a.actor.role]}</span></> : <span className="text-slate-400">System</span>) },
+    { key: 'action', header: 'Action', cell: (a) => <span className="rounded bg-slate-100 px-1.5 py-0.5 text-xs">{titleCase(a.action)}</span> },
+    { key: 'record', header: 'Record', title: true, cell: (a) => target(a) },
+    { key: 'details', header: 'Details', cell: (a) => <span className="text-slate-600">{detail(a)}</span> },
+  ];
+
   return (
     <>
       <PageHeader title="Audit log" subtitle="Who changed what, and when. Visible to super admins only." />
@@ -49,21 +58,7 @@ export default function Audit() {
       </div>
       {error && <ErrorBox error={error} />}
       <div className={`card overflow-hidden ${isFetching ? 'opacity-70' : ''}`}>
-        <table className="w-full">
-          <thead className="bg-slate-50"><tr><th className="th">When</th><th className="th">Who</th><th className="th">Action</th><th className="th">Record</th><th className="th">Details</th></tr></thead>
-          <tbody className="divide-y divide-slate-100">
-            {data?.items.map((a) => (
-              <tr key={a.id} className="align-top">
-                <td className="td whitespace-nowrap text-xs text-slate-500">{fmtDate(a.createdAt)}</td>
-                <td className="td">{a.actor ? <>{a.actor.name} <span className="text-xs text-slate-400">{ROLE_LABEL[a.actor.role]}</span></> : <span className="text-slate-400">System</span>}</td>
-                <td className="td"><span className="rounded bg-slate-100 px-1.5 py-0.5 text-xs">{titleCase(a.action)}</span></td>
-                <td className="td">{target(a)}</td>
-                <td className="td text-slate-600">{detail(a)}</td>
-              </tr>
-            ))}
-            {data && data.items.length === 0 && <tr><td className="td text-slate-500" colSpan={5}>No events match.</td></tr>}
-          </tbody>
-        </table>
+        <DataTable rows={data?.items ?? []} columns={columns} rowKey={(a) => a.id} empty="No events match." />
         {data && <Pager page={data.page} pageSize={data.pageSize} total={data.total} onChange={setPage} />}
       </div>
     </>

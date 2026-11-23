@@ -5,6 +5,7 @@ import { useAuth } from '../lib/auth';
 import { generatePassword } from '../lib/password';
 import { ROLE_LABEL, fmtDate } from '../lib/format';
 import { Role, UserRow } from '../lib/types';
+import { Column, DataTable } from '../components/DataTable';
 import { ErrorBox, PageHeader, Spinner } from '../components/ui';
 
 const ROLES = Object.keys(ROLE_LABEL) as Role[];
@@ -50,6 +51,34 @@ export default function Users() {
     patch.mutate({ id: u.id, body: { password } }, { onSuccess: () => setCreds({ email: u.email, password }) });
   };
 
+  const columns: Column<UserRow>[] = [
+    {
+      key: 'name', header: 'Name', title: true,
+      cell: (u) => (
+        <span className={u.isActive ? '' : 'text-slate-400'}>
+          {u.name}
+          {u.id === me?.id && <span className="ml-2 text-xs font-normal text-slate-400">(you)</span>}
+          {u.mustChangePassword && <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-normal text-amber-800">Temporary password</span>}
+        </span>
+      ),
+    },
+    { key: 'email', header: 'Email', cell: (u) => u.email },
+    {
+      key: 'role', header: 'Role',
+      cell: (u) => (
+        <select className="input w-auto" value={u.role} disabled={u.id === me?.id || patch.isPending} onChange={(e) => patch.mutate({ id: u.id, body: { role: e.target.value } })}>
+          {ROLES.map((r) => <option key={r} value={r}>{ROLE_LABEL[r]}</option>)}
+        </select>
+      ),
+    },
+    {
+      key: 'active', header: 'Active',
+      cell: (u) => <input type="checkbox" className="h-5 w-5 sm:h-4 sm:w-4" checked={u.isActive} disabled={u.id === me?.id || patch.isPending} onChange={(e) => patch.mutate({ id: u.id, body: { isActive: e.target.checked } })} aria-label={`Active: ${u.name}`} />,
+    },
+    { key: 'created', header: 'Created', cell: (u) => <span className="text-xs">{fmtDate(u.createdAt)}</span> },
+    { key: 'actions', header: '', align: 'right', cell: (u) => <button className="btn-secondary" disabled={patch.isPending} onClick={() => reset(u)}>Reset password</button> },
+  ];
+
   if (isLoading) return <Spinner />;
   if (error || !data) return <ErrorBox error={error} />;
 
@@ -77,28 +106,7 @@ export default function Users() {
 
       {patch.error && <div className="mb-4"><ErrorBox error={patch.error} /></div>}
       <div className="card overflow-hidden">
-        <table className="w-full">
-          <thead className="bg-slate-50"><tr><th className="th">Name</th><th className="th">Email</th><th className="th">Role</th><th className="th">Active</th><th className="th">Created</th><th className="th" /></tr></thead>
-          <tbody className="divide-y divide-slate-100">
-            {data.map((u) => {
-              const self = u.id === me?.id;
-              return (
-                <tr key={u.id} className={u.isActive ? '' : 'bg-slate-50 text-slate-400'}>
-                  <td className="td font-medium">{u.name}{self && <span className="ml-2 text-xs font-normal text-slate-400">(you)</span>}{u.mustChangePassword && <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-normal text-amber-800">Temporary password</span>}</td>
-                  <td className="td">{u.email}</td>
-                  <td className="td">
-                    <select className="input w-auto" value={u.role} disabled={self || patch.isPending} onChange={(e) => patch.mutate({ id: u.id, body: { role: e.target.value } })}>
-                      {ROLES.map((r) => <option key={r} value={r}>{ROLE_LABEL[r]}</option>)}
-                    </select>
-                  </td>
-                  <td className="td"><input type="checkbox" checked={u.isActive} disabled={self || patch.isPending} onChange={(e) => patch.mutate({ id: u.id, body: { isActive: e.target.checked } })} aria-label={`Active: ${u.name}`} /></td>
-                  <td className="td text-xs">{fmtDate(u.createdAt)}</td>
-                  <td className="td text-right"><button className="btn-secondary" disabled={patch.isPending} onClick={() => reset(u)}>Reset password</button></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <DataTable rows={data} columns={columns} rowKey={(u) => u.id} />
       </div>
     </>
   );
