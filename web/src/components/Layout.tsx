@@ -70,10 +70,11 @@ export function Layout() {
             </NavLink>
             <NavLink to="/dishes" className={link}>Dishes</NavLink>
             <NavLink to="/foods" className={link}>Foodstuffs</NavLink>
-            <NavLink to="/export" className={link}>Export</NavLink>
+
             {user?.role === 'SUPER_ADMIN' && (
               <>
                 <p className="px-3 pt-4 text-xs font-semibold uppercase tracking-wide text-slate-400">Administration</p>
+              <NavLink to="/export" className={link}>Export</NavLink>
                 <NavLink to="/users" className={link}>Users</NavLink>
                 <NavLink to="/audit" className={link}>Audit log</NavLink>
               </>
