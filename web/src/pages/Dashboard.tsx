@@ -33,6 +33,8 @@ function Tile({ label, value, to, tone = 'text-slate-900' }: { label: string; va
   return to ? <Link to={to}>{body}</Link> : body;
 }
 
+const confirmedPct = (d: Stats) => (d.ingredientLines?.total ? Math.round((d.ingredientLines.ready / d.ingredientLines.total) * 100) : 0);
+
 export default function Dashboard() {
   const { data, error, isLoading } = useQuery({ queryKey: ['stats'], queryFn: () => api<Stats>('/admin/stats') });
   if (isLoading) return <Spinner />;
@@ -42,11 +44,13 @@ export default function Dashboard() {
   return (
     <>
       <PageHeader title="Overview" subtitle="Where the dataset stands in review and how complete the nutrient data is." />
-      <div className="mb-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <Tile label="Waiting for review" value={pending} to="/review" tone={pending ? 'text-amber-700' : undefined} />
         <Tile label="Open comments" value={data.openComments} />
-        <Tile label="Unmapped ingredient lines" value={data.unmappedIngredientLines} to="/dishes" />
+        <Tile label="Ingredient lines to confirm" value={data.unmappedIngredientLines} to="/dishes" />
         <Tile label="Dishes with unverified names" value={data.recipesWithUnverifiedNames} />
+        <Tile label="Dishes live to the public" value={data.liveDishes ?? 0} to="/dishes" tone={data.liveDishes ? 'text-green-700' : undefined} />
+        <Tile label="Ingredient lines confirmed" value={`${confirmedPct(data)}%`} />
       </div>
       <div className="mb-5 grid gap-4 lg:grid-cols-2">
         <StatusBars title="Dishes by status" counts={data.recipesByStatus} />

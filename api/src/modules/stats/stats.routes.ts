@@ -11,16 +11,18 @@ statsRouter.use(authenticate);
 statsRouter.get(
   '/stats',
   ah(async (_req, res) => {
-    const [recipesByStatus, foodsByStatus, totalFoods, foodsWithNutrients, openComments, unmappedLines, namesUnverifiedRecipes, nutrientCoverage] =
+    const [recipesByStatus, foodsByStatus, totalFoods, foodsWithNutrients, openComments, unmappedLines, namesUnverifiedRecipes, nutrientCoverage, liveDishes, totalLines] =
       await Promise.all([
         prisma.recipe.groupBy({ by: ['status'], _count: { _all: true } }),
         prisma.food.groupBy({ by: ['status'], _count: { _all: true } }),
         prisma.food.count(),
         prisma.food.count({ where: { nutrients: { some: {} } } }),
         prisma.reviewComment.count({ where: { resolved: false } }),
-        prisma.recipeIngredientLine.count({ where: { mappingStatus: MappingStatus.UNMAPPED } }),
+        prisma.recipeIngredientLine.count({ where: { OR: [{ mappingStatus: { not: MappingStatus.CONFIRMED } }, { roleConfirmed: false }] } }),
         prisma.recipe.count({ where: { namesVerified: false } }),
         prisma.foodNutrient.groupBy({ by: ['nutrientId'], _count: { _all: true } }),
+        prisma.recipe.count({ where: { liveSnapshotId: { not: null } } }),
+        prisma.recipeIngredientLine.count(),
       ]);
     const nutrients = await prisma.nutrient.findMany({ orderBy: { sortOrder: 'asc' } });
     const counts = new Map(nutrientCoverage.map((c) => [c.nutrientId, c._count._all]));
@@ -32,6 +34,8 @@ statsRouter.get(
       nutrientCoverage: nutrients.map((n) => ({ key: n.key, name: n.name, foodsWithValue: counts.get(n.id) ?? 0, totalFoods })),
       openComments,
       unmappedIngredientLines: unmappedLines,
+      liveDishes,
+      ingredientLines: { total: totalLines, ready: totalLines - unmappedLines },
       recipesWithUnverifiedNames: namesUnverifiedRecipes,
     });
   }),

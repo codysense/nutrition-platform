@@ -11,5 +11,10 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "prisma/seed.ts"]
+  "include": [
+    "src",
+    "prisma/seed.ts",
+    "prisma/backfill-snapshots.ts",
+    "prisma/backfill-roles.ts"
+  ]
 }

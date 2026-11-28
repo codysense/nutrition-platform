@@ -10,6 +10,7 @@ import { AliasEditor } from '../components/AliasEditor';
 import { CommentThread } from '../components/CommentThread';
 import { EditableFields, FieldDef } from '../components/EditableFields';
 import { IngredientLines } from '../components/IngredientLines';
+import { LivePanel } from '../components/LivePanel';
 import { StatusActions } from '../components/StatusActions';
 import { ErrorBox, PageHeader, Spinner, StatusBadge } from '../components/ui';
 
@@ -89,8 +90,9 @@ export default function DishDetail() {
           <EditableFields title="Dish details" kind="dish" id={d.id} status={d.status} data={row} fields={DETAIL_FIELDS} canEdit={editable} comments={d.comments} onComment={setFocusField} />
         </div>
         <div className="contents xl:block xl:space-y-5 xl:sticky xl:top-6 xl:self-start">
-          <div className="order-1 xl:order-none">
+          <div className="order-1 space-y-5 xl:order-none">
             <StatusActions kind="dish" id={d.id} status={d.status} allowed={d.allowedTransitions} openComments={openComments} />
+            <LivePanel dish={d} canEdit={editable} />
           </div>
           <div id="comments" className="order-3 scroll-mt-20 xl:order-none">
             <CommentThread kind="dish" id={d.id} comments={d.comments} fields={ALL_FIELDS} focusField={focusField} canComment={canEdit} />

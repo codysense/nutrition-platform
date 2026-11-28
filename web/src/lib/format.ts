@@ -31,3 +31,13 @@ export const FOOD_CATEGORIES = [
   'Processed foods & staples',
 ];
 export const STATUSES = Object.keys(STATUS_LABEL) as ReviewStatus[];
+
+export const ROLE_INFO: Record<'CORE' | 'SEASONING' | 'STAPLE' | 'OPTIONAL', { label: string; help: string }> = {
+  CORE: { label: 'Core', help: 'The dish needs it. Missing one counts against a match.' },
+  SEASONING: { label: 'Seasoning', help: 'Flavouring (spices, crayfish, fermented seasonings). A match is still good without it.' },
+  STAPLE: { label: 'Staple', help: 'Assumed to be in every kitchen: water, salt, cooking oil, seasoning cubes.' },
+  OPTIONAL: { label: 'Optional', help: 'Can be left out: garnish, wrappers, serving extras.' },
+};
+
+/** A line is ready when a person has confirmed both its foodstuff links and its role. */
+export const lineReady = (l: { mappingStatus: string; roleConfirmed: boolean }) => l.mappingStatus === 'CONFIRMED' && l.roleConfirmed;

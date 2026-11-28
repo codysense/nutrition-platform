@@ -14,7 +14,10 @@
     "seed": "tsx prisma/seed.ts",
     "test": "vitest run",
     "seed:prod": "node dist/prisma/seed.js",
-    "start:render": "prisma migrate deploy && node dist/src/server.js"
+    "start:render": "prisma migrate deploy && node dist/prisma/backfill-roles.js && node dist/prisma/backfill-snapshots.js && node dist/src/server.js",
+    "backfill:snapshots": "tsx prisma/backfill-snapshots.ts",
+    "backfill:roles": "tsx prisma/backfill-roles.ts",
+    "fixture:catalogue": "tsx scripts/make-catalogue-fixture.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

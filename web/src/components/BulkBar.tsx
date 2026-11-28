@@ -13,7 +13,7 @@ interface Option { to: ReviewStatus; label: string; roles: Role[]; noteRequired?
 const OPTIONS: Option[] = [
   { to: 'PENDING_REVIEW', label: 'Submit for review', roles: ['SUPER_ADMIN', 'CONTENT_MANAGER'] },
   { to: 'DRAFT', label: 'Return to draft', roles: ['SUPER_ADMIN', 'CONTENT_MANAGER'] },
-  { to: 'PUBLISHED', label: 'Publish (approved items only)', roles: ['SUPER_ADMIN', 'CONTENT_MANAGER'] },
+  { to: 'PUBLISHED', label: 'Publish live (approved items only)', roles: ['SUPER_ADMIN', 'CONTENT_MANAGER'] },
   { to: 'REQUIRES_UPDATE', label: 'Request changes', roles: ['SUPER_ADMIN', 'NUTRITION_REVIEWER'], noteRequired: true },
   { to: 'REJECTED', label: 'Reject', roles: ['SUPER_ADMIN', 'NUTRITION_REVIEWER'], noteRequired: true },
   { to: 'ARCHIVED', label: 'Archive', roles: ['SUPER_ADMIN'] },

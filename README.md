@@ -68,6 +68,11 @@ The rules live in one file, `src/modules/review/workflow.ts`, with tests.
 | PATCH | `/admin/dishes/:id` | Edit fields |
 | PUT | `/admin/dishes/:id/aliases` | Replace local names |
 | PATCH | `/admin/dishes/:id/ingredients/:lineId` | Map an ingredient line to foodstuffs, quantity, unit |
+| PATCH | `/admin/dishes/:id/ingredients/:lineId` | Set foodstuff links, role, confirmation for one line |
+| POST | `/admin/dishes/:id/ingredients/confirm-all` | Confirm every line that can safely be confirmed |
+| POST | `/admin/dishes/:id/republish` | Publish a new version of an already-published dish (after link/role changes) |
+| POST | `/admin/dishes/:id/unpublish` | Take the live version offline (status unchanged) |
+| GET | `/admin/dishes/:id/versions/:n` | A frozen published version |
 | POST | `/admin/dishes/:id/status`, `/comments` | Workflow transition / comment on a field |
 | POST | `/admin/dishes/bulk-status`, `/admin/foods/bulk-status` | Move many items at once: `{ids}` or `{filter}` (max 500), `to`, `note`. Returns moved count and skipped items with reasons. **`APPROVED` is rejected: approvals are one at a time** |
 | GET | `/admin/foods`, `/admin/foods/:id` | List (also `missingNutrients=true`) / detail with used-in dishes |
@@ -79,6 +84,24 @@ The rules live in one file, `src/modules/review/workflow.ts`, with tests.
 | GET | `/admin/audit` | Audit log: filters `entityType`, `action`, paging (super admin only) |
 | POST | `/auth/change-password` | Change own password; clears the temporary-password flag |
 | GET | `/admin/export/dishes.json`, `dishes.csv`, `foods.csv` | Offline review exports (`status` filter); logged |
+
+## Packages
+
+- `api/` back-office API, `web/` back-office dashboard, `packages/matcher/` shared ingredient search and dish matching (see its README).
+  The public app (`app/`, step 7.5) will import the matcher directly.
+
+## Publishing (live versions)
+
+A dish has a **working copy** (what staff edit and the dietitian reviews) and zero or one **live version** (a frozen snapshot the
+public app reads). Publishing (`APPROVED -> PUBLISHED`) freezes the working copy as the next version number. Editing never
+changes the live version. A live version is removed by `POST /admin/dishes/:id/unpublish`, by archiving the dish, or by
+a reviewer moving a *Published* dish to *Needs update*. Snapshots are built in `src/modules/publishing/` (`snapshot.ts` is pure
+and unit-tested; `publishing.service.ts` runs inside the status-change transaction). A content hash tells the back office when
+the working copy has moved on from the live version. Foodstuffs are not snapshotted yet.
+
+### Ingredient roles and readiness
+
+Every `RecipeIngredientLine` has a `role` (`CORE`, `SEASONING`, `STAPLE`, `OPTIONAL`) and two confirmations: `mappingStatus = CONFIRMED` (which foodstuffs it refers to) and `roleConfirmed`. Roles are *suggested* by `src/modules/ingredients/roles.ts` (seed and `prisma/backfill-roles.ts`) and confirmed by a person. A line is **ready** when both are confirmed (`readiness.ts`); a dish can only be published when every line is ready. Core and seasoning lines must link to at least one foodstuff; staples and optional lines need none (water, foil). Link and role edits do not reopen review and do not change `lastEditedById`, so they cannot be used to bypass the four-eyes approval rule.
 
 ## Mobile and tablet
 

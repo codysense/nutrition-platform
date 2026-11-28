@@ -1,0 +1,12 @@
+export * from './types';
+export { fold, normalize, tokens, shortName, singular, withinEdits } from './normalize';
+export { buildFoodIndex, searchFoods, resolveIngredient, parsePantryText } from './foodIndex';
+export type { FoodIndex, SearchResult, Resolution } from './foodIndex';
+export { ALLERGENS, LABEL_CHECK_NOTICE, allergenLabel, parseAllergenFlags } from './allergens';
+export type { AllergenKey } from './allergens';
+export { matchDishes } from './match';
+export type { DishMatch, DishWarning, MatchOptions, MatchStatus, MissingItem } from './match';
+export { buildCatalogue, looksLikeAlternatives } from './catalogue';
+export type { SnapshotLike } from './catalogue';
+export { searchDishes } from './dishSearch';
+export { explainMatch } from './explain';

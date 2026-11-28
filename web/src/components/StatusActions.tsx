@@ -7,7 +7,7 @@ import { ErrorBox, StatusBadge } from './ui';
 
 const LABEL: Record<ReviewStatus, string> = {
   APPROVED: 'Approve', REJECTED: 'Reject', REQUIRES_UPDATE: 'Request changes', PENDING_REVIEW: 'Submit for review',
-  PUBLISHED: 'Publish', DRAFT: 'Return to draft', ARCHIVED: 'Archive',
+  PUBLISHED: 'Publish (go live)', DRAFT: 'Return to draft', ARCHIVED: 'Archive',
 };
 const STYLE: Partial<Record<ReviewStatus, string>> = {
   APPROVED: 'btn-primary', PUBLISHED: 'btn-primary', PENDING_REVIEW: 'btn-primary', REJECTED: 'btn-danger', ARCHIVED: 'btn-secondary',

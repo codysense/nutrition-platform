@@ -1,16 +1,18 @@
 import { Router } from 'express';
 import {
-  AnimalFlesh, CostTier, Difficulty, EvidenceLevel, FrequencyGuide, MappingStatus, Prisma, ReviewStatus, SpiceLevel,
+  AnimalFlesh, CostTier, Difficulty, EvidenceLevel, FrequencyGuide, IngredientRole, MappingStatus, Prisma, ReviewStatus, SpiceLevel,
 } from '@prisma/client';
 import { z } from 'zod';
 import { prisma } from '../../lib/prisma';
 import { ah, AppError } from '../../lib/errors';
 import { audit } from '../../lib/audit';
 import { authenticate, requireRole } from '../../middleware/auth';
-import { EDITORS, REVIEWERS } from '../../lib/roles';
+import { AUTHORS, EDITORS, REVIEWERS } from '../../lib/roles';
+import { confirmableLines, needsFoodstuff, readinessReport } from '../ingredients/readiness';
 import { bulkChangeStatus, editSideEffects } from '../review/review.service';
 import { mountReviewRoutes } from '../review/review.routes';
 import { allowedTransitions } from '../review/workflow';
+import { liveInfo, republish, takeOffline, versionContent } from '../publishing/publishing.service';
 
 export const recipesRouter = Router();
 recipesRouter.use(authenticate);
@@ -20,16 +22,19 @@ const listQuery = z.object({
   status: z.nativeEnum(ReviewStatus).optional(),
   category: z.string().optional(),
   cuisine: z.string().optional(),
+  live: z.enum(['true', 'false']).optional(),
   page: z.coerce.number().int().min(1).default(1),
   pageSize: z.coerce.number().int().min(1).max(100).default(25),
 });
 
 
-type RecipeFilter = { q?: string; status?: ReviewStatus; category?: string; cuisine?: string };
+type RecipeFilter = { q?: string; status?: ReviewStatus; category?: string; cuisine?: string; live?: 'true' | 'false' };
 const recipeWhere = (q: RecipeFilter): Prisma.RecipeWhereInput => ({
   ...(q.status && { status: q.status }),
   ...(q.category && { category: q.category }),
   ...(q.cuisine && { cuisine: q.cuisine }),
+  ...(q.live === 'true' && { liveSnapshotId: { not: null } }),
+  ...(q.live === 'false' && { liveSnapshotId: null }),
   ...(q.q && {
     OR: [
       { name: { contains: q.q, mode: 'insensitive' } },
@@ -43,7 +48,7 @@ const bulkSchema = z
   .object({
     ids: z.array(z.string()).min(1).max(BULK_MAX).optional(),
     filter: z
-      .object({ q: z.string().trim().optional(), status: z.nativeEnum(ReviewStatus).optional(), category: z.string().optional(), cuisine: z.string().optional() })
+      .object({ q: z.string().trim().optional(), status: z.nativeEnum(ReviewStatus).optional(), category: z.string().optional(), cuisine: z.string().optional(), live: z.enum(['true', 'false']).optional() })
       .optional(),
     to: z.nativeEnum(ReviewStatus),
     note: z.string().trim().max(2000).optional(),
@@ -76,8 +81,8 @@ recipesRouter.get(
         take: q.pageSize,
         select: {
           id: true, legacyNo: true, slug: true, name: true, category: true, cuisine: true, region: true,
-          status: true, namesVerified: true, allergenFlags: true, updatedAt: true,
-          _count: { select: { comments: { where: { resolved: false } }, lines: { where: { mappingStatus: MappingStatus.UNMAPPED } } } },
+          status: true, namesVerified: true, allergenFlags: true, updatedAt: true, liveSnapshot: { select: { version: true } },
+          _count: { select: { comments: { where: { resolved: false } }, lines: { where: { OR: [{ mappingStatus: { not: MappingStatus.CONFIRMED } }, { roleConfirmed: false }] } } } },
         },
       }),
     ]);
@@ -99,10 +104,28 @@ recipesRouter.get(
     });
     if (!recipe) throw new AppError(404, 'Dish not found');
     const user = req.user!;
+    const { live, versions } = await liveInfo(recipe.id);
     res.json({
       ...recipe,
+      live,
+      versions,
       allowedTransitions: allowedTransitions({ from: recipe.status, role: user.role, actorId: user.id, lastEditedById: recipe.lastEditedById }),
     });
+  }),
+);
+
+recipesRouter.get(
+  '/:id/versions/:version',
+  ah(async (req, res) => {
+    res.json(await versionContent(req.params.id, z.coerce.number().int().min(1).parse(req.params.version)));
+  }),
+);
+
+recipesRouter.post(
+  '/:id/unpublish',
+  requireRole(...EDITORS),
+  ah(async (req, res) => {
+    res.json(await takeOffline(req.params.id, req.user!.id));
   }),
 );
 
@@ -189,7 +212,9 @@ recipesRouter.put(
   }),
 );
 
-// Ingredient mapping: link a free-text line to foodstuffs and (optionally) structured quantity/unit.
+// Ingredient mapping: link a free-text line to foodstuffs, set its role, and confirm it.
+// These are structural edits, not reviewed claims, so they neither send an approved dish back to review nor change
+// "last edited by" (which would let a dietitian approve her own claim edits after an admin maps a line).
 recipesRouter.patch(
   '/:id/ingredients/:lineId',
   requireRole(...EDITORS),
@@ -200,12 +225,14 @@ recipesRouter.patch(
         quantity: z.number().positive().nullable().optional(),
         unit: z.string().trim().max(30).nullable().optional(),
         mappingStatus: z.nativeEnum(MappingStatus).optional(),
+        role: z.nativeEnum(IngredientRole).optional(),
+        roleConfirmed: z.boolean().optional(),
       })
       .strict()
       .parse(req.body);
     const line = await prisma.recipeIngredientLine.findFirst({
       where: { id: req.params.lineId, recipeId: req.params.id },
-      include: { recipe: { select: { status: true } } },
+      include: { recipe: { select: { status: true } }, foods: { select: { id: true } } },
     });
     if (!line) throw new AppError(404, 'Ingredient line not found');
     if (line.recipe.status === ReviewStatus.ARCHIVED) throw new AppError(409, 'Archived dishes cannot be edited');
@@ -213,22 +240,59 @@ recipesRouter.patch(
       const found = await prisma.food.count({ where: { id: { in: body.foodIds } } });
       if (found !== new Set(body.foodIds).size) throw new AppError(400, 'One or more foodstuffs do not exist');
     }
-    const effects = editSideEffects(line.recipe.status, req.user!.id);
+
     const { foodIds, ...rest } = body;
-    const [updated] = await prisma.$transaction([
-      prisma.recipeIngredientLine.update({
-        where: { id: line.id },
-        data: {
-          ...rest,
-          ...(foodIds ? { foods: { set: foodIds.map((id) => ({ id })) } } : {}),
-          ...(foodIds && !body.mappingStatus ? { mappingStatus: foodIds.length ? MappingStatus.CONFIRMED : MappingStatus.UNMAPPED } : {}),
-        },
-        include: { foods: { select: { id: true, code: true, name: true } } },
-      }),
-      prisma.recipe.update({ where: { id: req.params.id }, data: effects.data }),
-    ]);
-    await audit(req.user!.id, 'UPDATE', 'Recipe', req.params.id, { fields: ['ingredientLine'], lineId: line.id, approvalInvalidated: effects.invalidates });
+    const role = body.role ?? line.role;
+    const foodCount = foodIds ? new Set(foodIds).size : line.foods.length;
+    let mappingStatus = body.mappingStatus;
+    if (!mappingStatus && foodIds) mappingStatus = foodCount ? MappingStatus.CONFIRMED : MappingStatus.UNMAPPED;
+    const finalStatus = mappingStatus ?? line.mappingStatus;
+    if (finalStatus === MappingStatus.CONFIRMED && foodCount === 0 && needsFoodstuff(role))
+      throw new AppError(400, 'A core or seasoning ingredient must be linked to at least one foodstuff before it can be confirmed. Link a foodstuff, or change its role to Staple or Optional if none applies.');
+
+    const updated = await prisma.recipeIngredientLine.update({
+      where: { id: line.id },
+      data: {
+        ...rest,
+        ...(mappingStatus ? { mappingStatus } : {}),
+        // choosing a role is a deliberate human decision, so it counts as confirming it
+        ...(body.role !== undefined && body.roleConfirmed === undefined ? { roleConfirmed: true } : {}),
+        ...(foodIds ? { foods: { set: foodIds.map((id) => ({ id })) } } : {}),
+      },
+      include: { foods: { select: { id: true, code: true, name: true } } },
+    });
+    await audit(req.user!.id, 'UPDATE', 'Recipe', req.params.id, { fields: ['ingredientLine'], lineId: line.id });
     res.json(updated);
+  }),
+);
+
+// Confirms every line that can safely be confirmed in one go (links and role). Lines that still need a foodstuff are left alone.
+recipesRouter.post(
+  '/:id/ingredients/confirm-all',
+  requireRole(...EDITORS),
+  ah(async (req, res) => {
+    const recipe = await prisma.recipe.findUnique({
+      where: { id: req.params.id },
+      select: { status: true, lines: { select: { id: true, position: true, role: true, roleConfirmed: true, mappingStatus: true, foods: { select: { id: true } } } } },
+    });
+    if (!recipe) throw new AppError(404, 'Dish not found');
+    if (recipe.status === ReviewStatus.ARCHIVED) throw new AppError(409, 'Archived dishes cannot be edited');
+    const todo = confirmableLines(recipe.lines);
+    const ids = new Set(todo.map((l) => l.id));
+    await prisma.recipeIngredientLine.updateMany({ where: { id: { in: [...ids] } }, data: { mappingStatus: MappingStatus.CONFIRMED, roleConfirmed: true } });
+    const after = readinessReport(recipe.lines.map((l) => (ids.has(l.id) ? { ...l, mappingStatus: 'CONFIRMED', roleConfirmed: true } : l)));
+    await audit(req.user!.id, 'UPDATE', 'Recipe', req.params.id, { fields: ['ingredientLines'], confirmed: todo.length });
+    res.json({ confirmed: todo.length, needAttention: after.notReady.length, lines: after.notReady });
+  }),
+);
+
+// A published dish whose working copy has moved on (ingredient links or roles changed) can be republished without a new review,
+// because claim edits already send a dish back to review; only structural changes can leave it PUBLISHED.
+recipesRouter.post(
+  '/:id/republish',
+  requireRole(...AUTHORS),
+  ah(async (req, res) => {
+    res.json(await republish(req.params.id, req.user!.id));
   }),
 );
 

@@ -17,15 +17,17 @@ export interface Alias { id?: string; language: string; name: string; verified: 
 
 export interface FoodRef { id: string; code: string; name: string; status?: ReviewStatus }
 
+export type IngredientRole = 'CORE' | 'SEASONING' | 'STAPLE' | 'OPTIONAL';
+
 export interface IngredientLine {
   id: string; position: number; rawText: string; optional: boolean;
-  mappingStatus: 'UNMAPPED' | 'AUTO_SUGGESTED' | 'CONFIRMED'; foods: FoodRef[];
+  mappingStatus: 'UNMAPPED' | 'AUTO_SUGGESTED' | 'CONFIRMED'; role: IngredientRole; roleConfirmed: boolean; foods: FoodRef[];
 }
 
 export interface DishListItem {
   id: string; legacyNo: number | null; slug: string; name: string; category: string; cuisine: string | null;
   region: string | null; status: ReviewStatus; namesVerified: boolean; allergenFlags: string[]; updatedAt: string;
-  _count: { comments: number; lines: number };
+  _count: { comments: number; lines: number }; liveSnapshot?: { version: number } | null;
 }
 
 export interface Dish {
@@ -38,6 +40,8 @@ export interface Dish {
   tips: string | null; evidenceLevel: string; status: ReviewStatus; namesVerified: boolean; lastEditedById: string | null;
   updatedAt: string; aliases: Alias[]; lines: IngredientLine[]; steps: { id: string; stepNumber: number; instruction: string }[];
   comments: Comment[]; allowedTransitions: AllowedTransition[];
+  live?: { version: number; publishedAt: string; approvedAt: string | null; hasUnpublishedChanges: boolean } | null;
+  versions?: { version: number; publishedAt: string; retiredAt: string | null; approvedAt: string | null }[];
 }
 
 export interface FoodListItem {
@@ -66,6 +70,7 @@ export interface Stats {
   foods: { total: number; withNutrientValues: number };
   nutrientCoverage: { key: string; name: string; foodsWithValue: number; totalFoods: number }[];
   openComments: number; unmappedIngredientLines: number; recipesWithUnverifiedNames: number;
+  liveDishes?: number; ingredientLines?: { total: number; ready: number };
 }
 
 export interface Queue {

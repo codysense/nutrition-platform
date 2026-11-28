@@ -10,6 +10,7 @@ import bcrypt from 'bcryptjs';
 import {
   AnimalFlesh, CostTier, Difficulty, EvidenceLevel, FrequencyGuide, MappingStatus, PrismaClient, Role, SpiceLevel,
 } from '@prisma/client';
+import { suggestRole } from '../src/modules/ingredients/roles';
 import dataset from './seed-data/dataset.json';
 
 const prisma = new PrismaClient();
@@ -79,8 +80,8 @@ async function main() {
   }
 
   // Index foods by search key for the automatic ingredient-line suggestions (a reviewer confirms them later).
-  const foods = await prisma.food.findMany({ select: { id: true, searchKey1: true, searchKey2: true } });
-  const keyed = foods.map((f) => ({ id: f.id, keys: [f.searchKey1, f.searchKey2].filter((k): k is string => !!k).map((k) => k.toLowerCase()) }));
+  const foods = await prisma.food.findMany({ select: { id: true, name: true, category: true, searchKey1: true, searchKey2: true } });
+  const keyed = foods.map((f) => ({ id: f.id, name: f.name, category: f.category, keys: [f.searchKey1, f.searchKey2].filter((k): k is string => !!k).map((k) => k.toLowerCase()) }));
 
   let recipesCreated = 0, linesCreated = 0, linesSuggested = 0;
   for (const r of data.recipes) {
@@ -101,10 +102,12 @@ async function main() {
       });
       for (const line of r.ingredientLines) {
         const haystack = ' ' + line.rawText.toLowerCase();
-        const ids = keyed.filter((f) => f.keys.some((k) => haystack.includes(k))).map((f) => ({ id: f.id }));
+        const matched = keyed.filter((f) => f.keys.some((k) => haystack.includes(k)));
+        const ids = matched.map((f) => ({ id: f.id }));
         await tx.recipeIngredientLine.create({
           data: {
             recipeId: recipe.id, position: line.position, rawText: line.rawText, optional: line.optional,
+            role: suggestRole({ rawText: line.rawText, optional: line.optional, foods: matched.map((f) => ({ name: f.name, category: f.category })) }),
             mappingStatus: ids.length ? MappingStatus.AUTO_SUGGESTED : MappingStatus.UNMAPPED,
             foods: { connect: ids },
           },

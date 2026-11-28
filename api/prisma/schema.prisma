@@ -75,6 +75,13 @@ enum AnimalFlesh {
   OPTIONAL
 }
 
+enum IngredientRole {
+  CORE // the dish needs it: missing one counts against a match
+  SEASONING // flavouring; a match is still good without it (spices, crayfish, fermented seasonings)
+  STAPLE // assumed to be in every kitchen (water, salt, cooking oil, seasoning cubes)
+  OPTIONAL // can be left out (garnish, wrappers, serving extras)
+}
+
 enum MappingStatus {
   UNMAPPED
   AUTO_SUGGESTED
@@ -215,9 +222,13 @@ model Recipe {
   status             ReviewStatus   @default(DRAFT)
   namesVerified      Boolean        @default(false)
   lastEditedById     String?
+  // The version users currently see. Editing the working copy never changes this; only publish/unpublish does.
+  liveSnapshotId     String?        @unique
   createdAt          DateTime       @default(now())
   updatedAt          DateTime       @updatedAt
 
+  liveSnapshot PublishedRecipe? @relation("RecipeLive", fields: [liveSnapshotId], references: [id], onDelete: SetNull)
+  versions     PublishedRecipe[] @relation("RecipeVersions")
   aliases  RecipeAlias[]
   lines    RecipeIngredientLine[]
   steps    RecipeStep[]
@@ -227,6 +238,26 @@ model Recipe {
   @@index([category])
   @@index([cuisine])
   @@index([name])
+}
+
+/// A frozen, publishable copy of a dish. The public app reads only these, never the working copy.
+model PublishedRecipe {
+  id            String    @id @default(cuid())
+  recipeId      String
+  version       Int
+  contentHash   String // sha256 of `content`; compared with the working copy to spot unpublished changes
+  content       Json
+  approvedAt    DateTime? // when the dietitian last approved it
+  approvedById  String?
+  publishedById String?
+  publishedAt   DateTime  @default(now())
+  retiredAt     DateTime? // set when replaced by a newer version or taken offline
+
+  recipe  Recipe  @relation("RecipeVersions", fields: [recipeId], references: [id], onDelete: Cascade)
+  liveFor Recipe? @relation("RecipeLive")
+
+  @@unique([recipeId, version])
+  @@index([recipeId])
 }
 
 model RecipeAlias {
@@ -248,6 +279,8 @@ model RecipeIngredientLine {
   quantity      Decimal?      @db.Decimal(10, 3)
   unit          String?
   mappingStatus MappingStatus @default(UNMAPPED)
+  role          IngredientRole @default(CORE)
+  roleConfirmed Boolean       @default(false) // a person has checked the role (suggestions are heuristic)
   recipe        Recipe        @relation(fields: [recipeId], references: [id], onDelete: Cascade)
   foods         Food[] // a line can touch several foods, e.g. "tatashe, scotch bonnet, onion"
 

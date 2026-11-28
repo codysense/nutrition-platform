@@ -4,6 +4,7 @@ import { AppError } from '../../lib/errors';
 import { audit } from '../../lib/audit';
 import { AuthUser } from '../../middleware/auth';
 import { checkTransition, isBulkAllowed } from './workflow';
+import { publishRecipe, unpublishRecipe } from '../publishing/publishing.service';
 
 export type Kind = 'recipe' | 'food';
 
@@ -39,9 +40,18 @@ export async function changeStatus(kind: Kind, id: string, actor: AuthUser, to: 
     if (open > 0) throw new AppError(409, `Resolve the ${open} open comment(s) before approving`);
   }
 
-  await prisma.$transaction(async (tx) => {
-    if (kind === 'recipe') await tx.recipe.update({ where: { id }, data: { status: to } });
-    else await tx.food.update({ where: { id }, data: { status: to } });
+  const outcome = await prisma.$transaction(async (tx) => {
+    let published: { version: number; created: boolean } | null = null;
+    let unpublishedVersion: number | null = null;
+    if (kind === 'recipe') {
+      await tx.recipe.update({ where: { id }, data: { status: to } });
+      // Publishing freezes a live version. Archiving, or flagging published content as needing an update, takes it offline.
+      if (to === ReviewStatus.PUBLISHED) published = await publishRecipe(tx, id, actor.id);
+      else if (to === ReviewStatus.ARCHIVED || (current.status === ReviewStatus.PUBLISHED && to === ReviewStatus.REQUIRES_UPDATE))
+        unpublishedVersion = await unpublishRecipe(tx, id);
+    } else {
+      await tx.food.update({ where: { id }, data: { status: to } });
+    }
     if (note?.trim()) {
       await tx.reviewComment.create({
         data: {
@@ -55,9 +65,12 @@ export async function changeStatus(kind: Kind, id: string, actor: AuthUser, to: 
         } as Prisma.ReviewCommentUncheckedCreateInput,
       });
     }
+    return { published, unpublishedVersion };
   });
+  if (outcome.published?.created) await audit(actor.id, 'PUBLISH', 'Recipe', id, { version: outcome.published.version });
+  if (outcome.unpublishedVersion !== null) await audit(actor.id, 'UNPUBLISH', 'Recipe', id, { version: outcome.unpublishedVersion, reason: `moved to ${to}` });
   await audit(actor.id, 'STATUS_CHANGE', entityName(kind), id, { from: current.status, to, note: note ?? null });
-  return { id, status: to };
+  return { id, status: to, ...(outcome.published ? { liveVersion: outcome.published.version } : {}) };
 }
 
 export async function addComment(kind: Kind, id: string, actor: AuthUser, body: string, field?: string) {
